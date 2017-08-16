@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Глейси : каталог</title>
+</head>
+<body>
+
+<!--ХЕДЕР СТРАНИЦЫ-->
+<header class="pageHeader">
+  <img class="logo" src="http://placehold.it/154x64" class="" width="154" height="64" alt="Логотип Gllacy">
+
+  <!--Навигация по сайту-->
+  <nav class="siteNavigation">
+    <ul class="navigationMenu">
+      <!--каталог-->
+      <li class="catalogMenuItem navMenuItem">
+        Каталог
+        <ul class="visuallyHidden inCatalogPointers">
+          <li class="pointer_1"><a href="#">Новинки</a></li>
+          <li class="pointer_2"><a href="#">Сливочное</a></li>
+          <li class="pointer_3"><a href="#">Щербеты</a></li>
+          <li class="pointer_4"><a href="#">Фруктовый лед</a></li>
+          <li class="pointer_5"><a href="#">Мелорин</a></li>
+        </ul>
+      </li>
+
+      <!--Доставка и оплата-->
+      <li class="deliveryMenuItem navMenuItem"><a href="#">Доставка и оплата</a></li>
+
+      <!--О компании-->
+      <li class="aboutCompanyMenuItem navMenuItem"><a href="#">О Компании</a></li>
+    </ul>
+  </nav>
+
+  <!--Сервисы пользователя-->
+  <ul class="clientServices">
+    <!--Поиск-->
+    <li class="search">
+      <form class="searchForm" method="post" action="">
+        <input type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
+      </form>
+    </li>
+
+    <!--Авторизация-->
+    <li class="authorization">
+      <p class="authorizationText"> Вход</p>
+      <form class="authorizationForm" method="post" action="#">
+        <input class="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
+        <input class="password" type="text" name="password" maxlength="50" placeholder="Пароль">
+        <button class="authorizationButton button" type="submit">Войти</button>
+      </form>
+
+      <p class="forgotAndNewReg">
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрция</a>
+      </p>
+    </li>
+
+    <!--Тележка-->
+    <li class="trolley">
+      <p class="trolleyText">Пусто</p>
+      <table class="trolleyContent">
+        <tr class="inTrollyItem_1">
+          <td><button class="cancelBuyButton" type="button">x</button></td>
+          <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
+          <td class="productName">Пломбир с апельсиновы джемом</td>
+          <td class="quantityAndPrice">1,5 кг x 200 руб.</td>
+          <td class="itemPrice">300 руб.</td>
+        </tr>
+        <tr class="inTrolleyItem_2">
+          <td><button class="cancelBuyButton" type="button">x</button></td>
+          <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
+          <td class="productName">Клубничный пломбир с присыпкой из белого шоколада</td>
+          <td class="quantityAndPrice">1,5 кг x 300 руб.</td>
+          <td class="itemPrice">450 руб.</td>
+        </tr>
+      </table>
+
+      <p class="fullPrice">Итого: 750 руб.</p>
+      <a href="#" class="buyButton button">Оформить заказ</a>
+
+    </li>
+  </ul>
+
+  <!--Расписание и телефон-->
+  <p>с 10 до 20, ежедневно<br>
+    <span>8 812 450-25-25</span>
+  </p>
+</header>
+
+<!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
+<hr>
+<h1>Здесь должно быть основное содержание этой страницы</h1>
+<hr>
+
+
+
+
+
+
+
+
+<!--ФУТЕУР СТРАНИЦЫ-->
+<footer class="pageFooter">
+  <ul class="socialNetworks">
+    <li class="socialButton twitter">Твиттер</li>
+    <li class="socialButton instagram">Инстаграм</li>
+    <li class="socialButton facebook">Фейсбук</li>
+    <li class="socialButton vk">ВКонтакте</li>
+  </ul>
+
+  <div class="officialInformation">
+    <ul class="officialList_1">
+      <li class="forCustomers"><a href="#">Для поставщиков</a></li>
+      <li class="aboutManufactory"><a href="#">О производстве</a></li>
+    </ul>
+    <ul class="officialList_2">
+      <li class="ourDocuments"><a href="#">Наши документы</a></li>
+      <li class="ecoStandards"><a href="#">Экологические стандарты</a></li>
+    </ul>
+  </div>
+
+  <div class="siteDeveloper">
+    <a href="http://www.htmlacademy.ru"><img src="http://placehold.it/108x39" alt="Логотип HTMLAcademy" width="108" height="39"></a>
+    <p class="siteDeveloperText">Сделано в HTML Academy (copyright) 2017</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
