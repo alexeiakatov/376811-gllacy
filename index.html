@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
@@ -126,33 +126,37 @@
           <!--1-->
           <li class="popular_1">
             <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_1" src="http://placehold.it/267x267" width="267" hight="267">
+            <img class="popularImage img_1" src="http://placehold.it/267x266" width="267" hight="267">
             <p class="popularPrice">310 Р/кг</p>
             <p class="popularText">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
           </li>
 
           <!--2-->
           <li class="popular_2">
             <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_2" src="http://placehold.it/267x267" width="267" hight="267">
+            <img class="popularImage img_2" src="http://placehold.it/266x267" width="266" hight="267">
             <p class="popularPrice">380 Р/кг</p>
             <p class="popularText">Сливочно-койейное с кусочками шоколада</p>
+            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
           </li>
 
           <!--3-->
           <li class="popular_3">
             <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_3" src="http://placehold.it/267x267" width="267" hight="267">
+            <img class="popularImage img_3" src="http://placehold.it/266x267" width="266" hight="267">
             <p class="popularPrice">355 Р/кг</p>
             <p class="popularText">Сливочно-клубничное с присыпкой из белого шоколада</p>
+            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
           </li>
 
           <!--4-->
           <li class="popular_4">
             <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_4" src="http://placehold.it/267x267" width="267" hight="267">
+            <img class="popularImage img_4" src="http://placehold.it/266x267" width="266" hight="267">
             <p class="popularPrice">415 Р/кг</p>
             <p class="popularText">Сливочное крем-брюле с карамельной подливкой</p>
+            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
           </li>
         </ul>
       </section>
@@ -211,7 +215,7 @@
           (с 10 до 20 ежедневно)
         </p>
 
-        <a href="#" class="feedbackButton button">Форма обратной связи</a>
+        <button type="button" class="feedbackButton button">Форма обратной связи</button>
       </figcaption>
     </figure>
 
@@ -238,10 +242,20 @@
     </div>
 
     <div class="siteDeveloper">
-      <a href="http://www.htmlacademy.ru"><img src="http://placehold.it/108x39" alt="Логотип HTMLAcademy" width="108" height="39"></a>
-      <p class="siteDeveloperText">Сделано в HTML Academy (copyright) 2017</p>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/108x39" alt="Логотип HTMLAcademy" width="108" height="39"></a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="siteDeveloperLink">Сделано в HTML Academy (copyright) 2017</a>
     </div>
   </footer>
+
+<!--МОДАЛЬНОЕ ОКНО-->
+  <form >
+    <p>Мы обязательно вам ответим! </p>
+      <input type="text" name="clientName" placeholder="Как вас зовут?" maxlength="50">
+      <input type="text" name="clientEmail" placeholder="Ваша почта для ответа?" maxlength="50">
+    <textarea rows="7" cols="40" name="clientMessage" placeholder="Напишите что-нибудь..."></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+
 
   </body>
 </html>
