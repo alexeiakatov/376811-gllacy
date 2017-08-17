@@ -103,36 +103,37 @@
 
 	<!--Фильтры-->
 	<section class="filters">
+    <h2 class="visuallyHidden">Фиьтры сортировки товаров</h2>
 	<form class="filtersForm">
 		<!--критерий сортировки-->
-		<fieldset class="sortCriteria">
-		<legend class="criteriaLegend">Сортировка</legend>
-		<select class="criteriaOptions" name="sortCriteria">
-			<option class="option" value="popularity">по популярности</option>
-			<option class="option" value="price">по цене</option>
-			<option class="option" value="fatness">по жирноти</option>
-			<option class="option" value="filler">по наполнителю</option>
+		<fieldset class="sortSet">
+		<legend class="legend">Сортировка</legend>
+		<select class="options" name="sortCriteria">
+			<option class="option" name="sortBy" value="popularity">по популярности</option>
+			<option class="option" name="sortBy" value="price">по цене</option>
+			<option class="option" name="sortBy" value="fatness">по жирноти</option>
+			<option class="option" name="sortBy" value="filler">по наполнителю</option>
 		</select>
 		</fieldset>
 
 		<!--Установить диапазон цены-->
-		<fieldset class="sortPrice">
-			<legend class="priceLegend"> Цена: 100 руб. - 500 руб.</legend>
+		<fieldset class="sortSet">
+			<legend class="legend"> Цена: 100 руб. - 500 руб.</legend>
 			<p>Здесь д.б. бегунок для указания диапазона цены</p>
 		</fieldset>
 
 		<!--Жирность-->
-		<fieldset class="sortFatness">
-			<legend class="fatnessLegend">Жирность:</legend>
-			<label class="choice_1"><input type="radio" name="fatness" value="zero">0%</label>
-			<label class="choice_2"><input type="radio" name="fatness" value="less10">до 10%</label>
-			<label class="choice_3"><input type="radio" name="fatness" value="less30">до 30%</label>
-			<label class="choice_4"><input type="radio" name="fatness" value="more30">выше 30%</label>
+		<fieldset class="sortSet">
+			<legend class="legend">Жирность:</legend>
+			<label class="choice"><input type="radio" name="fatness" value="zero">0%</label>
+			<label class="choice"><input type="radio" name="fatness" value="less10">до 10%</label>
+			<label class="choice"><input type="radio" name="fatness" value="less30">до 30%</label>
+			<label class="choice"><input type="radio" name="fatness" value="more30">выше 30%</label>
 		</fieldset>
 
 		<!--Наполнители-->
-		<fieldset class="sortFiller">
-			<legend class="fillerLegend">Наполнители:</legend>
+		<fieldset class="sortSet">
+			<legend class="legend">Наполнители:</legend>
 			<label><input type="checkbox" name="chocolate" checked>Шоколадные</label>
 			<label><input type="checkbox" name="sugarAdds" checked>Сахарные присыпки</label>
 			<label><input type="checkbox" name="fruits">Фрукты</label>
@@ -146,109 +147,109 @@
 
     <section class="catalog">
       <!--1-->
-      <p class="catalogItem item_1">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">310 Р/кг</p>
       <p class="productName">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+      <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--2-->
-      <p class="catalogItem item_2">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">380 Р/кг</p>
       <p class="productName">Сливочно-кофейное с кусочками шоколада</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+      <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--3-->
-      <p class="catalogItem item_3">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">355 Р/кг</p>
       <p class="productName">Сливочно-клубничное с присыпкой из белого шоколада</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--4-->
-      <p class="catalogItem item_4">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">415 Р/кг</p>
       <p class="productName">Сливочное крем-брюле с карамельной подливкой</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--5-->
-      <p class="catalogItem item_5">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">325 Р/кг</p>
       <p class="productName">Сливочное с брусничным джемом</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--6-->
-      <p class="catalogItem item_6">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">410 Р/кг</p>
       <p class="productName">Сливочно-черничное с цельными ягодами черники</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--7-->
-      <p class="catalogItem item_7">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">375 Р/кг</p>
       <p class="productName">Сливочно-лимонное с карамельной присыпкой</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--8-->
-      <p class="catalogItem item_8">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">320 Р/кг</p>
       <p class="productName">Сливочное с шоколадной стружкой</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--9-->
-      <p class="catalogItem item_9">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">440 Р/кг</p>
       <p class="productName">Сливочно-ванильное с кусочками шоколада</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--10-->
-      <p class="catalogItem item_10">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">435 Р/кг</p>
       <p class="productName">Сливочное с ментоловым сиропом</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--11-->
-      <p class="catalogItem item_11">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">355 Р/кг</p>
       <p class="productName">Сливочное с кусочками черного шоколада</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
 
       <!--12-->
-      <p class="catalogItem item_12">
+      <div class="catalogItem">
         <img class="productImage" src="http://placehold.it/267x267" width="267" height="267" alt="Изображение мороженого">
       <p class="productPrice">420 Р/кг</p>
       <p class="productName">Сливочное с мятным сиропом</p>
-      <button class="visuallyHidden quickPreviewButton button" type="button">Быстрый просмотр</button>
-      </p>
+        <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
+      </div>
     </section>
 
     <ul class="paginator">
-      <li class="paginatorItem_1">1</li>
-      <li class="paginatorItem_2"><a href="#">2</a></li>
-      <li class="paginatorItem_3"><a href="#">3</a></li>
-      <li class="paginatorItem_4"><a href="#">4</a></li>
-      <li class="paginatorItem_5"><a href="#">5</a></li>
-      <li class="paginatorItem_6"><a href="#">6</a></li>
+      <li class="paginatorItem">1</li>
+      <li class="paginatorItem"><a href="#">2</a></li>
+      <li class="paginatorItem"><a href="#">3</a></li>
+      <li class="paginatorItem"><a href="#">4</a></li>
+      <li class="paginatorItem"><a href="#">5</a></li>
+      <li class="paginatorItem"><a href="#">6</a></li>
     </ul>
 
 	</main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns:http="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
@@ -14,22 +14,22 @@
     <nav class="siteNavigation">
       <ul class="navigationMenu">
         <!--каталог-->
-        <li class="catalogMenuItem navMenuItem">
+        <li class="navMenuItem">
           Каталог
           <ul class="visuallyHidden inCatalogPointers">
-            <li class="pointer_1"><a href="#">Новинки</a></li>
-            <li class="pointer_2"><a href="catalog.html">Сливочное</a></li>
-            <li class="pointer_3"><a href="#">Щербеты</a></li>
-            <li class="pointer_4"><a href="#">Фруктовый лед</a></li>
-            <li class="pointer_5"><a href="#">Мелорин</a></li>
+            <li class="pointer"><a href="#">Новинки</a></li>
+            <li class="pointer"><a href="catalog.html">Сливочное</a></li>
+            <li class="pointer"><a href="#">Щербеты</a></li>
+            <li class="pointer"><a href="#">Фруктовый лед</a></li>
+            <li class="pointer"><a href="#">Мелорин</a></li>
           </ul>
         </li>
 
         <!--Доставка и оплата-->
-        <li class="deliveryMenuItem navMenuItem"><a href="#">Доставка и оплата</a></li>
+        <li class="navMenuItem"><a href="#">Доставка и оплата</a></li>
 
         <!--О компании-->
-        <li class="aboutCompanyMenuItem navMenuItem"><a href="#">О Компании</a></li>
+        <li class="navMenuItem"><a href="#">О Компании</a></li>
       </ul>
     </nav>
 
@@ -37,15 +37,15 @@
     <ul class="clientServices">
       <!--Поиск-->
       <li class="search">
-          <form class="searchForm" method="post" action="">
+          <form class="visuallyHidden searchForm" method="post" action="">
             <input type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
           </form>
       </li>
 
       <!--Авторизация-->
       <li class="authorization">
-        <p class="authorizationText"> Вход</p>
-        <form class="authorizationForm" method="post" action="#">
+        <p class="authorizationText"><a href="#">Вход</a></p>
+        <form class="visuallyHidden authorizationForm" method="post" action="#">
           <input class="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
           <input class="password" type="text" name="password" maxlength="50" placeholder="Пароль">
           <button class="authorizationButton button" type="submit">Войти</button>
@@ -59,16 +59,17 @@
 
       <!--Тележка-->
       <li class="trolley">
-        <p class="trolleyText">Пусто</p>
-        <table class="trolleyContent">
-          <tr class="inTrollyItem_1">
+        <p class="trolleyText"><a href="#">Пусто</a></p>
+        <div clas="visuallyHidden trolleyContent">
+        <table class="chosenProducts">
+          <tr class="inTrolleyItem">
             <td><button class="cancelBuyButton" type="button">x</button></td>
             <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
             <td class="productName">Пломбир с апельсиновы джемом</td>
             <td class="quantityAndPrice">1,5 кг x 200 руб.</td>
             <td class="itemPrice">300 руб.</td>
           </tr>
-          <tr class="inTrolleyItem_2">
+          <tr class="inTrolleyItem">
             <td><button class="cancelBuyButton" type="button">x</button></td>
             <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
             <td class="productName">Клубничный пломбир с присыпкой из белого шоколада</td>
@@ -79,13 +80,13 @@
 
         <p class="fullPrice">Итого: 750 руб.</p>
         <a href="#" class="buyButton button">Оформить заказ</a>
-
+        </div>
       </li>
     </ul>
 
     <!--Расписание и телефон-->
-    <p>с 10 до 20, ежедневно<br>
-    <span>8 812 450-25-25</span>
+    <p class="sheduleAndTel">с 10 до 20, ежедневно<br>
+    <a href="tel:88124502525">8 812 450-25-25</a>
     </p>
   </header>
 
@@ -96,64 +97,64 @@
       <h2 class="specialOfferHeading visuallyHidden">Специальные предложения</h2>
       <!--слайдер со спец. предложениями-->
       <div class="specialOfferSlider">
-        <ul class="sliderPointer">
+        <ul class="sliderPointers">
           <li class="pointer_1"></li>
           <li class="pointer_2"></li>
           <li class="pointer_3"></li>
         </ul>
 
         <p class="specialOfferText">Крем-брюле и пломбир с малиновым джемом</p>
-        <button class="giveBothButton button" type="button">Давайте оба</button>
+        <a class="giveBothButton button" href="#">Давайте оба</a>
 
-        <div class="specialOfferChoice_1">
+        <div class="specialOfferChoice">
           <p class="choice_1Heading">Малинка даром!</p>
           <p class="choice_1Text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <button class="wantJamButton button" type="button">Хочу варенье!</button>
+          <a class="wantJamButton button" href="#">Хочу варенье!</a>
         </div>
 
-        <div class="specialOfferChoice_2">
+        <div class="specialOfferChoice">
           <p class="choice_2Heading">Шоколадки даром!</p>
           <p class="choice_2Text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <button class="wantChocolat button" type="button">Хочу шоколадки!</button>
+          <a class="wantChocolate button" href="#">Хочу шоколадки!</a>
         </div>
       </div>
     </section>
 
       <!--Хиты продаж-->
-      <section class="mostPopular">
+      <section class="catalog">
         <h2 class="visuallyHidden">Хиты продаж</h2>
         <ul>
           <!--1-->
-          <li class="popular_1">
-            <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_1" src="http://placehold.it/267x266" width="267" hight="267">
+          <li class="catalogItem">
+            <!--<p class="hitMark">ХИТ</p>-->
+            <img class="popularImage img_1" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="popularPrice">310 Р/кг</p>
             <p class="popularText">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
           </li>
 
           <!--2-->
-          <li class="popular_2">
-            <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_2" src="http://placehold.it/266x267" width="266" hight="267">
+          <li class="catalogItem">
+            <!--<p class="hitMark">ХИТ</p>-->
+            <img class="popularImage img_2" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="popularPrice">380 Р/кг</p>
             <p class="popularText">Сливочно-койейное с кусочками шоколада</p>
             <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
           </li>
 
           <!--3-->
-          <li class="popular_3">
-            <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_3" src="http://placehold.it/266x267" width="266" hight="267">
+          <li class="catalogItem">
+            <!--<p class="hitMark">ХИТ</p>-->
+            <img class="popularImage img_3" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="popularPrice">355 Р/кг</p>
             <p class="popularText">Сливочно-клубничное с присыпкой из белого шоколада</p>
             <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
           </li>
 
           <!--4-->
-          <li class="popular_4">
-            <p class="hitMark">ХИТ</p>
-            <img class="popularImage img_4" src="http://placehold.it/266x267" width="266" hight="267">
+          <li class="catalogItem">
+            <!--<p class="hitMark">ХИТ</p>-->
+            <img class="popularImage img_4" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="popularPrice">415 Р/кг</p>
             <p class="popularText">Сливочное крем-брюле с карамельной подливкой</p>
             <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
@@ -166,16 +167,16 @@
     <section class="aboutUs">
       <h2 class="visuallyHidden">Краткая информация о нас</h2>
       <p class="aboutUsHeading">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного произсодства на развес</p>
-        <p class="aboutUsItem_1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
+        <p class="aboutUsItem">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
         проверенных временем технологий.</p>
 
-        <p class="aboutUsItem_2">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные
+        <p class="aboutUsItem">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные
         ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 
-        <p class="aboutUsItem_3">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает
+        <p class="aboutUsItem">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает
         долговременное сотрудничество.</p>
 
-        <p class="aboutUsItem_4">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому
+        <p class="aboutUsItem">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому
         растаять в пути и позволяет сохранить превосходный вкус.</p>
     </section>
 
@@ -199,25 +200,31 @@
     </section>
 
     <!--Карта-->
-    <figure class="mapFigure">
-      <img  class="mapImage" src="http://placehold.it/1250x430" width="1250" height="430">
-      <figcaption class="mapTextContainer">
+    <div class="map">
+      <div class="mapImage" style=
+          "width: 1250px;
+           height: 430px;
+           background : lightgrey url(img/map.png) no-repeat;
+           background-size: 100% 100%;">
+
+      </div>
+
         <p class="mapText_1">
-      Адрес главного офиса <br>
+      Адрес главного офиса
         и офлайн магазина: <br>
-        <b>ул.Больная Конюшенная <br>
+        <b>ул.Больная Конюшенная
         19/8, Санкт-Петербург</b>
         </p>
 
         <p class="mapText_2">
-          Для заказов по телефону: <br>
+          Для заказов по телефону:
           <b>8 812 450-25-25</b> <br>
           (с 10 до 20 ежедневно)
         </p>
 
-        <button type="button" class="feedbackButton button">Форма обратной связи</button>
-      </figcaption>
-    </figure>
+        <a class="feedbackButton button" href="#">Форма обратной связи</a>
+      </p>
+    </div>
 
   </main>
 
