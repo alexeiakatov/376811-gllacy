@@ -44,7 +44,7 @@
 
     <!--Авторизация-->
     <li class="authorization">
-      <p class="authorizationText"> Вход</p>
+      <p class="authorizationText"><a href="#">Вход</a></p>
       <form class="authorizationForm" method="post" action="#">
         <input class="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
         <input class="password" type="text" name="password" maxlength="50" placeholder="Пароль">
@@ -59,7 +59,7 @@
 
     <!--Тележка-->
     <li class="trolley">
-      <p class="trolleyText">Пусто</p>
+      <p class="trolleyText"><a href="#">Пусто</a></p>
       <table class="trolleyContent">
         <tr class="inTrollyItem_1">
           <td><button class="cancelBuyButton" type="button">x</button></td>
@@ -84,9 +84,10 @@
   </ul>
 
   <!--Расписание и телефон-->
-  <p>с 10 до 20, ежедневно<br>
-    <span>8 812 450-25-25</span>
+  <p class="sheduleAndTel">с 10 до 20, ежедневно<br>
+    <a href="tel:88124502525">8 812 450-25-25</a>
   </p>
+
 </header>
 
 <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
@@ -125,19 +126,19 @@
 		<!--Жирность-->
 		<fieldset class="sortSet">
 			<legend class="legend">Жирность:</legend>
-			<label class="choice"><input type="radio" name="fatness" value="zero">0%</label>
-			<label class="choice"><input type="radio" name="fatness" value="less10">до 10%</label>
-			<label class="choice"><input type="radio" name="fatness" value="less30">до 30%</label>
-			<label class="choice"><input type="radio" name="fatness" value="more30">выше 30%</label>
+			<label class="fatness"><input type="radio" name="fatness" value="zero">0%</label>
+			<label class="fatness"><input type="radio" name="fatness" value="less10">до 10%</label>
+			<label class="fatness"><input type="radio" name="fatness" value="less30">до 30%</label>
+			<label class="fatness"><input type="radio" name="fatness" value="more30">выше 30%</label>
 		</fieldset>
 
 		<!--Наполнители-->
 		<fieldset class="sortSet">
 			<legend class="legend">Наполнители:</legend>
-			<label><input type="checkbox" name="chocolate" checked>Шоколадные</label>
-			<label><input type="checkbox" name="sugarAdds" checked>Сахарные присыпки</label>
-			<label><input type="checkbox" name="fruits">Фрукты</label>
-			<label><input type="checkbox" name="syrup">Сиропы</label>
+			<label class="filler"><input type="checkbox" name="chocolate" checked>Шоколадные</label>
+			<label class="filler"><input type="checkbox" name="sugarAdds" checked>Сахарные присыпки</label>
+			<label class="filler"><input type="checkbox" name="fruits">Фрукты</label>
+			<label class="filler"><input type="checkbox" name="syrup">Сиропы</label>
 			<label><input type="checkbox" name="jam">Джемы</label>
 		</fieldset>
 
