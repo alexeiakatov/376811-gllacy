@@ -44,7 +44,7 @@
 
       <!--Авторизация-->
       <li class="authorization">
-        <p class="authorizationText"><a href="#">Вход</a></p>
+        <a class="authorizationText" href="#">Вход</a>
         <form class="visuallyHidden authorizationForm" method="post" action="#">
           <input class="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
           <input class="password" type="text" name="password" maxlength="50" placeholder="Пароль">
@@ -59,7 +59,7 @@
 
       <!--Тележка-->
       <li class="trolley">
-        <p class="trolleyText"><a href="#">Пусто</a></p>
+        <a class="trolleyText" href="#">Пусто</a>
         <div clas="visuallyHidden trolleyContent">
         <table class="chosenProducts">
           <tr class="inTrolleyItem">
@@ -85,9 +85,11 @@
     </ul>
 
     <!--Расписание и телефон-->
-    <p class="sheduleAndTel">с 10 до 20, ежедневно<br>
-    <a href="tel:88124502525">8 812 450-25-25</a>
+    <p class="sheduleAndTel">
+      <span>с 10 до 20, ежедневно</span>
+      <a href="tel:88124502525">8 812 450-25-25</a>
     </p>
+
   </header>
 
 <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
@@ -104,18 +106,18 @@
         </ul>
 
         <p class="specialOfferText">Крем-брюле и пломбир с малиновым джемом</p>
-        <a class="giveBothButton button" href="#">Давайте оба</a>
+        <a class="specialOfferBtn" href="#">Давайте оба</a>
 
         <div class="specialOfferChoice">
           <p class="choiceHeading">Малинка даром!</p>
           <p class="choiceText">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="wantJamButton button" href="#">Хочу варенье!</a>
+          <a class="specialOfferBtn" href="#">Хочу варенье!</a>
         </div>
 
         <div class="specialOfferChoice">
           <p class="choiceHeading">Шоколадки даром!</p>
           <p class="choiceText">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="wantChocolate button" href="#">Хочу шоколадки!</a>
+          <a class="specialOfferBtn" href="#">Хочу шоколадки!</a>
         </div>
       </div>
     </section>
@@ -128,32 +130,32 @@
           <li class="catalogItem">
             <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="popularPrice">310 Р/кг</p>
-            <p class="popularNamet"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
-            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
+            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
           </li>
 
           <!--2-->
           <li class="catalogItem">
             <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="productPrice">380 Р/кг</p>
-            <p class="productText"><a href="#">Сливочно-койейное с кусочками шоколада</a></p>
-            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
+            <a href="#">Сливочно-койейное с кусочками шоколада</a>
+            <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
           </li>
 
           <!--3-->
           <li class="catalogItem">
             <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="productPrice">355 Р/кг</p>
-            <p class="productText"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
-            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
+            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
           </li>
 
           <!--4-->
           <li class="catalogItem">
             <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
             <p class="productPrice">415 Р/кг</p>
-            <p class="productText"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
-            <button class="visuallyHidden popularButton button" type="button">Быстрый просмотр</button>
+            <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -225,30 +227,30 @@
   </main>
 
 <!--ФУТЕУР СТРАНИЦЫ-->
-  <footer class="pageFooter">
-    <ul class="socialNetworks">
-      <li class="socialButton twitter">Твиттер</li>
-      <li class="socialButton instagram">Инстаграм</li>
-      <li class="socialButton facebook">Фейсбук</li>
-      <li class="socialButton vk">ВКонтакте</li>
-    </ul>
+<footer class="pageFooter">
+  <ul class="socialNetworks">
+    <li class="socialButton twitter">Твиттер</li>
+    <li class="socialButton instagram">Инстаграм</li>
+    <li class="socialButton facebook">Фейсбук</li>
+    <li class="socialButton vk">ВКонтакте</li>
+  </ul>
 
-    <div class="officialInformation">
-    <ul class="officialList_1">
-      <li class="forCustomers"><a href="#">Для поставщиков</a></li>
-      <li class="aboutManufactory"><a href="#">О производстве</a></li>
+  <div class="officialInformation">
+    <ul class="list">
+      <li class="listItem"><a href="#">Для поставщиков</a></li>
+      <li class="listItem"><a href="#">О производстве</a></li>
     </ul>
-    <ul class="officialList_2">
-      <li class="ourDocuments"><a href="#">Наши документы</a></li>
-      <li class="ecoStandards"><a href="#">Экологические стандарты</a></li>
+    <ul class="list">
+      <li class="listItem"><a href="#">Наши документы</a></li>
+      <li class="listItem"><a href="#">Экологические стандарты</a></li>
     </ul>
-    </div>
+  </div>
 
-    <div class="siteDeveloper">
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/108x39" alt="Логотип HTMLAcademy" width="108" height="39"></a>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" class="siteDeveloperLink">Сделано в HTML Academy (copyright) 2017</a>
-    </div>
-  </footer>
+  <div class="siteDeveloper">
+    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/108x39" alt="Логотип HTMLAcademy" width="108" height="39"></a>
+    <a href="https://htmlacademy.ru/intensive/htmlcss" class="siteDeveloperLink">Сделано в HTML Academy (copyright) 2017</a>
+  </div>
+</footer>
 
 <!--МОДАЛЬНОЕ ОКНО-->
   <form >
