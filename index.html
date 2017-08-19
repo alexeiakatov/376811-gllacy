@@ -2,9 +2,10 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns:http="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Глейси</title>
 </head>
-<body>
+<body class="index">
 
 <!--ХЕДЕР СТРАНИЦЫ-->
 <header class="pageHeader">
@@ -103,9 +104,10 @@
 <main class="pageMain">
   <!--Специальные предложения-->
   <section class="specialOffers">
-    <h2 class="visuallyHidden specialOfferHeading">Специальные предложения</h2>
+    <h2 class="visuallyHidden heading">Специальные предложения</h2>
+
     <!--слайдер со спец. предложениями-->
-    <div class="specialOfferSlider">
+    <section class="specialOfferSlider">
       <ul class="sliderPointers">
         <li class="pointer_1"></li>
         <li class="pointer_2"></li>
@@ -113,6 +115,7 @@
       </ul>
 
       <p class="specialOfferText">Крем-брюле и пломбир с малиновым джемом</p>
+      <img src="img/forIndex/specialOffer1_main.png" width="1045" height="881" alt="Главное изображение спец предложения">
       <a class="specialOfferBtn" href="#">Давайте оба</a>
 
       <div class="specialOfferChoice">
@@ -128,16 +131,16 @@
           совершенно бесплатно.</p>
         <a class="specialOfferBtn" href="#">Хочу шоколадки!</a>
       </div>
-    </div>
+    </section>
   </section>
 
   <!--Хиты продаж-->
   <section class="catalog">
-    <h2 class="visuallyHidden">Хиты продаж</h2>
+    <h2 class="visuallyHidden heading">Хиты продаж</h2>
     <ul>
       <!--1-->
       <li class="catalogItem">
-        <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
+        <img class="productImage" src="img/forIndex/hit1_orange.png" width="267" hight="267">
         <p class="popularPrice">310 Р/кг</p>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
@@ -145,7 +148,7 @@
 
       <!--2-->
       <li class="catalogItem">
-        <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
+        <img class="productImage" src="img/forIndex/hit2_brown.png" width="267" hight="267">
         <p class="productPrice">380 Р/кг</p>
         <a href="#">Сливочно-койейное с кусочками шоколада</a>
         <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
@@ -153,7 +156,7 @@
 
       <!--3-->
       <li class="catalogItem">
-        <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
+        <img class="productImage" src="img/forIndex/hit3_pink.png" width="267" hight="267">
         <p class="productPrice">355 Р/кг</p>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
         <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
@@ -161,7 +164,7 @@
 
       <!--4-->
       <li class="catalogItem">
-        <img class="productImage" src="http://placehold.it/267x267" width="267" hight="267">
+        <img class="productImage" src="img/forIndex/hit4_caramel.png" width="267" hight="267">
         <p class="productPrice">415 Р/кг</p>
         <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
         <a class="visuallyHidden quickPreviewButton button" href="#">Быстрый просмотр</a>
@@ -171,7 +174,7 @@
 
   <!--Текстовое описание магазина-->
   <section class="aboutUs">
-    <h2 class="visuallyHidden">Краткая информация о нас</h2>
+    <h2 class="visuallyHidden heading">Краткая информация о нас</h2>
     <p class="aboutUsHeading">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного
       произсодства на развес</p>
     <p class="aboutUsItem">Все наше мороженое изготавливается на собственном производстве, с использованием современного
@@ -193,14 +196,14 @@
 
   <!--Предложение поддерживать связь-->
   <section class="inTouchInvitation">
-    <h2 сlass="visuallyHidden">Поддерживайте с нами связь</h2>
+    <h2 сlass="visuallyHidden heading">Поддерживайте с нами связь</h2>
     <div class="blogNews">
       Новое в нашем блоге
       <a class="link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
     </div>
 
     <div class="mailListSubscription">
-      <p class="subscriptionText">Подпишитесь на нашу сладку рассылку и будете всегда в курсе всего самого вкусного, что
+      <p class="subscriptionText">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что
         у нас происходит. Обещаем
         не спамить и не слать всякой ненужной ерунды. Честно =)</p>
       <form class="subscriptionForm" method="post" action="">
@@ -213,13 +216,7 @@
 
   <!--Карта-->
   <div class="map">
-    <div class="mapImage" style=
-      "width: 1250px;
-           height: 430px;
-           background : lightgrey url(img/map.png) no-repeat;
-           background-size: 100% 100%;">
-
-    </div>
+    <img src="img/forIndex/map_withMask.png" width="1200" height="430" alt="Карта - как най найти">
 
     <p class="mapText_1">
       <span>Адрес главного офиса
