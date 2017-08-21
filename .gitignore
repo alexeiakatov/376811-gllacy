@@ -9,3 +9,5 @@ node_modules/
 Thumbs.db
 Specification-gllacy.md
 img/preview/*
+test.html
+*.js
