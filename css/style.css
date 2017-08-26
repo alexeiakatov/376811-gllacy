@@ -39,3 +39,11 @@ body {
   color : #ffffff;
   font-family: "Roboto_Bold";
 }
+
+input:focus,
+a:focus,
+.button:focus,
+.getMessage:focus,
+select:focus {
+  outline : 2px solid red;
+}

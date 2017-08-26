@@ -10,14 +10,18 @@
 
 <!--ХЕДЕР СТРАНИЦЫ-->
 <header class="pageHeader">
-  <a href="index.html"><img class="logo" src="img/svg/logo.svg" class="" width="154" height="64" alt="Логотип Gllacy"></a>
+  <a href="index.html">
+  <img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Логотип Gllacy">
+  </a>
 
   <!--Навигация по сайту-->
   <nav class="siteNavigation">
+    <h4 class="visuallyHidden descriptor">Блок навигации по сайту</h4>
     <ul class="navigationMenu">
-      <!--каталог-->
+
+      <!--Пункт меню - каталог-->
       <li class="navMenuItem">
-        Каталог
+        <a class="button" href="#">Каталог</a>
         <ul class="hidden inCatalogPointers">
           <li class="pointer"><a href="#">Новинки</a></li>
           <li class="pointer"><a href="catalog.html">Сливочное</a></li>
@@ -40,18 +44,23 @@
     <!--Поиск-->
     <li class="search">
       <form class="hidden searchForm" method="post" action="">
-        <input type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
+        <label class="visuallyHidden" for="searchField">Поле поиска</label>
+        <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
       </form>
     </li>
 
     <!--Авторизация-->
     <li class="authorization">
+      <h4 class="visuallyHidden descriptor">Авторизация пользователя</h4>
       <a class="text" href="#">Вход</a>
       <div class="hidden popUp">
         <form class="form" method="post" action="#">
-          <input class="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
-          <input class="password" type="text" name="password" maxlength="50" placeholder="Пароль">
-          <button class="authorizationButton button" type="submit">Войти</button>
+          <label class="visuallyHidden" for="login">Электронная почта</label>
+          <input class="login" id="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
+
+          <label class="visuallyHidden" for="password">Пароль</label>
+          <input class="password" id="password" type="text" name="password" maxlength="50" placeholder="Пароль">
+          <button class="authButton button" type="submit">Войти</button>
         </form>
 
         <p class="forgotAndNewReg">
@@ -63,47 +72,49 @@
 
     <!--Тележка-->
     <li class="trolley">
+      <h4 class="visuallyHidden descriptor">Тележка: список товаров выбранных для покупки</h4>
       <a class="text" href="#">Пусто</a>
-      <div clas="hidden popUp">
+      <div class="hidden popUp">
         <table class="chosenProducts">
           <tr class="inTrolleyItem">
             <td>
-              <button class="cancelBuyButton" type="button">x</button>
+              <button class="button cancel" type="button">Удалить товар</button>
             </td>
-            <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
-            <td class="productName">Пломбир с апельсиновы джемом</td>
+            <td class="icon"><img src="img/for_index/hit1_orange.png" width="33" height="33" alt="Миниатюра товара в тележке"></td>
+            <td class="name">Пломбир с апельсиновы джемом</td>
             <td class="quantityAndPrice">1,5 кг x 200 руб.</td>
-            <td class="itemPrice">300 руб.</td>
+            <td class="price">300 руб.</td>
           </tr>
           <tr class="inTrolleyItem">
             <td>
-              <button class="cancelBuyButton" type="button">x</button>
+              <button class="button cancel" type="button">Удалить товар</button>
             </td>
-            <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
-            <td class="productName">Клубничный пломбир с присыпкой из белого шоколада</td>
+            <td class="icon"><img src="img/for_index/hit3_pink.png" width="33" height="33" alt=""></td>
+            <td class="name">Клубничный пломбир с присыпкой из белого шоколада</td>
             <td class="quantityAndPrice">1,5 кг x 300 руб.</td>
-            <td class="itemPrice">450 руб.</td>
+            <td class="price">450 руб.</td>
           </tr>
         </table>
 
         <p class="fullPrice">Итого: 750 руб.</p>
-        <a href="#" class="buyButton button">Оформить заказ</a>
+        <a href="#" class="button">Оформить заказ</a>
       </div>
     </li>
 
   </ul>
 
-  <!--Расписание и телефон-->
-  <p class="sheduleAndTel">
-    <span>с 10 до 20, ежедневно</span>
-    <a href="tel:88124502525">8 812 450-25-25</a>
-  </p>
 
+  <p class="sheduleAndTel">
+  <h4 class="visuallyHidden descriptor">Наш график работы и телефон</h4>
+  <span>с 10 до 20, ежедневно</span>
+  <a href="tel:88124502525">8 812 450-25-25</a>
+  </p>
 </header>
 
 <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
 <main class="pageMain">
   <!--breadcrumbs-->
+  <h4 class="visuallyHidden descriptor">Ваше расположение на сайте</h4>
   <ol class="breadcrumbs">
     <li><a href="index.html">Главная</a></li>
     <li><a href="#">Каталог</a></li>
@@ -118,9 +129,9 @@
     <h2 class="visuallyHidden heading">Фиьтры сортировки товаров</h2>
     <form class="filtersForm">
       <!--критерий сортировки-->
-      <fieldset class="sortSet">
-        <legend class="legend">Сортировка</legend>
-        <select class="options" name="sortCriteria">
+      <fieldset class="sortCriteria">
+        <legend class="legend"><label class="visuallyHidden" for="options">Сортировка</label></legend>
+        <select class="options" id="options" name="sortCriteria">
           <option class="option" name="sortBy" value="popularity" selected>по популярности</option>
           <option class="option" name="sortBy" value="lowPriceFirst">сначала недорогие</option>
           <option class="option" name="sortBy" value="highPriceFirst">сначала дорогие</option>
@@ -131,29 +142,47 @@
       <!--Установить диапазон цены-->
       <fieldset class="sortSet">
         <legend class="legend"> Цена: 100 руб. - 500 руб.</legend>
-        <p>Здесь д.б. бегунок для указания диапазона цены</p>
+        <p class="button" tabindex="0">Здесь д.б. бегунок для указания диапазона цены</p>
       </fieldset>
 
       <!--Жирность-->
       <fieldset class="sortSet">
         <legend class="legend">Жирность:</legend>
-        <label class="fatness"><input type="radio" name="fatness" value="zero">0%</label>
-        <label class="fatness"><input type="radio" name="fatness" value="less10" checked>до 10%</label>
-        <label class="fatness"><input type="radio" name="fatness" value="less30">до 30%</label>
-        <label class="fatness"><input type="radio" name="fatness" value="more30">выше 30%</label>
+        <label class="fatness">
+          <input type="radio" name="fatness" value="zero">0%
+        </label>
+        <label class="fatness">
+          <input type="radio" name="fatness" value="less10" checked>до 10%
+        </label>
+        <label class="fatness">
+          <input type="radio" name="fatness" value="less30">до 30%
+        </label>
+        <label class="fatness">
+          <input type="radio" name="fatness" value="more30">выше 30%
+        </label>
       </fieldset>
 
       <!--Наполнители-->
       <fieldset class="sortSet">
         <legend class="legend">Наполнители:</legend>
-        <label class="filler"><input type="checkbox" name="chocolate" checked>Шоколадные</label>
-        <label class="filler"><input type="checkbox" name="sugarAdds" checked>Сахарные присыпки</label>
-        <label class="filler"><input type="checkbox" name="fruits">Фрукты</label>
-        <label class="filler"><input type="checkbox" name="syrup">Сиропы</label>
-        <label><input type="checkbox" name="jam">Джемы</label>
+        <label class="filler">
+          <input type="checkbox" name="chocolate" checked>Шоколадные
+        </label>
+        <label class="filler">
+          <input type="checkbox" name="sugarAdds" checked>Сахарные присыпки
+        </label>
+        <label class="filler">
+          <input type="checkbox" name="fruits">Фрукты
+        </label>
+        <label class="filler">
+          <input type="checkbox" name="syrup">Сиропы
+        </label>
+        <label>
+          <input type="checkbox" name="jam">Джемы
+        </label>
       </fieldset>
 
-      <button class="filtersButton button" type="submit">Применить</button>
+      <button class="button" type="submit">Применить</button>
     </form>
   </section>
 
@@ -271,6 +300,7 @@
     </ul>
   </section>
 
+  <h4 class="visuallyHidden descriptor">Переключатель страниц каталога</h4>
   <ul class="paginator">
     <li class="paginatorItem">1</li>
     <li class="paginatorItem"><a href="#">2</a></li>
@@ -284,14 +314,16 @@
 
 <!--ФУТЕУР СТРАНИЦЫ-->
 <footer class="pageFooter">
+  <h4 class="visuallyHidden descriptor">Наши страницы в соц.сетях</h4>
   <ul class="socialNetworks">
-    <li class="socialButton twitter">Твиттер</li>
-    <li class="socialButton instagram">Инстаграм</li>
-    <li class="socialButton facebook">Фейсбук</li>
-    <li class="socialButton vk">ВКонтакте</li>
+    <li class="socialButton twitter"><a href="#">Твиттер</a></li>
+    <li class="socialButton instagram"><a href="#">Инстаграм</a></li>
+    <li class="socialButton facebook"><a href="#">Фейсбук</a></li>
+    <li class="socialButton vk"><a href="#">ВКонтакте</a></li>
   </ul>
 
-  <div class="officialInformation">
+  <div class="officialInfo">
+    <h4 class="visuallyHidden descriptor">Официальная информация</h4>
     <ul class="list">
       <li class="listItem"><a href="#">Для поставщиков</a></li>
       <li class="listItem"><a href="#">О производстве</a></li>
@@ -303,10 +335,9 @@
   </div>
 
   <div class="siteDeveloper">
-    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/108x39" alt="Логотип HTMLAcademy"
-                                                            width="108" height="39"></a>
-    <a href="https://htmlacademy.ru/intensive/htmlcss" class="siteDeveloperLink">Сделано в HTML Academy (copyright)
-      2017</a>
+    <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">Сделано в HTML Academy (copyright)
+    </a>
   </div>
 </footer>
 

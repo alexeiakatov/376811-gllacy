@@ -14,10 +14,12 @@
 
   <!--Навигация по сайту-->
   <nav class="siteNavigation">
+    <h4 class="visuallyHidden descriptor">Блок навигации по сайту</h4>
     <ul class="navigationMenu">
-      <!--каталог-->
+
+      <!--Пункт меню - каталог-->
       <li class="navMenuItem">
-        Каталог
+        <a class="button" href="#">Каталог</a>
         <ul class="hidden inCatalogPointers">
           <li class="pointer"><a href="#">Новинки</a></li>
           <li class="pointer"><a href="catalog.html">Сливочное</a></li>
@@ -40,18 +42,23 @@
     <!--Поиск-->
     <li class="search">
       <form class="hidden searchForm" method="post" action="">
-        <input type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
+        <label class="visuallyHidden" for="searchField">Поле поиска</label>
+        <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
       </form>
     </li>
 
     <!--Авторизация-->
     <li class="authorization">
+      <h4 class="visuallyHidden descriptor">Авторизация пользователя</h4>
       <a class="text" href="#">Вход</a>
       <div class="hidden popUp">
         <form class="form" method="post" action="#">
-          <input class="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
-          <input class="password" type="text" name="password" maxlength="50" placeholder="Пароль">
-          <button class="authorizationButton button" type="submit">Войти</button>
+          <label class="visuallyHidden" for="login">Электронная почта</label>
+          <input class="login" id="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
+
+          <label class="visuallyHidden" for="password">Пароль</label>
+          <input class="password" id="password" type="text" name="password" maxlength="50" placeholder="Пароль">
+          <button class="authButton button" type="submit">Войти</button>
         </form>
 
         <p class="forgotAndNewReg">
@@ -63,68 +70,76 @@
 
     <!--Тележка-->
     <li class="trolley">
+      <h4 class="visuallyHidden descriptor">Тележка: список товаров выбранных для покупки</h4>
       <a class="text" href="#">Пусто</a>
       <div class="hidden popUp">
         <table class="chosenProducts">
           <tr class="inTrolleyItem">
             <td>
-              <button class="cancelBuyButton" type="button">x</button>
+              <button class="button cancel" type="button">Удалить товар</button>
             </td>
-            <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
-            <td class="productName">Пломбир с апельсиновы джемом</td>
+            <td class="icon"><img src="img/for_index/hit1_orange.png" width="33" height="33" alt="Миниатюра товара в тележке"></td>
+            <td class="name">Пломбир с апельсиновы джемом</td>
             <td class="quantityAndPrice">1,5 кг x 200 руб.</td>
-            <td class="itemPrice">300 руб.</td>
+            <td class="price">300 руб.</td>
           </tr>
           <tr class="inTrolleyItem">
             <td>
-              <button class="cancelBuyButton" type="button">x</button>
+              <button class="button cancel" type="button">Удалить товар</button>
             </td>
-            <td class="productIcon"><img src="http://placehold.it/33x33" width="33" height="33" alt=""></td>
-            <td class="productName">Клубничный пломбир с присыпкой из белого шоколада</td>
+            <td class="icon"><img src="img/for_index/hit3_pink.png" width="33" height="33" alt=""></td>
+            <td class="name">Клубничный пломбир с присыпкой из белого шоколада</td>
             <td class="quantityAndPrice">1,5 кг x 300 руб.</td>
-            <td class="itemPrice">450 руб.</td>
+            <td class="price">450 руб.</td>
           </tr>
         </table>
 
         <p class="fullPrice">Итого: 750 руб.</p>
-        <a href="#" class="buyButton button">Оформить заказ</a>
+        <a href="#" class="button">Оформить заказ</a>
       </div>
     </li>
 
   </ul>
 
-  <!--Расписание и телефон-->
+
   <p class="sheduleAndTel">
+    <h4 class="visuallyHidden descriptor">Наш график работы и телефон</h4>
     <span>с 10 до 20, ежедневно</span>
     <a href="tel:88124502525">8 812 450-25-25</a>
   </p>
-
 </header>
 
 <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
 <main class="pageMain">
-  <h1 class="visuallHidden heading1L">Магазин мороженого Глейси</h1>
+  <h1 class="visuallyHidden heading1L">Магазин мороженого Глейси</h1>
   <!--Специальные предложения-->
   <section class="specialOffers">
     <h2 class="visuallyHidden heading">Специальные предложения</h2>
 
     <!--слайдер со спец. предложениями-->
     <section class="specialOfferSlider">
-      <ul class="sliderPointers">
-        <li class="pointer_1"></li>
-        <li class="pointer_2"></li>
-        <li class="pointer_3"></li>
-      </ul>
+
+      <div class="slider" id="slider">
+        <h4 class="visuallyHidden descriptor">Переключатель слайдов спец-предложений</h4>
+        <label class="visuallyHidden" for="slide1">Выбрать слайд</label>
+        <button class="button" id="slide1" type="button">1</button>
+
+        <label class="visuallyHidden" for="slide2">Выбрать слайд</label>
+        <button class="button" id="slide2" type="button">2</button>
+
+        <label class="visuallyHidden" for="slide3">Выбрать слайд</label>
+        <button class="button" id="slide3" type="button">3</button>
+      </div>
 
       <p class="specialOfferText">Крем-брюле и пломбир с малиновым джемом</p>
-      <img src="img/for_index/specialoffer1_main.png" width="1045" height="881" alt="Главное изображение спец предложения">
-      <a class="specialOfferBtn" href="#">Давайте оба</a>
+      <img src="img/for_index/specialoffer1_main.png" width="1045" height="881" alt="Большое изображение спец предложения">
+      <a class="button" href="#">Давайте оба</a>
 
       <div class="specialOfferChoice">
         <p class="choiceHeading">Малинка даром!</p>
         <p class="choiceText">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
           варенья бесплатно.</p>
-        <a class="specialOfferBtn" href="#">Хочу варенье!</a>
+        <a class="button" href="#">Хочу варенье!</a>
       </div>
 
       <div class="specialOfferChoice">
@@ -142,32 +157,32 @@
     <ul>
       <!--1-->
       <li class="catalogItem">
-        <img class="productImage" src="img/for_index/hit1_orange.png" width="267" height="267">
-        <p class="popularPrice">310 Р/кг</p>
+        <img class="image" src="img/for_index/hit1_orange.png" width="267" height="267">
+        <p class="price">310 Р/кг</p>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         <a class="hidden quickPreviewButton button" href="#">Быстрый просмотр</a>
       </li>
 
       <!--2-->
       <li class="catalogItem">
-        <img class="productImage" src="img/for_index/hit2_brown.png" width="267" height="267">
-        <p class="productPrice">380 Р/кг</p>
+        <img class="image" src="img/for_index/hit2_brown.png" width="267" height="267">
+        <p class="price">380 Р/кг</p>
         <a href="#">Сливочно-койейное с кусочками шоколада</a>
         <a class="hidden quickPreviewButton button" href="#">Быстрый просмотр</a>
       </li>
 
       <!--3-->
       <li class="catalogItem">
-        <img class="productImage" src="img/for_index/hit3_pink.png" width="267" height="267">
-        <p class="productPrice">355 Р/кг</p>
+        <img class="image" src="img/for_index/hit3_pink.png" width="267" height="267">
+        <p class="price">355 Р/кг</p>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
         <a class="hidden quickPreviewButton button" href="#">Быстрый просмотр</a>
       </li>
 
       <!--4-->
       <li class="catalogItem">
-        <img class="productImage" src="img/for_index/hit4_caramel.png" width="267" height="267">
-        <p class="productPrice">415 Р/кг</p>
+        <img class="image" src="img/for_index/hit4_caramel.png" width="267" height="267">
+        <p class="price">415 Р/кг</p>
         <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
         <a class="hidden quickPreviewButton button" href="#">Быстрый просмотр</a>
       </li>
@@ -180,20 +195,13 @@
     <p class="aboutUsHeading">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного
       произсодства на развес</p>
     <p class="aboutUsItem">Все наше мороженое изготавливается на собственном производстве, с использованием современного
-      оборудования и
-      проверенных временем технологий.</p>
-
+      оборудования и проверенных временем технологий.</p>
     <p class="aboutUsItem">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все
-      дополнительные
-      ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-
+      дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
     <p class="aboutUsItem">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с
-      которыми нас связывает
-      долговременное сотрудничество.</p>
-
+      которыми нас связывает долговременное сотрудничество.</p>
     <p class="aboutUsItem">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не
-      дает мороженому
-      растаять в пути и позволяет сохранить превосходный вкус.</p>
+      дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
   </section>
 
   <!--Предложение поддерживать связь-->
@@ -206,10 +214,10 @@
 
     <div class="mailListSubscription">
       <p class="subscriptionText">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что
-        у нас происходит. Обещаем
-        не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
       <form class="subscriptionForm" method="post" action="">
-        <input type="text" name="emailToSubscribe" maxlength="50" placeholder="Электронная почта">
+        <label class="visuallyHidden" for="emailField">Ваша электронная почта</label>
+        <input id="emailField" type="text" name="emailToSubscribe" maxlength="50" placeholder="Электронная почта">
         <button class="subscriptionButton button" type="button">Отправить</button>
       </form>
     </div>
@@ -217,8 +225,9 @@
   </section>
 
   <!--Карта-->
-  <div class="map">
-    <img src="img/for_index/map_mask_pin.png" width="1200" height="430" alt="Карта - как най найти">
+  <section class="map">
+    <h2 class="visuallyHidden heading">Карта как до нас добраться</h2>
+    <img src="img/for_index/map_mask_marker.jpg" width="1200" height="430" alt="Карта - как най найти">
 
     <p class="mapText_1">
       <span>Адрес главного офиса
@@ -234,20 +243,22 @@
     </p>
 
     <a class="feedbackButton button" href="#">Форма обратной связи</a>
-  </div>
+  </section>
 
 </main>
 
 <!--ФУТЕУР СТРАНИЦЫ-->
 <footer class="pageFooter">
+  <h4 class="visuallyHidden descriptor">Наши страницы в соц.сетях</h4>
   <ul class="socialNetworks">
-    <li class="socialButton twitter">Твиттер</li>
-    <li class="socialButton instagram">Инстаграм</li>
-    <li class="socialButton facebook">Фейсбук</li>
-    <li class="socialButton vk">ВКонтакте</li>
+    <li class="socialButton twitter"><a href="#">Твиттер</a></li>
+    <li class="socialButton instagram"><a href="#">Инстаграм</a></li>
+    <li class="socialButton facebook"><a href="#">Фейсбук</a></li>
+    <li class="socialButton vk"><a href="#">ВКонтакте</a></li>
   </ul>
 
-  <div class="officialInformation">
+  <div class="officialInfo">
+    <h4 class="visuallyHidden descriptor">Официальная информация</h4>
     <ul class="list">
       <li class="listItem"><a href="#">Для поставщиков</a></li>
       <li class="listItem"><a href="#">О производстве</a></li>
@@ -259,21 +270,29 @@
   </div>
 
   <div class="siteDeveloper">
-    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/108x39" alt="Логотип HTMLAcademy"
-                                                            width="108" height="39"></a>
-    <a href="https://htmlacademy.ru/intensive/htmlcss" class="siteDeveloperLink">Сделано в HTML Academy (copyright)
-      2017</a>
+    <a href="https://htmlacademy.ru/intensive/htmlcss">
+    <img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">Сделано в HTML Academy (copyright)
+    </a>
   </div>
 </footer>
 
 <!--МОДАЛЬНОЕ ОКНО-->
+<div class="feedback" id="feedback">
+  <h4 class="visuallyHidden descriptor">Форма обратной связи</h4>
 <form>
-  <p>Мы обязательно вам ответим! </p>
-  <input type="text" name="clientName" placeholder="Как вас зовут?" maxlength="50">
-  <input type="text" name="clientEmail" placeholder="Ваша почта для ответа?" maxlength="50">
-  <textarea rows="7" cols="40" name="clientMessage" placeholder="Напишите что-нибудь..."></textarea>
-  <button type="submit">Отправить</button>
+  <h2>Мы обязательно вам ответим! </h2>
+  <label class="visuallyHidden" for="name">Ваше имя</label>
+  <input id="name" type="text" name="clientName" placeholder="Как вас зовут?" maxlength="50">
+
+  <label class="visuallyHidden" for="email">Ваша электронная почта</label>
+  <input id="email" type="text" name="clientEmail" placeholder="Ваша почта для ответа?" maxlength="50">
+
+  <label class="visuallyHidden" for="message">Ваше сообщение</label>
+  <textarea class="getMessage" id="message" rows="7" cols="40" name="clientMessage" placeholder="Напишите что-нибудь..."></textarea>
+  <button class="button" type="submit">Отправить</button>
 </form>
+<button class="button" type="button">Закрыть форму обратной связи</button>
+</div>
 
 
 </body>
