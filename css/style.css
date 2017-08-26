@@ -1,32 +1,41 @@
+@font-face {
+  font-family: "Roboto_Regular";
+  src: url("../fonts/roboto.woff2") format('woff2'),
+  url("../fonts/roboto.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Roboto_Medium";
+  src: url("../fonts/robotomedium.woff2") format('woff2'),
+  url("../fonts/robotomedium.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Roboto_Bold";
+  src: url("../fonts/robotobold.woff2") format('woff2'),
+  url("../fonts/robotobold.woff") format('woff');
+}
+
+
 body {
   font-size : 16px;
   line-height : 22px;
   color : #ffffff;
-  font-weight : normal;
-  font-family : "Roboto";
-}
-
-body.index {
+  font-family : "Roboto_Regular";
   background-color : #849d8f;
+
 }
 
-body.catalog {
-  background-color : #849d8f;
-}
-
-h1,
-.specialOfferText {
-  font-size : 60px;
-  line-height: 60.35px;
-  color : #ffffff;
-  font-weight : bold;
-  font-family: "Roboto";
-}
-
-.heading {
+.heading1L {
   font-size : 35px;
   line-height: 41px;
   color : #ffffff;
-  font-weight : bold;
-  font-family: "Roboto";
+  font-family: "Roboto_Bold";
+}
+
+.heading {
+  font-size : 24px;
+  line-height: 30px;
+  color : #ffffff;
+  font-family: "Roboto_Bold";
 }

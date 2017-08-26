@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Глейси : каталог</title>
 </head>
-<body class="catalog">
+<body class="bodyCatalog">
 
 <!--ХЕДЕР СТРАНИЦЫ-->
 <header class="pageHeader">
-  <a href="index.html"><img class="logo" src="http://placehold.it/154x64" class="" width="154" height="64" alt="Логотип Gllacy"></a>
+  <a href="index.html"><img class="logo" src="img/svg/logo.svg" class="" width="154" height="64" alt="Логотип Gllacy"></a>
 
   <!--Навигация по сайту-->
   <nav class="siteNavigation">
@@ -102,15 +103,15 @@
 
 <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
 <main class="pageMain">
-  <!--breadcrums-->
-  <ol class="breadcrums">
+  <!--breadcrumbs-->
+  <ol class="breadcrumbs">
     <li><a href="index.html">Главная</a></li>
     <li><a href="#">Каталог</a></li>
     <li class="current">Сливочное</li>
   </ol>
 
   <!--Заголовок страницы-->
-  <h1 class="header"> Сливочное мороженое </h1>
+  <h1 class="heading1L"> Сливочное мороженое </h1>
 
   <!--Фильтры-->
   <section class="filters">
@@ -137,7 +138,7 @@
       <fieldset class="sortSet">
         <legend class="legend">Жирность:</legend>
         <label class="fatness"><input type="radio" name="fatness" value="zero">0%</label>
-        <label class="fatness"><input type="radio" name="fatness" value="less10">до 10%</label>
+        <label class="fatness"><input type="radio" name="fatness" value="less10" checked>до 10%</label>
         <label class="fatness"><input type="radio" name="fatness" value="less30">до 30%</label>
         <label class="fatness"><input type="radio" name="fatness" value="more30">выше 30%</label>
       </fieldset>
@@ -162,7 +163,7 @@
     <ul>
       <!--1-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem1.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem1.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">310 Р/кг</p>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -171,7 +172,7 @@
 
       <!--2-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem2.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem2.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">380 Р/кг</p>
         <a href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -180,7 +181,7 @@
 
       <!--3-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem3.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem3.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">355 Р/кг</p>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
@@ -189,7 +190,7 @@
 
       <!--4-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem4.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem4.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">415 Р/кг</p>
         <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -198,7 +199,7 @@
 
       <!--5-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem5.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem5.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">325 Р/кг</p>
         <a href="#">Сливочное с брусничным джемом</a>
@@ -207,7 +208,7 @@
 
       <!--6-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem6.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem6.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">410 Р/кг</p>
         <a href="#">Сливочно-черничное с цельными ягодами черники</a>
@@ -216,7 +217,7 @@
 
       <!--7-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem7.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem7.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">375 Р/кг</p>
         <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
@@ -225,7 +226,7 @@
 
       <!--8-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem8.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem8.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">320 Р/кг</p>
         <a href="#">Сливочное с шоколадной стружкой</a>
@@ -234,7 +235,7 @@
 
       <!--9-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem9.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem9.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">440 Р/кг</p>
         <a href="#">Сливочно-ванильное с кусочками шоколада</a>
@@ -243,7 +244,7 @@
 
       <!--10-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem10.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem10.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">435 Р/кг</p>
         <a href="#">Сливочное с ментоловым сиропом</a>
@@ -252,7 +253,7 @@
 
       <!--11-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem11.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem11.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">355 Р/кг</p>
         <a href="#">Сливочное с кусочками черного шоколада</a>
@@ -261,7 +262,7 @@
 
       <!--12-->
       <li class="catalogItem">
-        <img class="productImage" src="img/forCatalog/catItem12.png" width="267" height="267"
+        <img class="productImage" src="img/for_catalog/catItem12.png" width="267" height="267"
              alt="Изображение мороженого">
         <p class="productPrice">420 Р/кг</p>
         <a href="#">Сливочное с мятным сиропом</a>
