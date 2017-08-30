@@ -1,23 +1,34 @@
 @font-face {
-  font-family: "Roboto_Regular";
+  font-family: "Roboto";
   src: url("../fonts/roboto.woff2") format('woff2'),
   url("../fonts/roboto.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto_Medium";
+  font-family: "Roboto";
   src: url("../fonts/robotomedium.woff2") format('woff2'),
   url("../fonts/robotomedium.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto_Bold";
+  font-family: "Roboto";
   src: url("../fonts/robotobold.woff2") format('woff2'),
   url("../fonts/robotobold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 
 body {
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  width: 1200px;
+
   font-size : 16px;
   line-height : 22px;
   color : #ffffff;
@@ -30,7 +41,7 @@ body {
   font-size : 35px;
   line-height: 41px;
   color : #ffffff;
-  font-family: "Roboto_Bold";
+  font-family: "Roboto";
 }
 
 .heading {
@@ -39,6 +50,1233 @@ body {
   color : #ffffff;
   font-family: "Roboto_Bold";
 }
+
+/*МЕНЮ НАВИГАЦИИ ПО САЙТУ и подменю в "Каталог"*/
+.navigationMenu{
+  list-style: none;
+  display: flex;
+}
+
+    /*Элементы li в которых находятся ссылки (они стали флекс-элементами)*/
+.navMenuItem {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin-right: 1px;
+  position: relative;
+  border-radius: 14px;
+}
+
+    /*ссылки внутри элементов li*/
+.navMenuItem > .button {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 6px 14px;
+  margin: 0;
+
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+    /*эффекты при наведении на элемент меню навигации*/
+.navMenuItem > .button:hover {
+  background-color: #f7f6f3;
+  border-radius: 14px;
+  color: #333333;
+}
+
+    /*Контейнер подменю Каталога - элемент div - в скрытом состоянии и появляется при наведении*/
+.catalogPopup {
+  display : none;
+}
+.catalog:hover + .catalogPopup {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 144px;
+
+  position: absolute;
+  top: 37px;
+  left: -8px;
+  border-radius: 5px;
+
+}
+
+    /*подменю пункта Каталог - элемент ul*/
+.inCatalogPointers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #f8f7f4;
+
+  border-radius: 5px;
+}
+
+.inCatalogPointers .pointer {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+    /*Скругление 1го и последнего элементов ul>li.pointer чтоб при наведении углы не становились квадратными*/
+.inCatalogPointers .pointer:first-child {
+  border-radius: 5px 5px 0 0;
+}
+.inCatalogPointers .pointer:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+    /*элементы подменю Каталог - элементы li>a.button*/
+.inCatalogPointers .button {
+  display: inline-block;
+  padding-left: 22px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  text-decoration: none;
+}
+    /*Нижний отступ у последнего элемента подменю Каталога*/
+.inCatalogPointers .last {
+  padding-bottom: 14px;
+
+}
+
+    /*Элемент Новинки подменю Каталога*/
+.inCatalogPointers .new {
+  display: inline-block;
+  padding: 10px 0;
+  padding-left: 16px;
+  padding-right: 58px;
+  margin-left: 6px;
+
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+
+  border-bottom: 1px solid #d1d0ce;
+}
+
+    /*Эффект - изменение фона элементов подменю Каталога при наведении*/
+.inCatalogPointers .pointer:hover {
+  background-color: #fbded7;
+}
+
+/*БЛОК СЕРВИСОВ ПОЛЬЗОВАТЕЛЯ*/
+.clientServices {
+  list-style: none;
+  display: flex;
+}
+
+/*Кнопки в разделе сервисов пользователя*/
+.clientServices .button {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+    /*элемент - Поиск*/
+.search {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("../img/svg/magnif_nohover.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 17px 17px;
+}
+    /*всплывающее окно поиска*/
+.searchPopup {
+  width: 340px;
+  height: 85px;
+  background-color: #f8f7f4;
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  border-radius: 5px;
+}
+    /*контейнер формы - элемент <form>*/
+.searchForm {
+  /*border: 1px solid red;*/
+  padding: 20px 15px;
+}
+    /*поле ввода текста - элемент <input>*/
+.searchForm .searchField {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 0;
+  padding-left: 15px;
+  /*width: 312px;*/
+  width: 100%;
+  height: 44px;
+
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+
+    /*Элемент Авторизация*/
+.authPopup {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 276px;
+  height: 215px;
+  position: absolute;
+  right: 10px;
+  top: 110px;
+  background-color: #f8f7f4;
+
+  border-radius: 5px;
+}
+
+.authPopup .form {
+  /*border: 1px solid red;*/
+  padding: 20px;
+}
+    /*поля ввода текста*/
+.authPopup .login,
+.authPopup .password {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+
+    /*Кнопка*/
+.form .authButton{
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 26px;
+
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+
+  background-color: #ec583c;
+  border: none;
+  border-radius: 15px;
+}
+
+    /*Забыл пароль, новая регистрация*/
+.authPopup .forgotAndNewReg {
+  /*display: none;*/
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  height: 45px;
+}
+
+.forgotAndNewReg .link {
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+  text-decoration: none;
+
+  border-bottom: 1px solid #adacaa;
+}
+
+    /*Тележка с покупками*/
+.trolleyPopup {
+  box-sizing: border-box;
+  width: 540px;
+  margin: 0;
+  padding: 20px 0;
+  padding-left: 20px;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 390px;
+  right: 10px;
+
+  background-color: #f8f7f4;
+
+}
+.inTrolleyItem .name,
+.inTrolleyItem .quantityAndPrice,
+.inTrolleyItem .price {
+
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+
+}
+.inTrolleyItem .quantityAndPrice {
+  /*border: 1px solid red;*/
+  width: 120px;
+  padding: 0;
+}
+.inTrolleyItem .name {
+  width: 250px;
+  padding: 0;
+  padding-left: 14px;
+  margin: 0;
+}
+
+.cancelCell {
+  padding: 0;
+}
+
+.inTrolleyItem .cancel {
+  font-size: 0;
+  width: 11px;
+  background-color: transparent;
+  background-image: url("../img/svg/cross-small.svg");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+    /*итоговая цена*/
+.trolleyPopup .fullPrice {
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #323232;
+}
+    /*Кнопка "Оформить заказ"*/
+.trolleyPopup .buyButton {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 9px 15px;
+
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+  text-decoration: none;
+
+  border-radius: 16px;
+  background-color: #e84e37;
+}
+
+
+    /*Блок с расписанием и телефоном*/
+/*Контейнер блока - элемент div*/
+.scheduleAndTel {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  width: 167px;
+}
+.scheduleAndTel .info {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /*Расписание*/
+.scheduleAndTel .schedule {
+  margin-left: 18px;
+
+  font-family: Roboto;
+  forn-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+    /*Телефон*/
+.scheduleAndTel .tel {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*ПЕРЕКЛЮЧАТЕЛЬ СЛАЙДОВ*/
+.sliderToggle .button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 21px;
+  height: 21px;
+  background-color: #849d8f;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  font-size: 0;
+}
+.slideControl {
+  display: none;
+}
+.slideControl:checked+.button {
+  background-color: #ffffff;
+}
+
+.sliderToggle .button:hover {
+  background-color: rgba(178, 193, 183,0.6);
+}
+
+/*СПЕЦ ПРЕДЛОЖЕНИЯ*/
+    /*Большая надпись спец предложения*/
+.specialOfferText {
+  width: 667px;
+  margin: 0 auto;
+
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60.35px;
+  color: #ffffff;
+  text-align: center;
+}
+
+    /*Кнопка "Давайте оба"*/
+.specialOffers > .button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 9px 42px;
+
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+
+  border-radius: 30px;
+  background-color: rgb(242,104,67);
+}
+
+
+    /*первое спец предложение*/
+.specialOfferChoice1 {
+  box-sizing: border-box;
+  width: 560px;
+  height: 230px;
+  border-radius: 11px;
+  background-color: #5f0e1d;
+  background-image: url("../img/for_index/bgr_raspberries.jpg");
+  background-repean: no-repeat;
+  background-size: 560px 230px;
+
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+    /*заголовок*/
+.specialOfferChoice1 .choiceHeading {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  color: #ffffff;
+}
+    /*кнопка*/
+.specialOfferChoice1 .button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 23px;
+
+  font-familly: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+
+  border-radius: 20px;
+  background-color: rgb(242,104,67);
+}
+
+  /*второе спец предложение*/
+.specialOfferChoice2 {
+  box-sizing: border-box;
+  width: 560px;
+  height: 230px;
+  border-radius: 11px;
+  background-color: #452a1e;
+  background-image: url("../img/for_index/bgr_choco.jpg");
+  background-repeat: no-repeat;
+  background-size: 560px 230px;
+
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+    /*Заголовок*/
+.specialOfferChoice2 .choiceHeading {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  color: #ffffff;
+}
+    /*!*Кнопка*!*/
+.specialOfferChoice2 .button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 23px;
+  padding-top: 8px;
+
+  font-familly: "Roboto_Bold";
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+
+  border-radius: 20px;
+  background-color: rgb(242,104,67);
+}
+
+/*ХИТЫ ПРОДАЖ*/
+.hitsCatalog {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 1146px;
+}
+    /*Контейнер хитов продаж - элемент ul*/
+.catalogList {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+    /*Карточка товара - элемент li*/
+.catalogItem {
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 267px;
+  height: 406px;
+  position: relative;
+}
+.catalog-item:last-child {
+  margin-right: 0;
+  background-color: white;
+}
+
+  /*значек Хит*/
+.catalogItem::before {
+  content: "";
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 61px;
+  height: 61px;
+  background-color: #e9e8e8;
+  background-image: url("../img/svg/hit.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: absolute;
+}
+
+    /*Заголовок в карточке товара - название товара*/
+.itemHeading {
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+.catalogItem .image {
+  /*border: 1px solid red;*/
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 7px;  /*нижнее растояние от изображения на карточке товара до текста.*/
+  padding: 0;
+}
+
+.itemHeading > .link{
+  /*border: 1px solid red;*/
+  display: block;
+  margin:0 auto;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+  /*Надпись цены и значок рубля*/
+.catalogItem .price {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 215px;
+
+  font-family: "Roboto_Bold";
+  font-size: 45px;
+  line-height: 45px;
+  text-align: left;
+
+
+  background-color: transparent;
+  background-image: url("../img/svg/ruble.svg");
+  background-repeat: no-repeat;
+  background-position: 84px 7px;
+}
+
+.toSetRub {
+  margin-right: 37px;
+  padding-right: 6px;
+}
+  /*кнопка на карточке Хита продаж*/
+.catalogItem > .button {
+  /*border: 1px solid black;*/
+  visibility: hidden;
+
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 9px 17px;
+
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 20px;
+  background-color: rgb(242,104,67);
+
+}
+.catalogItem:hover > .button {
+  visibility: visible;
+
+}
+
+/*ТЕКСТОВОЕ ОПИСАНИЕ МАГАЗИНА*/
+    /*Контейнер описания - элемент section*/
+.aboutUs {
+  /*border: 1px solid black;*/
+
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+  width: 1146px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  border-radius: 13px;
+
+  background-color: #eee1c6;
+  background-image: url("../img/for_index/waffle_pattern.jpg");
+  background-repeat: no-repeat;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323232;
+}
+    /*Заголовок в текстовом описании*/
+.aboutUs .heading {
+  padding: 0;
+  margin: 0;
+  width: 1000px;
+  padding-left: 21px;
+  padding-top: 24px;
+  padding-bottom: 18px;
+
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232;
+
+}
+    /*пункты текстового описания - элемент <p>*/
+.aboutUsItem {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  padding-left: 77px;
+  padding-bottom: 20px;
+  width: 558px;
+  position: relative;
+}
+
+    /*иконка с мороженкой*/
+.aboutUsItem:nth-of-type(1):before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 21px;
+  top: -12px;
+  background-color: transparent;
+  background-image: url("../img/for_index/ice_cream_icon.png");
+  background-repeat: no-repeat;
+}
+
+    /*иконка с коровой*/
+.aboutUsItem:nth-of-type(2):before {
+  /*border: 1px solid red;*/
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 21px;
+  top: -12px;
+  background-color: transparent;
+  background-image: url("../img/for_index/cow_icon.png");
+  background-repeat: no-repeat;
+}
+    /*иконка с листом дерева*/
+.aboutUsItem:nth-of-type(3):before {
+   /*border: 1px solid red;*/
+   content: "";
+   display: block;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   left: 21px;
+   top: -12px;
+   background-color: transparent;
+   background-image: url("../img/for_index/leaf_icon.png");
+   background-repeat: no-repeat;
+ }
+
+    /*иконка с термометром*/
+.aboutUsItem:nth-of-type(4):before {
+  /*border: 1px solid red;*/
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 21px;
+  top: -12px;
+  background-color: transparent;
+  background-image: url("../img/for_index/termometer_icon.png");
+  background-repeat: no-repeat;
+}
+
+.aboutUsItem:nth-of-type(2n){
+  margin-left: 7px;
+}
+
+/*ПРЕДЛОЖЕНИЯ ПОДДЕРЖИВАТЬ СВЯЗЬ*/
+.inTouchInvitation {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 1146px;
+  margin: 0;
+  padding: 0;
+  border-radius: 13px;
+
+}
+    /*блок блога*/
+.blogNews {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  width: 560px;
+  min-height: 220px;
+  border-radius: 13px;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #323232;
+
+  background-color: #ffffff;
+  background-image: url("../img/for_index/bgr_stawberry_small.jpg");
+  background-repeat: no-repeat;
+  background-position: 202px -36px;
+}
+.blogInfo {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  padding-top: 23px;
+  padding-left: 20px;
+  padding-bottom: 3px;
+
+}
+
+.blogNews .link {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  width: 300px;
+
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+}
+
+    /*блок подписки на рассылку - элемент div*/
+.mailListSubscription {
+  /*border: 1px solid red;*/
+  margin: 0;
+  padding: 5px;
+
+  box-sizing: border-box;
+  width: 560px;
+  min-height: 220px;
+  border-radius: 13px;
+
+  background-color: #e0d6dd;
+  background-image: url("../img/for_index/bgr_post_final.png");
+  background-repeat: no-repeat;
+}
+
+/*внутренний блок для создания одноцветного фона над почтовым изображением*/
+.mailListSubscription .wrapperForBgr {
+  /*border: 1px solid black;*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 13px;
+  min-height: 100%;
+
+  background-color: #f8f5f2;
+
+}
+    /*блок с текстом - элемент <p>*/
+.subscriptionText {
+  /*border: 1px solid red;*/
+  margin: 0;
+  padding: 0;
+  padding-left: 22px;
+  padding-right: 10px;
+  padding-top: 28px;
+  padding-bottom: 35px;
+  border-radius: 13px;
+
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #5a5a5a;
+}
+
+/*Форма ввода - элемент <form>*/
+.subscriptionForm {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  padding-left: 22px;
+
+}
+
+/*поле ввода текста*/
+.subscriptionForm .inputText {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-left: 14px;
+  margin-right: 6px;
+  width: 367px;
+  height: 44px;
+
+  border-radius: 5px;
+  border: 2px solid #d3d3d2;
+}
+
+    /*кнопка*/
+.subscriptionForm .subscriptionButton {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding: 9px 17px;
+  border-radius: 20px;
+
+  background-color: #f06441;
+  border: none;
+
+  font-familly: "Roboto";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+}
+
+/*КАРТА*/
+
+.map {
+  position: relative;
+}
+
+.map .mapInfo {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 305px;
+  height: 305px;
+  background-color: #fffffe;
+  position: absolute;
+  top: 65px;
+  right: 27px;
+  border-radius: 15px;
+
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.mapTexts1,
+.mapTexts2 {
+  margin: 0;
+  padding: 0;
+}
+    /*информационный блок на карте с адресом и телефоном*/
+.mapTexts1 .text,
+.mapTexts2 .text {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.mapTexts1 .t1 {
+  /*border: 1px solid red;*/
+  padding-top: 29px;
+  padding-right: 120px;
+}
+.mapTexts1 .t2 {
+  padding-right: 50px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.mapTexts2 .t2 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+    /*кнопка*/
+.mapInfo .feedbackButton {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+  padding: 12px 28px;
+  border-radius: 20px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+  text-decoration: none;
+
+  background-color: rgb(242,104,67);
+}
+    /*Форма обратной связи*/
+.feedback {
+  box-sizing: border-box;
+  width: 478px;
+  margin: 0;
+  padding: 0;
+
+  border-radius: 9px;
+  background-color: #f8f7f4;
+}
+.feedback .feedbackForm {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding: 16px 25px;
+  padding-bottom: 25px;
+
+  border-radius: 9px;
+  border: 1px solid red;
+}
+
+    /*верхняя надпись в попапе*/
+.feedback .info {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 16px;
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #323232;
+}
+    /*поля ввода имени и эл.почты*/
+.feedback .clientName,
+.feedback .clientEmail {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-left: 15px;
+  width: 268px;
+  height: 45px;
+
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+    /*Блок ввода сообщения - элемент <textarea>*/
+.feedback .getMessage {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  padding-left: 15px;
+  padding-top: 8px;
+  height: 155px;
+  width: 428px;
+
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+
+}
+    /*Кнопка отправки формы*/
+.feedbackForm .button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 9px 24px;
+
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+
+  background-color: #ed5b3d;
+  border-radius: 20px;
+  border: none;
+}
+    /*Кнопка закрытия попапа*/
+.feedback > .button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+
+  background-color: transparent;
+  background-image: url("../img/svg/cross-big.svg");
+  border: none;
+  font-size: 0;
+
+}
+
+
+/*ФУТЕР СТРАНИЦЫ*/
+.pageFooter {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+}
+
+    /*Социальные сети*/
+.socialButton {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-right: 7px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  border: 4px solid rgba(255, 255, 255, 0.5);
+
+  font-size: 0px;
+}
+
+.twitter {
+  background-color: transparent;
+  background-image: url("../img/svg/twittericon.svg");
+  background-repeat: no-repeat;
+}
+.instagram {
+  background-color: transparent;
+  background-image: url("../img/svg/instagramicon.svg");
+  background-repeat: no-repeat;
+}
+.facebook {
+  background-color: transparent;
+  background-image: url("../img/svg/facebookicon.svg");
+  background-repeat: no-repeat;
+}
+.vk {
+  background-color: transparent;
+  background-image: url("../img/svg/vkicon.svg");
+  background-repeat: no-repeat;
+}
+
+    /*Официальная информация*/
+.officialInfo {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 345px;
+  font-size: 0;
+}
+.officialInfo .block {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+
+}
+
+.officialInfo .link {
+  /*border: 1px solid red;*/
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 3px;
+  padding-left: 22px;
+
+  font-family: Roboto;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+}
+.officialInfo .marked {
+  font-weight: 700;
+  position: relative;
+}
+.officialInfo .marked:before {
+  /*border: 1px solid red;*/
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 15px;
+  height: 14px;
+
+  position: absolute;
+  left: 0;
+  top: 4px;
+  background-color: transparent;
+  background-image: url("../img/svg/hearticon.svg");
+  background-repeat: no-repeat;
+}
+
+    /*Разработчик сайта*/
+.siteDeveloper {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 195px;
+}
+.siteDeveloper .image {
+  margin: 0;
+  margin-right: 80px;
+}
+.siteDeveloper .link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  font-familly: "Roboto";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.siteDeveloper .info {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-top: -1px;
+}
+
+
+
+
+
+.visuallyHidden {
+  display: none;
+}
+
+
+
+
+
+
 
 input:focus,
 a:focus,

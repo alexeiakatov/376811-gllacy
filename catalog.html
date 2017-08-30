@@ -10,52 +10,63 @@
 
 <!--ХЕДЕР СТРАНИЦЫ-->
 <header class="pageHeader">
-  <a href="index.html">
+  <h2 class="visuallyHidden">Шапка страницы : навигация и сервисы пользователя</h2>
   <img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Логотип Gllacy">
-  </a>
 
   <!--Навигация по сайту-->
   <nav class="siteNavigation">
-    <h2 class="visuallyHidden descriptor">Блок навигации по сайту</h2>
+    <h3 class="visuallyHidden">Блок навигации по сайту</h3>
     <ul class="navigationMenu">
-
       <!--Пункт меню - каталог-->
       <li class="navMenuItem">
-        <a class="button" href="#">Каталог</a>
-        <ul class="hidden inCatalogPointers">
-          <li class="pointer"><a href="#">Новинки</a></li>
-          <li class="pointer"><a href="catalog.html">Сливочное</a></li>
-          <li class="pointer"><a href="#">Щербеты</a></li>
-          <li class="pointer"><a href="#">Фруктовый лед</a></li>
-          <li class="pointer"><a href="#">Мелорин</a></li>
-        </ul>
+        <a class="button catalog" href="#">Каталог</a>
+        <!--МОДАЛЬНОЕ ОКНО - подменю в "Каталог"-->
+        <div class="catalogPopup">
+          <h4 class="visuallyHidden">Подменю пункта каталог</h4>
+          <ul class="hidden inCatalogPointers">
+            <li class="pointer"><a class="button new" href="#">Новинки </a></li>
+            <li class="pointer"><a class="button" href="catalog.html">Сливочное </a></li>
+            <li class="pointer"><a class="button" href="#">Щербеты</a></li>
+            <li class="pointer"><a class="button" href="#">Фруктовый лед</a></li>
+            <li class="pointer"><a class="button last" href="#">Мелорин</a></li>
+          </ul>
+        </div>
       </li>
-
       <!--Доставка и оплата-->
-      <li class="navMenuItem"><a href="#">Доставка и оплата</a></li>
-
+      <li class="navMenuItem">
+        <a class="button" href="#">Доставка и оплата</a>
+      </li>
       <!--О компании-->
-      <li class="navMenuItem"><a href="#">О Компании</a></li>
+      <li class="navMenuItem">
+        <a class="button" href="#">О Компании</a>
+      </li>
     </ul>
   </nav>
 
   <!--Сервисы пользователя-->
-  <h2 class="visuallyHidden">Сервисы пользователя</h2>
+  <h3 class="visuallyHidden">Сервисы пользователя</h3>
   <ul class="clientServices">
     <!--Поиск-->
     <li class="search">
-      <form class="hidden searchForm" method="post" action="">
-        <label class="visuallyHidden" for="searchField">Поле поиска</label>
-        <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
-      </form>
+      <h4 class="visuallyHidden">Поиск по сайту</h4>
+
+      <!--МОДАЛЬНОЕ ОКНО - поле ввода поиска-->
+      <div class="hidden searchPopup">
+        <form class="searchForm" method="post" action="">
+          <label class="visuallyHidden" for="searchField">Поле поиска</label>
+          <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
+        </form>
+      </div>
     </li>
 
     <!--Авторизация-->
     <li class="authorization">
-      <h3 class="visuallyHidden descriptor">Авторизация пользователя</h3>
-      <a class="text" href="#">Вход</a>
-      <div class="hidden popUp">
-        <h3 class="visuallyHidden descriptor">Форма авторизации</h3>
+      <h4 class="visuallyHidden">Авторизация пользователя</h4>
+      <a class="button" href="#">Вход</a>
+
+      <!--МОДАЛЬНОЕ ОКНО - Авторизация пользователя-->
+      <div class="hidden authPopup">
+        <h4 class="visuallyHidden">Форма авторизации</h4>
         <form class="form" method="post" action="#">
           <label class="visuallyHidden" for="login">Электронная почта</label>
           <input class="login" id="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
@@ -66,20 +77,22 @@
         </form>
 
         <p class="forgotAndNewReg">
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Новая регистрция</a>
+          <a class="link" href="#">Забыли пароль?</a>
+          <a class="link" href="#">Новая регистрция</a>
         </p>
       </div>
     </li>
 
     <!--Тележка-->
     <li class="trolley">
-      <h3 class="visuallyHidden descriptor">Тележка: список товаров выбранных для покупки</h3>
-      <a class="text" href="#">Пусто</a>
-      <div class="hidden popUp">
+      <h4 class="visuallyHidden">Тележка: список товаров выбранных для покупки</h4>
+      <a class="button" href="#">Пусто</a>
+
+      <!--МОДАЛЬНОЕ ОКНО - содержимое тележки с покупками-->
+      <div class="hidden trolleyPopup">
         <table class="chosenProducts">
           <tr class="inTrolleyItem">
-            <td>
+            <td class="cancelCell">
               <button class="button cancel" type="button">Удалить товар</button>
             </td>
             <td class="icon"><img src="img/for_index/hit1_orange.png" width="33" height="33" alt="Миниатюра товара в тележке"></td>
@@ -99,19 +112,19 @@
         </table>
 
         <p class="fullPrice">Итого: 750 руб.</p>
-        <a href="#" class="button">Оформить заказ</a>
+        <a href="#" class="buyButton">Оформить заказ</a>
       </div>
     </li>
-
   </ul>
 
-<!--График работы и телефон-->
-  <h2 class="visuallyHidden descriptor">Наш график работы и телефон</h2>
-  <p class="sheduleAndTel">
-  <h4 class="visuallyHidden descriptor">Наш график работы и телефон</h4>
-  <span>с 10 до 20, ежедневно</span>
-  <a href="tel:88124502525">8 812 450-25-25</a>
-  </p>
+  <!--График работы и телефон-->
+  <div class="scheduleAndTel">
+    <h4 class="visuallyHidden">Наш график работы и телефон</h4>
+    <p class="info">
+      <span class="schedule">с 10 до 20, ежедневно</span>
+      <a class="tel" href="tel:88124502525">8 812 450-25-25</a>
+    </p>
+  </div>
 </header>
 
 <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
@@ -129,7 +142,7 @@
 
   <!--Фильтры-->
   <section class="filters">
-    <h2 class="visuallyHidden heading">Фиьтры сортировки товаров</h2>
+    <h2 class="visuallyHidden">Фиьтры сортировки товаров</h2>
     <form class="filtersForm">
       <!--критерий сортировки-->
       <fieldset class="sortCriteria">
@@ -318,30 +331,31 @@
 <!--ФУТЕУР СТРАНИЦЫ-->
 <footer class="pageFooter">
 
-  <h2 class="visuallyHidden descriptor">Наши страницы в соц.сетях</h2>
-  <ul class="socialNetworks">
-    <li class="socialButton twitter"><a href="#">Твиттер</a></li>
-    <li class="socialButton instagram"><a href="#">Инстаграм</a></li>
-    <li class="socialButton facebook"><a href="#">Фейсбук</a></li>
-    <li class="socialButton vk"><a href="#">ВКонтакте</a></li>
-  </ul>
+  <div class="socialNetworks">
+    <h3 class="visuallyHidden">Наши страницы в соц.сетях</h3>
+    <a class="socialButton twitter" href="#">Твиттер</a>
+    <a class="socialButton instagram" href="#">Инстаграм</a>
+    <a class="socialButton facebook" href="#">Фейсбук</a>
+    <a class="socialButton vk" href="#">ВКонтакте</a>
+  </div>
 
   <div class="officialInfo">
-    <h2 class="visuallyHidden descriptor">Официальная информация</h2>
-    <ul class="list">
-      <li class="listItem"><a href="#">Для поставщиков</a></li>
-      <li class="listItem"><a href="#">О производстве</a></li>
-    </ul>
-    <ul class="list">
-      <li class="listItem"><a href="#">Наши документы</a></li>
-      <li class="listItem"><a href="#">Экологические стандарты</a></li>
-    </ul>
+    <h3 class="visuallyHidden">Официальная информация</h3>
+    <p class="block">
+      <a class="link marked" href="#">Для поставщиков</a>
+      <a class="link" href="#">О производстве</a>
+    </p>
+    <p class="block">
+      <a class="link" href="#">Наши документы</a>
+      <a class="link" href="#">Экологические стандарты</a>
+    </p>
   </div>
 
   <div class="siteDeveloper">
-    <h2 class="visuallyHidden">Разработчик сайта</h2>
-    <a href="https://htmlacademy.ru/intensive/htmlcss">
-      <img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">Сделано в HTML Academy (copyright)
+    <h3 class="visuallyHidden">Разработчик сайта</h3>
+    <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">
+      <img class="image" src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">
+      <p class="info">Сделано в HTML Academy (copyright)</p>
     </a>
   </div>
 </footer>
