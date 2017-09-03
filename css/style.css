@@ -64,6 +64,11 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
+.bodyIndex > .pageHeader {
+  margin-bottom: 10px;
+  positio: relative;
+  z-index: 10;
+}
 
 .pageHeader .logo {
   margin-right: 10px;
@@ -534,7 +539,20 @@ body {
   text-decoration: none;
 }
 
-/*ПЕРЕКЛЮЧАТЕЛЬ СЛАЙДОВ*/
+
+
+/*СПЕЦ ПРЕДЛОЖЕНИЯ*/
+
+    /*ПЕРЕКЛЮЧАТЕЛЬ СЛАЙДОВ*/
+.sliderToggle {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+  top: 478px;
+}
+
 .sliderToggle .button {
   display: inline-block;
   box-sizing: border-box;
@@ -555,12 +573,62 @@ body {
 .sliderToggle .button:hover {
   background-color: rgba(178, 193, 183,0.6);
 }
+    /*Контейнер спец предложений - элемент <section>*/
+.specialOffers {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
 
-/*СПЕЦ ПРЕДЛОЖЕНИЯ*/
-    /*Большая надпись спец предложения*/
-.specialOfferText {
+  width: 1146px;
+
+  position: relative;
+}
+
+    /*СЛАЙДЫ*/
+
+.slide2,
+.slide3 {
+  display: none;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+  /*border: 1px solid red;*/
+
+  min-height: 565px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+}
+.slide1 {
+  z-index: 2;
+  background-color: #849d8f;
+}
+.slide2 {
+  z-index: 1;
+  background-color: #8996a6;
+}
+
+.slide3 {
+  z-index: 0;
+  background-color: #9d8b84;
+}
+
+
+
+
+.slide1 .specialOfferText,
+.slide2 .specialOfferText,
+.slide3 .specialOfferText {
+  box-sizing: border-box;
   width: 667px;
   margin: 0 auto;
+  padding: 0;
 
   font-family: "Roboto";
   font-weight: 700;
@@ -568,10 +636,26 @@ body {
   line-height: 60.35px;
   color: #ffffff;
   text-align: center;
+
+  position: absolute;
+  top: 309px;
+  left: 242px;
+  z-index: 1;
+}
+.slide1 > .image,
+.slide2 > .image,
+.slide3 > .image {
+  /*border: 1px solid red;*/
+  position: absolute;
+  top: -81px;
+  left: 51px;
+  z-index: 0;
 }
 
     /*Кнопка "Давайте оба"*/
-.specialOffers > .button {
+.slide1 > .button,
+.slide2 > .button,
+.slide3 > .button {
   display: inline-block;
   box-sizing: border-box;
   margin: 0;
@@ -587,18 +671,38 @@ body {
 
   border-radius: 30px;
   background-color: rgb(242,104,67);
+
+  position: absolute;
+  z-index: 1;
+  top: 460px;
+  left: 433px;
 }
 
+    /*Контейнер с 2 плитками спец предложений*/
+.specials {
+  /*border: 1px solid red;*/
 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  weight: 100%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
     /*первое спец предложение*/
 .specialOfferChoice1 {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   width: 560px;
-  height: 230px;
+  min-height: 230px;
   border-radius: 11px;
   background-color: #5f0e1d;
   background-image: url("../img/for_index/bgr_raspberries.jpg");
-  background-repean: no-repeat;
+  background-repeat: no-repeat;
   background-size: 560px 230px;
 
   font-family: "Roboto";
@@ -609,6 +713,10 @@ body {
 }
     /*заголовок*/
 .specialOfferChoice1 .choiceHeading {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
   font-family: "Roboto";
   font-weight: 700;
   font-size: 35px;
@@ -637,8 +745,10 @@ body {
   /*второе спец предложение*/
 .specialOfferChoice2 {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   width: 560px;
-  height: 230px;
+  min-height: 230px;
   border-radius: 11px;
   background-color: #452a1e;
   background-image: url("../img/for_index/bgr_choco.jpg");
@@ -653,6 +763,9 @@ body {
 }
     /*Заголовок*/
 .specialOfferChoice2 .choiceHeading {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 35px;
@@ -1520,9 +1633,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.paginator > .paginatorItem:first-child {
-  margin-left: auto;
-}
 .paginator > .paginatorItem {
   /*outline: 1px solid red;*/
   /*border: 1px solid red;*/
@@ -1534,6 +1644,7 @@ body {
   /*border-radius: 50%;*/
 }
 .paginator > .paginatorItem:first-child {
+  margin-left: auto;
   margin-right: 5px;
   padding-top: 1px;
 }
@@ -1551,7 +1662,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-top: 3px;
+  padding-top: 4px;
   font-family: "Roboto";
   font-size: 16px;
   line-height: 18px;
