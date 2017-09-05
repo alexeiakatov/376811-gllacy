@@ -7,7 +7,7 @@
   <title>HTML Academy: Глейси</title>
 </head>
 <body class="bodyIndex">
-
+<div class="globalContainer">
 <!--ХЕДЕР СТРАНИЦЫ-->
 <header class="pageHeader">
   <img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Логотип Gllacy">
@@ -23,8 +23,8 @@
         <!--МОДАЛЬНОЕ ОКНО - подменю в "Каталог"-->
         <div class="catalogOnHover">
           <ul class="hidden inCatalogPointers">
-            <li class="pointer"><a class="button new" href="#">Новинки </a></li>
-            <li class="pointer"><a class="button" href="catalog.html">Сливочное </a></li>
+            <li class="pointer"><a class="button new" href="#">Новинки</a></li>
+            <li class="pointer"><a class="button" href="catalog.html">Сливочное</a></li>
             <li class="pointer"><a class="button" href="#">Щербеты</a></li>
             <li class="pointer"><a class="button" href="#">Фруктовый лед</a></li>
             <li class="pointer"><a class="button last" href="#">Мелорин</a></li>
@@ -46,6 +46,7 @@
   <!--Сервисы пользователя-->
   <h2 class="visuallyHidden descriptor">Сервисы пользователя</h2>
   <ul class="clientServices">
+
     <!--Поиск-->
     <li class="search service">
       <h3 class="visuallyHidden descriptor">Поиск по сайту</h3>
@@ -90,11 +91,12 @@
 
       <!--МОДАЛЬНОЕ ОКНО - содержимое тележки с покупками-->
       <div class="hidden trolleyOnHover">
+        <div class="inTrolleyWrapper">
         <h3 class="visuallyHidden descriptor">Список выбранных товаров</h3>
         <table class="chosenProducts">
           <tr class="inTrolleyItem">
             <td class="cancelCell">
-              <button class="button cancel" type="button">Удалить товар</button>
+              <button class="cancelButton" type="button">Удалить товар</button>
             </td>
             <td class="icon"><img src="img/for_index/hit1_orange.png" width="33" height="33" alt="Миниатюра товара в тележке"></td>
             <td class="name">Пломбир с апельсиновы джемом</td>
@@ -103,7 +105,7 @@
           </tr>
           <tr class="inTrolleyItem">
             <td>
-              <button class="button cancel" type="button">Удалить товар</button>
+              <button class="cancelButton" type="button">Удалить товар</button>
             </td>
             <td class="icon"><img src="img/for_index/hit3_pink.png" width="33" height="33" alt=""></td>
             <td class="name">Клубничный пломбир с присыпкой из белого шоколада</td>
@@ -114,6 +116,7 @@
 
         <p class="fullPrice">Итого: 750 руб.</p>
         <a href="#" class="buyButton">Оформить заказ</a>
+        </div>
       </div>
     </li>
   </ul>
@@ -197,7 +200,7 @@
     <h2 class="visuallyHidden descriptor">Хиты продаж</h2>
     <ul class="catalogList">
       <!--1-->
-      <li class="catalogItem">
+      <li class="catalogItem isHit">
         <img class="image" src="img/for_index/hit1_orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
         <p class="price"><span class="toSetRub">310</span>/кг</p>
         <h3 class="itemHeading"><a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -205,7 +208,7 @@
       </li>
 
       <!--2-->
-      <li class="catalogItem">
+      <li class="catalogItem isHit">
         <img class="image" src="img/for_index/hit2_brown.png" width="267" height="267" alt="Сливочно-койейное с кусочками шоколада">
         <p class="price"><span class="toSetRub">380</span>/кг</p>
 
@@ -214,7 +217,7 @@
       </li>
 
       <!--3-->
-      <li class="catalogItem">
+      <li class="catalogItem isHit">
         <img class="image" src="img/for_index/hit3_pink.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
         <p class="price"><span class="toSetRub">355</span>/кг</p>
 
@@ -223,7 +226,7 @@
       </li>
 
       <!--4-->
-      <li class="catalogItem">
+      <li class="catalogItem isHit">
         <img class="image" src="img/for_index/hit4_caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
         <p class="price"><span class="toSetRub">415</span>/кг</p>
 
@@ -283,26 +286,13 @@
     <h2 class="visuallyHidden descriptor">Карта - как до нас добраться</h2>
 
     <div class="mapInfo">
-      <p class="mapTexts1">
-        <span class="text t1">Адрес главного офиса
-        и офлайн магазина:
-        </span>
-        <span class="text t2">ул.Больная Конюшенная
-        19/8, Санкт-Петербург
-        </span>
-      </p>
-
-      <p class="mapTexts2">
-        <span class="text t1">Для заказов по телефону:
-        </span>
-        <a class="text t2" href="tel:88124502525">8 812 450-25-25</a>
-        <span class="text t3">(с 10 до 20 ежедневно)
-        </span>
-      </p>
-
+    <span class="text t1">Адрес главного офиса и офлайн магазина:</span>
+    <span class="text t2">ул.Больная Конюшенная 19/8, Санкт-Петербург</span>
+    <span class="text t3">Для заказов по телефону:</span>
+    <a class="text t4" href="tel:88124502525">8 812 450-25-25</a>
+    <span class="text t5">(с 10 до 20 ежедневно)</span>
     <a class="feedbackButton button" href="#">Форма обратной связи</a>
     </div>
-
   </section>
 
 </main>
@@ -358,5 +348,6 @@
   <button class="button" type="button">Закрыть форму обратной связи</button>
 </div>
 
+</div>
 </body>
 </html>

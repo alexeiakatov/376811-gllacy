@@ -7,6 +7,7 @@
     <title>Глейси : каталог</title>
 </head>
 <body class="bodyCatalog">
+<div class="globalContainer">
 
 <!--ХЕДЕР СТРАНИЦЫ-->
 <header class="pageHeader">
@@ -90,11 +91,12 @@
 
       <!--МОДАЛЬНОЕ ОКНО - содержимое тележки с покупками-->
       <div class="hidden trolleyOnHover">
+        <div class="inTrolleyWrapper">
         <h3 class="visuallyHidden descriptor">Список выбранных товаров</h3>
         <table class="chosenProducts">
           <tr class="inTrolleyItem">
             <td class="cancelCell">
-              <button class="button cancel" type="button">Удалить товар</button>
+              <button class="cancelButton" type="button">Удалить товар</button>
             </td>
             <td class="icon"><img src="img/for_index/hit1_orange.png" width="33" height="33" alt="Миниатюра товара в тележке"></td>
             <td class="name">Пломбир с апельсиновы джемом</td>
@@ -103,7 +105,7 @@
           </tr>
           <tr class="inTrolleyItem">
             <td>
-              <button class="button cancel" type="button">Удалить товар</button>
+              <button class="cancelButton" type="button">Удалить товар</button>
             </td>
             <td class="icon"><img src="img/for_index/hit3_pink.png" width="33" height="33" alt=""></td>
             <td class="name">Клубничный пломбир с присыпкой из белого шоколада</td>
@@ -114,6 +116,7 @@
 
         <p class="fullPrice">Итого: 750 руб.</p>
         <a href="#" class="buyButton">Оформить заказ</a>
+        </div>
       </div>
     </li>
   </ul>
@@ -324,7 +327,6 @@
     <li class="paginatorItem"><a class="link" href="#">3</a></li>
     <li class="paginatorItem"><a class="link" href="#">4</a></li>
     <li class="paginatorItem"><a class="link" href="#">5</a></li>
-    <li class="paginatorItem"><a class="link" href="#">6</a></li>
     <li class="paginatorItem"><a class="link linkForward" href="#">
       <!--следующая строка - инлайн svg стрелочи forward у пагинатора-->
       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="rgba(255, 255, 255, 1)" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/></svg>
@@ -365,6 +367,6 @@
   </div>
 </footer>
 
-
+</div>
 </body>
 </html>

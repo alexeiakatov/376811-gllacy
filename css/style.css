@@ -26,7 +26,6 @@
 body {
   margin: 0;
   padding: 0;
-  width: 1200px;
 
   font-family : "Roboto";
   font-size : 16px;
@@ -54,7 +53,7 @@ body {
 
 .pageHeader {
   /*outline: 1px solid red;*/
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 25px;
   padding: 0;
   padding-top: 10px;
@@ -64,15 +63,17 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
-.bodyIndex > .pageHeader {
-  margin-bottom: 10px;
-  positio: relative;
+.bodyIndex .pageHeader {
+  /*border: 1px solid red;*/
+  margin-bottom: 0;
+  /*position: relative;*/
   z-index: 10;
 }
 
 .pageHeader .logo {
   margin-right: 10px;
 }
+
 /*МЕНЮ НАВИГАЦИИ ПО САЙТУ и подменю в "Каталог"*/
 
     /*элемент <nav>*/
@@ -108,7 +109,7 @@ body {
 
     /*ссылки внутри элементов li*/
 .navMenuItem > .button {
-  /*outline: 1px solid black;*/
+  /*border: 1px solid black;*/
   display: inline-block;
   box-sizing: border-box;
   text-align: center;
@@ -125,33 +126,37 @@ body {
   border-radius: 14px;
 }
     /*эффекты при наведении на элемент меню навигации*/
-.navMenuItem > .button:hover {
+.navMenuItem:hover > .button {
   background-color: #f7f6f3;
   color: #333333;
 }
 
     /*Контейнер подменю Каталога - элемент div - в скрытом состоянии и появляется при наведении*/
 .catalogOnHover {
+  /*outline: 1px solid red;*/
   display : none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-top: 7px;
   width: 144px;
 
   position: absolute;
-  top: 37px;
+  top: 30px;
   left: -8px;
   border-radius: 5px;
+
 }
 
-.catalog:hover + .catalogOnHover {
+    /*эффект появления подменю Каталог*/
+.navMenuItem:hover .catalogOnHover {
   display: block;
-
-
 }
+
 
     /*подменю пункта Каталог - элемент ul*/
 .inCatalogPointers {
+  /*border: 1px solid red;*/
   margin: 0;
   padding: 0;
   list-style: none;
@@ -159,8 +164,9 @@ body {
 
   border-radius: 5px;
 }
-
+    /*элементы подменю Каталог - элемент <li>*/
 .inCatalogPointers .pointer {
+  /*border: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -169,6 +175,7 @@ body {
     /*Скругление 1го и последнего элементов ul>li.pointer чтоб при наведении углы не становились квадратными*/
 .inCatalogPointers .pointer:first-child {
   border-radius: 5px 5px 0 0;
+  position: relative; //для того чтоб сделать подчеркивание у Новинок псевдоэлементом и позиционировать относит эт. блока
 }
 .inCatalogPointers .pointer:last-child {
   border-radius: 0 0 5px 5px;
@@ -176,7 +183,11 @@ body {
 
     /*элементы подменю Каталог - элементы li>a.button*/
 .inCatalogPointers .button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   display: inline-block;
+  width: 100%;
   padding-left: 22px;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -195,17 +206,33 @@ body {
 
     /*Элемент Новинки подменю Каталога*/
 .inCatalogPointers .new {
+  /*border: 1px solid red;*/
   display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   padding: 10px 0;
-  padding-left: 16px;
-  padding-right: 58px;
-  margin-left: 6px;
+  padding-left: 22px;
+  width: 100%;
 
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: #323232;
+}
+    /*Подчеркивание у пункта Новинки*/
+.inCatalogPointers .new::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: calc(100% - 15px);
+  height: 1px;
+  left: 6px;
+  bottom: 0;
 
   border-bottom: 1px solid #d1d0ce;
 }
@@ -268,7 +295,7 @@ body {
   min-width: 117px;
 }
 
-.service > .button:hover {
+.service:hover > .button {
   background-color: rgb(248, 247, 244);
   color: #323232;
 }
@@ -294,29 +321,38 @@ body {
   background-color: rgb(248, 247, 244);
 }
 
-    /*всплывающее окно со строкой поиска - элемент <div> (без ховера, ховер ниже)*/
-.searchOnHover {
-  display: none;
-  width: 340px;
-  height: 85px;
-  background-color: #f8f7f4;
-
-  position: absolute;
-  right: 0px;
-  top: 36px;
-
-  border-radius: 5px;
-}
-
 .search:hover .searchOnHover {
   display: block;
 }
+    /*всплывающее окно со строкой поиска - элемент <div> (без ховера)*/
+.searchOnHover {
+  /*border: 1px solid red;*/
+
+  display: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+  width: 340px;
+
+  position: absolute;
+  right: 0px;
+  top: 30px;
+
+}
+
+
     /*контейнер формы - элемент <form>*/
 .searchForm {
   /*outline: 1px solid red;*/
+
   box-sizing: border-box;
   margin: 0;
   padding: 20px 15px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+
 }
     /*поле ввода текста - элемент <input>*/
 .searchForm .searchField {
@@ -335,17 +371,18 @@ body {
 
     /*всплывающий блок АВТОРИЗАЦИИ*/
 .authOnHover {
+  /*border: 1px solid red;*/
   display: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-top: 5px;
   width: 276px;
   position: absolute;
   right: 0;
-  top: 37px;
+  top: 30px;
   z-index: 5;
 
-  background-color: #f8f7f4;
   border-radius: 5px;
 }
 .authorization:hover > .authOnHover {
@@ -357,6 +394,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 20px;
+  background-color: #f8f7f4;
+
+  border-radius: 5px;
 }
     /*поля ввода текста*/
 .authOnHover .login,
@@ -422,22 +462,78 @@ body {
   box-sizing: border-box;
   width: 540px;
   margin: 0;
-  padding: 20px 0;
-  padding-left: 20px;
-  border-radius: 5px;
+  padding-top: 6px;
   z-index: 5;
 
   position: absolute;
-  top: 37px;
+  top: 30px;
   right: 0;
 
-  background-color: #f8f7f4;
+  border-radius: 5px;
 }
 
+    /*Обертка содержимого тоблицы - элемент <div> нужен чтоб задать единый фон для таблицы, итоговой цены и кнопки оформить заказ*/
+.inTrolleyWrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding: 20px;
+  padding-right: 15px;
+  background-color: #f8f7f4;
+
+  text-align: right;
+  border-radius: 5px;
+
+}
+
+    /*настройка таблицы выбранных товаров - элемент <table>*/
+.trolleyOnHover .chosenProducts {
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  width: 100%;
+  position: relative;
+
+  text-align: left;
+  border-collapse: collapse;
+
+}
+
+    /*настройка строки в таблице выбранных товаров - элемент <tr>*/
+.chosenProducts .inTrolleyItem {
+  /*border: 1px solid red;*/
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 54px;
+}
+
+    /*подчеркивание под таблицей - псевдоэлемент у элемента <table.chosenProducts>*/
+.chosenProducts::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 0;
+
+  position: absolute;
+  bottom: -5px;
+  border-bottom: 1px solid #cacac7;
+
+
+}
+
+    /*эффект появления блока с содержимым таблицы*/
 .trolley:hover > .trolleyOnHover {
   display: block;
 }
 
+    /*текстовые стили для ячеек таблицы*/
 .inTrolleyItem .name,
 .inTrolleyItem .quantityAndPrice,
 .inTrolleyItem .price {
@@ -462,20 +558,36 @@ body {
 }
 
 .cancelCell {
+  /*border: 1px solid red;*/
   padding: 0;
 }
 
-.inTrolleyItem .cancel {
+.inTrolleyItem .cancelButton {
+  /*border: 1px solid red;*/
+  border: none;
+
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-size: 0;
-  width: 11px;
+  width: 19px;
+  min-height: 12px;
   background-color: transparent;
   background-image: url("../img/svg/cross-small.svg");
   background-repeat: no-repeat;
-  border: none;
+  background-size: 10px;
+  background-position: 0 0;
+
 }
 
     /*итоговая цена*/
 .trolleyOnHover .fullPrice {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 1px 0;
+
   font-family: "Roboto";
   font-size: 15px;
   line-height: 18px;
@@ -539,7 +651,17 @@ body {
   text-decoration: none;
 }
 
+/*ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ*/
+    /*Верхний контейнер контейнер - элемент <main>*/
+.pageMain {
+  /*border: 1px solid black;*/
 
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+}
 
 /*СПЕЦ ПРЕДЛОЖЕНИЯ*/
 
@@ -573,14 +695,14 @@ body {
 .sliderToggle .button:hover {
   background-color: rgba(178, 193, 183,0.6);
 }
+
     /*Контейнер спец предложений - элемент <section>*/
 .specialOffers {
   /*border: 1px solid red;*/
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 34px;
   padding: 0;
-
   width: 1146px;
 
   position: relative;
@@ -588,34 +710,31 @@ body {
 
     /*СЛАЙДЫ*/
 
-.slide2,
-.slide3 {
-  display: none;
-}
-
 .slide1,
 .slide2,
 .slide3 {
   /*border: 1px solid red;*/
 
-  min-height: 565px;
+  min-height: 575px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
   position: relative;
 }
 .slide1 {
+  /*border: 1px solid red;*/
+  /*display: none;*/
   z-index: 2;
   background-color: #849d8f;
 }
 .slide2 {
-  z-index: 1;
+  display: none;
+
   background-color: #8996a6;
 }
 
 .slide3 {
-  z-index: 0;
+  display: none;
   background-color: #9d8b84;
 }
 
@@ -646,9 +765,13 @@ body {
 .slide2 > .image,
 .slide3 > .image {
   /*border: 1px solid red;*/
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   position: absolute;
-  top: -81px;
-  left: 51px;
+  top: -75px;
+  left: 50px;
   z-index: 0;
 }
 
@@ -685,7 +808,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  weight: 100%;
   position: relative;
   z-index: 3;
   display: flex;
@@ -730,7 +852,7 @@ body {
   margin: 0;
   padding: 10px 23px;
 
-  font-familly: "Roboto";
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -791,14 +913,14 @@ body {
   background-color: rgb(242,104,67);
 }
 
-/*ХИТЫ ПРОДАЖ и ОБЩИЙ КАТАЛОГ в catalog.html*/
+/*ХИТЫ ПРОДАЖ в index.html и ОБЩИЙ КАТАЛОГ в catalog.html*/
 
     /*контейнер каталога - элемент <section>*/
 .hitsCatalog,
 .productsCatalog {
-  /*border: 1px solid red;*/
+  /*border: 1px solid black;*/
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 1146px;
 }
@@ -838,7 +960,7 @@ body {
 }
 
   /*значек Хит*/
-.catalogItem::before {
+.catalogItem.isHit::before {
   content: "";
   display: block;
   padding: 0;
@@ -942,10 +1064,10 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: center;*/
   width: 1146px;
+  margin: 0 auto;
+  margin-bottom: 40px;
   padding: 0;
-  margin: 0;
   padding-bottom: 6px;
   box-sizing: border-box;
   border-radius: 13px;
@@ -1052,15 +1174,20 @@ body {
 
 /*ПРЕДЛОЖЕНИЯ ПОДДЕРЖИВАТЬ СВЯЗЬ*/
 .inTouchInvitation {
+  /*border: 1px solid red;*/
+
   box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0;
+
   display: flex;
   justify-content: space-between;
   width: 1146px;
-  margin: 0;
-  padding: 0;
-  border-radius: 13px;
 
+  border-radius: 13px;
 }
+
     /*блок блога*/
 .blogNews {
   /*border: 1px solid red;*/
@@ -1203,7 +1330,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  width: 1200px;
+  width: 100%;
   height: 430px;
 
   background-color: #eae3c6;
@@ -1217,8 +1344,11 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-top: 29px;
+  padding-left: 25px;
+  padding-bottom: 30px;
   width: 305px;
-  height: 305px;
+  min-height: 305px;
   background-color: #fffffe;
   position: absolute;
   top: 65px;
@@ -1232,45 +1362,37 @@ body {
   color: #323232;
 }
 
-.mapTexts1,
-.mapTexts2 {
-  margin: 0;
-  padding: 0;
-}
     /*тексты в информационном блоке на карте с адресом и телефоном*/
-.mapTexts1 .text,
-.mapTexts2 .text {
+.mapInfo .text {
+  /*border: 1px solid red;*/
   display: block;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-left: 25px;
-
-  font-family: "Roboto";
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #323232;
 }
-
-.mapTexts1 .t1 {
-  /*outline: 1px solid red;*/
-  padding-top: 29px;
+.mapInfo .t1{
   padding-right: 120px;
 }
-.mapTexts1 .t2 {
-  padding-right: 50px;
 
+
+.mapInfo .t2 {
+  padding-right: 50px;
+  margin-bottom: 17px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
 }
-.mapTexts2 .t2 {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
+.mapInfo .t4 {
+  padding: 2px 0;
 
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
   text-decoration: none;
+  color: #323232;
+}
+.mapInfo .t5 {
+  margin-bottom: 25px;
 }
 
     /*кнопка*/
@@ -1278,7 +1400,6 @@ body {
   display: inline-block;
   box-sizing: border-box;
   margin: 0;
-  margin-left: 25px;
   padding: 0;
   padding: 12px 28px;
   border-radius: 20px;
@@ -1401,9 +1522,10 @@ body {
 .breadcrumbs {
   /*outline: 1px solid red;*/
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 2px;
   padding: 0;
+  width: 1146px;
   list-style: none;
   display: flex;
 
@@ -1445,9 +1567,10 @@ body {
 .bodyCatalog .heading1L {
   /*outline: 1px solid red;*/
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 24px;
   padding: 0;
+  width: 1146px;
 
 
 }
@@ -1457,7 +1580,7 @@ body {
 .filters {
   /*outline: 1px solid red;*/
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 19px;
   padding: 0;
   width: 1146px;
@@ -1623,7 +1746,7 @@ body {
 .paginator {
   /*outline: 1px solid red;*/
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 30px;
   padding: 0;
   width: 1146px;
@@ -1634,7 +1757,6 @@ body {
   flex-wrap: wrap;
 }
 .paginator > .paginatorItem {
-  /*outline: 1px solid red;*/
   /*border: 1px solid red;*/
 
   box-sizing: border-box;
@@ -1678,7 +1800,6 @@ body {
   /*border: 1px solid red;*/
   padding-top: 6px;
   transform: rotate(180deg);
-
 }
 
 
@@ -1697,7 +1818,7 @@ body {
 .pageFooter {
   /*outline: 1px solid red;*/
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-bottom: 25px;
   padding-top: 18px;
@@ -1845,7 +1966,15 @@ body {
   padding: 0;
 }
 
+/*СЕТКА*/
+.globalContainer {
+  /*border: 1px solid yellow;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
 
+}
 
 
 
