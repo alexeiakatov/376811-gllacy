@@ -17,8 +17,8 @@
     <h2 class="visuallyHidden descriptor">Навигация по сайту</h2>
     <ul class="navigationMenu">
       <!--Пункт меню - каталог-->
-      <li class="navMenuItem">
-        <a class="button catalog" href="#">Каталог</a>
+      <li class="navMenuItem" tabindex="0">
+        <a class="button catalog navButton" href="#"><span class="toUnderline">Каталог</span></a>
 
         <!--МОДАЛЬНОЕ ОКНО - подменю в "Каталог"-->
         <div class="catalogOnHover">
@@ -34,11 +34,11 @@
 
       <!--Доставка и оплата-->
       <li class="navMenuItem">
-        <a class="button" href="#">Доставка и оплата</a>
+        <a class="button navButton" href="#"><span class="toUnderline">Доставка и оплата</span></a>
       </li>
       <!--О компании-->
       <li class="navMenuItem">
-        <a class="button" href="#">О Компании</a>
+        <a class="button navButton" href="#"><span class="toUnderline">О Компании</span></a>
       </li>
     </ul>
   </nav>
@@ -48,7 +48,7 @@
   <ul class="clientServices">
 
     <!--Поиск-->
-    <li class="search service">
+    <li class="search service" tabindex="0">
       <h3 class="visuallyHidden descriptor">Поиск по сайту</h3>
 
       <!--МОДАЛЬНОЕ ОКНО - поле ввода поиска-->
@@ -61,7 +61,7 @@
     </li>
 
     <!--Авторизация-->
-    <li class="authorization service">
+    <li class="authorization service" tabindex="0">
       <h3 class="visuallyHidden descriptor">Авторизация пользователя</h3>
       <a class="button" href="#">Вход</a>
 
@@ -85,9 +85,9 @@
     </li>
 
     <!--Тележка-->
-    <li class="trolley service">
+    <li class="trolley service" tabindex="0">
       <h3 class="visuallyHidden descriptor">Тележка: выбранные товары</h3>
-      <a class="button" href="#">Пусто</a>
+      <a class="button trolleyButton" href="#">Пусто</a>
 
       <!--МОДАЛЬНОЕ ОКНО - содержимое тележки с покупками-->
       <div class="hidden trolleyOnHover">
@@ -203,7 +203,7 @@
       <li class="catalogItem isHit">
         <img class="image" src="img/for_index/hit1_orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
         <p class="price"><span class="toSetRub">310</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a></h3>
         <a class="hidden button" href="#">Быстрый просмотр</a>
       </li>
 
@@ -212,7 +212,7 @@
         <img class="image" src="img/for_index/hit2_brown.png" width="267" height="267" alt="Сливочно-койейное с кусочками шоколада">
         <p class="price"><span class="toSetRub">380</span>/кг</p>
 
-        <h3 class="itemHeading"><a class="link" href="#">Сливочно-койейное с кусочками шоколада</a></h3>
+        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-койейное с кусочками шоколада</span></a></h3>
         <a class="hidden button" href="#">Быстрый просмотр</a>
       </li>
 
@@ -221,7 +221,7 @@
         <img class="image" src="img/for_index/hit3_pink.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
         <p class="price"><span class="toSetRub">355</span>/кг</p>
 
-        <h3 class="itemHeading"><a class="link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-клубничное с присыпкой из белого шоколада</span></a></h3>
         <a class="hidden button" href="#">Быстрый просмотр</a>
       </li>
 
@@ -230,7 +230,7 @@
         <img class="image" src="img/for_index/hit4_caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
         <p class="price"><span class="toSetRub">415</span>/кг</p>
 
-        <h3 class="itemHeading"><a class="link" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное крем-брюле с карамельной подливкой</span></a></h3>
         <a class="hidden button" href="#">Быстрый просмотр</a>
       </li>
     </ul>
@@ -261,7 +261,7 @@
     <div class="blogNews">
       <h3 class="visuallyHidden descriptor">Заходите в наш блог</h3>
       <p class="blogInfo">Новое в нашем блоге</p>
-      <a class="link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      <a class="link" href="#"><span class="toUnderline">10 способов сервировки фруктовых щербетов к столу</span></a>
     </div>
 
     <!--Рассылка по эл.почте-->
@@ -311,20 +311,21 @@
   <div class="officialInfo">
     <h2 class="visuallyHidden descriptor">Официальная информация</h2>
     <p class="block">
-      <a class="link marked" href="#">Для поставщиков</a>
-      <a class="link" href="#">О производстве</a>
+      <a class="link marked" href="#"><span class="toUnderline">Для поставщиков</span></a>
+      <a class="link" href="#"><span class="toUnderline">О производстве</span></a>
     </p>
     <p class="block">
-      <a class="link" href="#">Наши документы</a>
-      <a class="link" href="#">Экологические стандарты</a>
+      <a class="link" href="#"><span class="toUnderline">Наши документы</span></a>
+      <a class="link" href="#"><span class="toUnderline">Экологические стандарты</span></a>
     </p>
   </div>
 
   <div class="siteDeveloper">
     <h2 class="visuallyHidden descriptor">Разработчик сайта</h2>
-    <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">
-    <img class="image" src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">
-      <p class="info">Сделано в HTML Academy (copyright)</p>
+    <a class="link1" href="https://htmlacademy.ru/intensive/htmlcss">
+      <img class="image" src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">
+    </a>
+    <p class="info">Сделано в <a class="link2" href="https://htmlacademy.ru/intensive/htmlcss"><span class="toUnderline">HTML Academy</span></a> &copy; 2017</p>
     </a>
   </div>
 </footer>
