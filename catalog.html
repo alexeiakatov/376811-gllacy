@@ -87,9 +87,9 @@
     </li>
 
     <!--Тележка-->
-    <li class="trolley service" tabindex="0">
+    <li class="trolley service withProducts" tabindex="0">
       <h3 class="visuallyHidden descriptor">Тележка: выбранные товары</h3>
-      <a class="button trolleyButton" href="#">2 товара</a>
+      <a class="button trolleyButton withProducts" href="#">2 товара</a>
 
       <!--МОДАЛЬНОЕ ОКНО - содержимое тележки с покупками-->
       <div class="hidden trolleyOnHover">
@@ -164,7 +164,13 @@
       <!--Установить диапазон цены-->
       <fieldset class="priceRangeSet set">
         <legend class="legend"> Цена: 100 руб. - 500 руб.</legend>
-        <p class="wrapper" tabindex="0">Дипазон цен</p>
+
+        <div class="wrapper">
+          <button class="runner1"></button>
+          <button class="runner2"></button>
+          <div class="rail"></div>
+          <div class="betweenCircles"></div>
+        </div>
       </fieldset>
 
       <!--Жирность-->
