@@ -223,6 +223,7 @@ body {
 .navMenuItem:hover .catalogOnHover,
 .navMenuItem:focus .catalogOnHover{
   display: block;
+  z-index: 1;
 }
 
 
@@ -1148,7 +1149,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
 
 .productsCatalog {
   /*outline: 1px solid black;*/
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 .hitsCatalog {
   margin-bottom: 38px;
@@ -1219,6 +1220,9 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   color: rgb(255, 255, 255);
   text-decoration: none;
   text-align: center;
+}
+.itemHeading .addSpace {
+  padding-right: 3px;
 }
     /*подчеркивание названия-заголовка в карточке товара*/
 .itemHeading .toUnderline {
@@ -1764,7 +1768,8 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
 }
     /*ПОПАП - Форма обратной связи*/
 .feedback {
-  /*outline: 1px solid red;*/
+  display: none;
+  outline: 1px solid red;
   box-sizing: border-box;
   width: 478px;
   margin: 0;
@@ -1933,7 +1938,8 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
 }
     /*убрать фон с изображением стрелки у последнего элемента breadcrumbs*/
 .breadcrumbs .current {
-  backround-image: none;
+  /*outline: 1px solid red;*/
+  background-image: none;
   padding-right: 0;
   margin-left: -1.5px;
 }
@@ -2474,7 +2480,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin-right: 5px;
   padding-top: 1px;
 }
-.paginator > .paginatorItem:last-child {
+.paginator .paginatorItem:last-child {
   /*outline: 1px solid red;*/
   margin-left: 5px;
   margin-right: 0;
@@ -2848,14 +2854,14 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
       -webkit-linear-gradient( 90deg, rgba(0, 0, 0, 0.07) 0%, rgba(0, 0, 0, 0.07) 100%),
       -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   /*background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);*/
-  
+
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
 
 
   /*СЕТКА*/
 .globalContainer {
-  outline: 1px solid black;
+  /*outline: 1px solid black;*/
   /*border: 1px solid yellow;*/
   box-sizing: border-box;
   margin: 0 auto;
