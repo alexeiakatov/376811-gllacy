@@ -27,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size : 16px;
   line-height : 22px;
   font-weight: 400;
@@ -40,14 +40,14 @@ body {
   font-size : 35px;
   line-height: 41px;
   color : #ffffff;
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .heading {
   font-size : 24px;
   line-height: 30px;
   color : #ffffff;
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 /*ХЕДЕР СТРАНИЦЫ*/
 
@@ -141,7 +141,7 @@ body {
   min-height: 32px;
   position: relative;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -267,7 +267,7 @@ body {
   padding-left: 22px;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -291,7 +291,7 @@ body {
   padding-left: 22px;
   width: 100%;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -434,7 +434,7 @@ body {
   padding-left: 44px;
   padding-right: 16px;
 
-font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -524,7 +524,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 10px 26px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -548,7 +548,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
 }
 
 .forgotAndNewReg .link {
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -580,7 +580,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-left: 44px;
   padding-right: 34px; //????????
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -722,7 +722,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
 .inTrolleyItem .quantityAndPrice,
 .inTrolleyItem .price {
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
@@ -772,7 +772,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin-bottom: 13px;
   padding: 1px 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
@@ -785,7 +785,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 9px 15px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -826,7 +826,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 0;
   padding-bottom: 2px;
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
@@ -840,7 +840,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
@@ -983,7 +983,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding: 0;
   padding-bottom: 7px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 60px;
   line-height: 60.35px;
@@ -1005,7 +1005,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-top: 8px;
   padding-bottom: 12px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -1041,7 +1041,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin-bottom: 16px;
   padding: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
@@ -1057,7 +1057,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin-bottom: 45px;
   padding: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -1075,7 +1075,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-bottom: 12px;
   padding-left: 21px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1213,7 +1213,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -1279,7 +1279,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding: 0;
   padding-right: 36px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
@@ -1294,7 +1294,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 30px;
   line-height: 45px;
   font-weight: 500;
@@ -1329,7 +1329,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   box-sizing: border-box;
   padding: 9px 17px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -1388,7 +1388,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   background-image: url("../img/for_index/waffle_pattern.jpg");
   background-repeat: no-repeat;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -1403,7 +1403,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-top: 24px;
   padding-bottom: 22px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -1510,7 +1510,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   min-height: 220px;
   border-radius: 13px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -1540,7 +1540,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-left: 20px;
   width: 300px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -1618,7 +1618,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-bottom: 35px;
   border-radius: 13px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -1663,7 +1663,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   background-color: #f06441;
   border: none;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -1703,7 +1703,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
 
   border-radius: 15px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -1800,7 +1800,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 0;
   padding-bottom: 16px;
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
@@ -1842,7 +1842,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 9px 24px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -1909,7 +1909,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-right: 22px;
   margin: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -2010,7 +2010,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-left: 16px;
   margin: 0;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -2024,7 +2024,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding: 0;
   min-height: 36px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -2040,7 +2040,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
 
     /*опции внутри выпадающего списка*/
 .criteriaSet .option {
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: black;
 }
 
@@ -2069,7 +2069,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-bottom: 5px;
   padding-left: 16px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -2087,7 +2087,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding: 0;
   min-height: 36px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -2180,7 +2180,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-bottom: 6px;
   padding-left: 15px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -2201,7 +2201,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-right: 17px;
   height: 36px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -2312,7 +2312,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-bottom: 5px;
   padding-left: 16px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -2327,7 +2327,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-left: 15px;
   padding-right: 19px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -2430,7 +2430,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   background-color: rgba(255, 255, 255, 0.188);
   border: 2px solid rgb(255, 255, 255);
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -2498,7 +2498,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   margin: 0;
   padding: 0;
   padding-top: 4px;
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight:500;
@@ -2674,7 +2674,7 @@ font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-se
   padding-bottom: 4px;
   padding-left: 22px;
 
-  font-family: "Roboto", "Arial", "Franklin Gothic Medium", "Lucida Sans", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
