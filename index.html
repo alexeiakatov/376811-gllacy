@@ -126,7 +126,7 @@
   <div class="scheduleAndTel">
     <h2 class="visuallyHidden descriptor">Наш график работы и телефон</h2>
     <p class="info">
-      <span class="schedule">с 10 до 20, ежедневно</span>
+      <span class="schedule">C 10 до 20, ежедневно</span>
       <a class="tel" href="tel:88124502525">8 812 450-25-25</a>
     </p>
   </div>
@@ -143,7 +143,7 @@
     <!--переключатель слайдов со спец. предложениями-->
     <div class="sliderToggle">
       <h3 class="visuallyHidden descriptor">Переключатель слайдов спец-предложений</h3>
-      <form>
+      <form class="sliderToggleForm">
         <input class="slideControl" id="slide1" type="radio" name="slideControl" checked>
         <label class="button" for="slide1">слайд 1</label>
 
@@ -193,41 +193,68 @@
   <!--Хиты продаж-->
   <section class="hitsCatalog">
     <h2 class="visuallyHidden descriptor">Хиты продаж</h2>
+
     <ul class="catalogList">
       <!--1-->
       <li class="catalogItem isHit">
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
         <img class="image" src="img/for_index/hit1_orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-        <p class="price"><span class="toSetRub">310</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a></h3>
+          <p class="price">
+            <span class="priceBig">310</span><span class="priceSmall">/кг</span>
+          </p>
+        <h3 class="itemHeading">
+          <a class="link itemLink" href="#"><span class="toUnderline">Сливочное с апельсиновым</span><span class="toUnderline"> джемом и цитрусовой стружкой</span></a>
+        </h3>
         <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--2-->
       <li class="catalogItem isHit">
-        <img class="image" src="img/for_index/hit2_brown.png" width="267" height="267" alt="Сливочно-койейное с кусочками шоколада">
-        <p class="price"><span class="toSetRub">380</span>/кг</p>
-
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-койейное с кусочками шоколада</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_index/hit2_brown.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+          <p class="price">
+            <span class="priceBig">380</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочно-кофейное с кусочками</span><span class="toUnderline">шоколада</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--3-->
       <li class="catalogItem isHit">
-        <img class="image" src="img/for_index/hit3_pink.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-        <p class="price"><span class="toSetRub">355</span>/кг</p>
-
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-клубничное с присыпкой из белого шоколада</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_index/hit3_pink.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+          <p class="price">
+            <span class="priceBig">355</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочно-клубничное с </span><span class="toUnderline">присыпкой из белого шоколада</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--4-->
       <li class="catalogItem isHit">
-        <img class="image" src="img/for_index/hit4_caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-        <p class="price"><span class="toSetRub">415</span>/кг</p>
-
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное крем-брюле с карамельной подливкой</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_index/hit4_caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+          <p class="price">
+            <span class="priceBig">355</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное крем-брюле с</span><span class="toUnderline">карамельной подливкой</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
+
     </ul>
   </section>
 
@@ -256,7 +283,11 @@
     <div class="blogNews">
       <h3 class="visuallyHidden descriptor">Заходите в наш блог</h3>
       <p class="blogInfo">Новое в нашем блоге</p>
-      <a class="link" href="#"><span class="toUnderline">10 способов сервировки фруктовых щербетов к столу</span></a>
+      <a class="blogLink" href="#">
+        <span class="toUnderline">10 способов сервировки</span>
+        <span class="toUnderline"> фруктовых щербетов к</span>
+        <span class="toUnderline"> столу</span>
+      </a>
     </div>
 
     <!--Рассылка по эл.почте-->
@@ -282,7 +313,7 @@
 
     <div class="mapInfo">
     <span class="text t1">Адрес главного офиса и офлайн магазина:</span>
-    <span class="text t2">ул.Больная Конюшенная 19/8, Санкт-Петербург</span>
+    <span class="text t2">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
     <span class="text t3">Для заказов по телефону:</span>
     <a class="text t4" href="tel:88124502525">8 812 450-25-25</a>
     <span class="text t5">(с 10 до 20 ежедневно)</span>
@@ -307,24 +338,24 @@
     <h2 class="visuallyHidden descriptor">Официальная информация</h2>
     <p class="block">
       <a class="link marked" href="#"><span class="toUnderline">Для поставщиков</span></a>
-      <a class="link" href="#"><span class="toUnderline">О производстве</span></a>
+      <a class="link atBottom" href="#"><span class="toUnderline">О производстве</span></a>
     </p>
     <p class="block">
       <a class="link" href="#"><span class="toUnderline">Наши документы</span></a>
-      <a class="link" href="#"><span class="toUnderline">Экологические стандарты</span></a>
+      <a class="link atBottom" href="#"><span class="toUnderline">Экологические стандарты</span></a>
     </p>
   </div>
 
   <div class="siteDeveloper">
     <h2 class="visuallyHidden descriptor">Разработчик сайта</h2>
     <a class="link1" href="https://htmlacademy.ru/intensive/htmlcss">
-      <img class="image" src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">
+      <img class="image" src="img/for_index/academyLogo.png" alt="Логотип HTMLAcademy" width="108" height="39">
     </a>
     <p class="info">Сделано в <a class="link2" href="https://htmlacademy.ru/intensive/htmlcss"><span class="toUnderline">HTML Academy</span></a> &copy; 2017</p>
     </a>
   </div>
 </footer>
-
+    <!--/*108x39*/-->
 <!--МОДАЛЬНОЕ ОКНО - Форма обратной связи, которая открывается с кнопки на карте-->
 <div class="hidden feedback">
   <h2 class="visuallyHidden descriptor">Форма обратной связи</h2>

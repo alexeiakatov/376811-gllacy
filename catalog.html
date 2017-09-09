@@ -127,7 +127,7 @@
   <div class="scheduleAndTel">
     <h2 class="visuallyHidden descriptor">Наш график работы и телефон</h2>
     <p class="info">
-      <span class="schedule">с 10 до 20, ежедневно</span>
+      <span class="schedule">С 10 до 20, ежедневно</span>
       <a class="tel" href="tel:88124502525">8 812 450-25-25</a>
     </p>
   </div>
@@ -138,9 +138,9 @@
   <!--breadcrumbs-->
   <h2 class="visuallyHidden descriptor">Ваше расположение на сайте</h2>
   <ol class="breadcrumbs">
-    <li class="item"><a class="link" href="index.html"><span class="toUnderline">Главная</span></a></li>
-    <li class="item"><a class="link" href="#"><span class="toUnderline">Каталог</span></a></li>
-    <li class="item"><a class="link current"><span class="toUnderline currentUnderline">Сливочное</span></a></li>
+    <li class="item"><a class="link breadcrumbsLink" href="index.html"><span class="toUnderline">Главная</span></a></li>
+    <li class="item"><a class="link breadcrumbsLink" href="#"><span class="toUnderline">Каталог</span></a></li>
+    <li class="item"><a class="link current breadcrumbsLink"><span class="toUnderline currentUnderline">Сливочное</span></a></li>
   </ol>
 
   <!--Заголовок страницы-->
@@ -178,16 +178,16 @@
         <legend class="legend">Жирность:</legend>
         <div class="wrapper">
           <input class="fatnessRadio" id="fatnessRradio1" type="radio" name="fatness" value="zero">
-          <label class="fatnessLabel" for="fatnessRradio1" tabindex="0">0%</label>
+          <label class="fatnessLabel lab1" for="fatnessRradio1" tabindex="0">0%</label>
 
           <input class="fatnessRadio" id="fatnessRradio2" type="radio" name="fatness" value="less10" checked>
-          <label class="fatnessLabel" for="fatnessRradio2" tabindex="0">до 10%</label>
+          <label class="fatnessLabel lab2" for="fatnessRradio2" tabindex="0">до 10%</label>
 
           <input class="fatnessRadio" id="fatnessRradio3" type="radio" name="fatness" value="less30">
-          <label class="fatnessLabel" for="fatnessRradio3" tabindex="0">до 30%</label>
+          <label class="fatnessLabel lab3" for="fatnessRradio3" tabindex="0">до 30%</label>
 
           <input class="fatnessRadio" id="fatnessRradio14" type="radio" name="fatness" value="more30">
-          <label class="fatnessLabel" for="fatnessRradio14" tabindex="0">выше 30%</label>
+          <label class="fatnessLabel lab4" for="fatnessRradio14" tabindex="0">выше 30%</label>
 
         </div>
       </fieldset>
@@ -198,19 +198,19 @@
         <div class="wrapper">
 
           <input class="check" id="check1" type="checkbox" name="chocolate" checked>
-          <label class="fillerLabel" for="check1">Шоколадные</label>
+          <label class="fillerLabel lab1" for="check1">шоколадные</label>
 
           <input class="check" id="check2" type="checkbox" name="sugarAdds" checked>
-          <label class="fillerLabel" for="check2">Сахарные присыпки</label>
+          <label class="fillerLabel lab2" for="check2">сахарные присыпки</label>
 
           <input class="check" id="check3" type="checkbox" name="fruits">
-          <label class="fillerLabel" for="check3">Фрукты</label>
+          <label class="fillerLabel lab3" for="check3">фрукты</label>
 
           <input class="check" id="check4" type="checkbox" name="syrup">
-          <label class="fillerLabel" for="check4">Сиропы</label>
+          <label class="fillerLabel lab4" for="check4">сиропы</label>
 
           <input class="check" id="check5" type="checkbox" name="jam">
-          <label class="fillerLabel" for="check5">Джемы</label>
+          <label class="fillerLabel lab5" for="check5">джемы</label>
 
         </div>
       </fieldset>
@@ -225,100 +225,182 @@
     <ul class="catalogList">
       <!--1-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem1.png" width="267" height="267"
-             alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">310</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          <p class="price">
+            <span class="priceBig">310</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное с апельсиновым</span><span class="toUnderline"> джемом и цитрусовой стружкой</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--2-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem2.png" width="267" height="267"
-             alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">380</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-кофейное с кусочками шоколада</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+          <p class="price">
+            <span class="priceBig">380</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочно-кофейное с кусочками</span><span class="toUnderline">шоколада</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--3-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem3.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">355</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-клубничное с присыпкой из белого шоколада</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+          <p class="price">
+            <span class="priceBig">355</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочно-клубничное с</span><span class="toUnderline">присыпкой из белого шоколада</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--4-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem4.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">415</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное крем-брюле с карамельной подливкой</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+          <p class="price">
+            <span class="priceBig">415</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное крем-брюле с</span><span class="toUnderline">карамельной подливкой</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--5-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem5.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">325</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с брусничным джемом</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
+          <p class="price">
+            <span class="priceBig">325</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное с брусничным</span><span class="toUnderline">джемом</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--6-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem6.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">410</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-черничное с цельными ягодами черники</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
+          <p class="price">
+            <span class="priceBig">410</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочно-черничное с цельными</span><span class="toUnderline">ягодами черники</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--7-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem7.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">375</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-лимонное с карамельной присыпкой</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+          <p class="price">
+            <span class="priceBig">375</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочно-лимонное с</span><span class="toUnderline">карамельной присыпкой</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--8-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem8.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">320</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с шоколадной стружкой</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
+          <p class="price">
+            <span class="priceBig">320</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное с шоколадной</span><span class="toUnderline">стружкой</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--9-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem9.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">440</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочно-ванильное с кусочками шоколада</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
+          <p class="price">
+            <span class="priceBig">440</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочно-ванильное с</span><span class="toUnderline">кусочками шоколада</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--10-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem10.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">435</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с ментоловым сиропом</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem10.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
+          <p class="price">
+            <span class="priceBig">435</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное с ментоловым</span><span class="toUnderline">сиропом</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--11-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem11.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">355</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с кусочками черного шоколада</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
+          <p class="price">
+            <span class="priceBig">355</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное с кусочками черного</span><span class="toUnderline">шоколада</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
       <!--12-->
       <li class="catalogItem">
-        <img class="image" src="img/for_catalog/catItem12.png" width="267" height="267" alt="Изображение мороженого">
-        <p class="price"><span class="toSetRub">420</span>/кг</p>
-        <h3 class="itemHeading"><a class="link" href="#"><span class="toUnderline">Сливочное с мятным сиропом</span></a></h3>
-        <a class="hidden button" href="#">Быстрый просмотр</a>
+        <div class="hoverWrapper"></div>
+        <div class="zPositioner">
+          <img class="image" src="img/for_catalog/catItem12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
+          <p class="price">
+            <span class="priceBig">420</span><span class="priceSmall">/кг</span>
+          </p>
+          <h3 class="itemHeading">
+            <a class="link itemLink" href="#"><span class="toUnderline">Сливочное с мятным сиропом</span></a>
+          </h3>
+          <a class="hidden button" href="#">Быстрый просмотр</a>
+        </div>
       </li>
 
     </ul>
@@ -369,7 +451,7 @@
   <div class="siteDeveloper">
     <h2 class="visuallyHidden descriptor">Разработчик сайта</h2>
     <a class="link1" href="https://htmlacademy.ru/intensive/htmlcss">
-      <img class="image" src="img/svg/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" width="108" height="39">
+      <img class="image" src="img/for_catalog/academyLogo.png" alt="Логотип HTMLAcademy" width="108" height="39">
     </a>
     <p class="info">Сделано в <a class="link2" href="https://htmlacademy.ru/intensive/htmlcss"><span class="toUnderline">HTML Academy</span></a> &copy; 2017</p>
     </a>

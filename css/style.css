@@ -54,7 +54,7 @@ body {
 .pageHeader {
   /*outline: 1px solid red;*/
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   padding: 0;
   padding-top: 10px;
   width: 1146px;
@@ -99,9 +99,11 @@ body {
 }
     /*элемент <ul>*/
 .navigationMenu{
+  /*border: 1px solid red;*/
   /*outline: 1px solid black;*/
   margin: 0;
   padding: 0;
+  padding-bottom: 3px;
   max-width: 690px;
   list-style: none;
   display: flex;
@@ -112,11 +114,10 @@ body {
 
     /*Элементы li в которых находятся ссылки (они стали флекс-элементами)*/
 .navMenuItem {
-  /*border: 1px solid red;*/
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  margin-right: 1px;
   position: relative;
   border-radius: 14px;
 
@@ -125,31 +126,49 @@ body {
 .navMenuItem.current .navButton {
   background-color: rgb(208, 112, 88);
 }
-.navMenuItem.current .toUnderline {
+.navMenuItem.current .toUnderline::after {
   border: none;
 }
 
     /*ссылки внутри элементов li*/
 .navMenuItem > .button {
-  /*border: 1px solid black;*/
+  /*outline: 1px solid black;*/
   display: inline-block;
   box-sizing: border-box;
-  text-align: center;
+  vertical-align: top;
   padding: 6px 14px;
   margin: 0;
+  min-height: 32px;
+  position: relative;
 
   font-family: "Roboto";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
+
 
   border-radius: 14px;
 }
 
-    /*подчеркивания кнопок навигации*/
-.navMenuItem .toUnderline {
+.navButton .toUnderline {
+  /*border: 1px solid red;*/
+  position: relative;
+}
+    /*подчеркивание кнопок навигации с помощью псевдоэлемента*/
+.navButton .toUnderline:after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   border-bottom:  1px solid rgba(255, 255, 255, 0.2);
 
 }
@@ -166,9 +185,9 @@ body {
   outline: none;
 }
 
-.navMenuItem:hover .toUnderline,
-.navButton:focus .toUnderline,
-.navMenuItem:focus .toUnderline {
+.navMenuItem:hover .toUnderline::after,
+.navButton:focus .toUnderline::after,
+.navMenuItem:focus .toUnderline::after {
   border: none;
 }
 
@@ -311,6 +330,7 @@ body {
   margin: 0;
   margin-left: auto;
   padding: 0;
+  padding-bottom: 4px;
   box-sizing: border-box;
   list-style: none;
   display: flex;
@@ -341,7 +361,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/svg/magnif_nohover.svg");
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 7px 7px;
   background-size: 17px 17px;
   position: relative;
 }
@@ -401,18 +421,17 @@ body {
   border: 1px solid #d3d3d2;
 }
 
-    /*Общие настройки кнопкок Авторизация и Тележка - элементы <a>*/
+    /*Общие настройки кнопки Авторизация - элемент <a>*/
 
-.authorization > .button,
-.trolley > .button {
+.authorization > .button {
   /*outline: 1px solid red;*/
 
   display: inline-block;
   box-sizing: border-box;
   margin: 0;
-  padding: 7px 0;
+  padding: 8px 0;
   padding-left: 44px;
-  padding-right: 16px; //????????
+  padding-right: 16px;
 
 font-family: Roboto;
   font-weight: 500;
@@ -422,14 +441,14 @@ font-family: Roboto;
   text-decoration: none;
 
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 14px;
+  border-radius: 16px;
 }
 
     /*настройки кнопки Авторизации */
 .authorization > .button {
   background-image: url("../img/svg/login_nohover.svg");
   background-repeat: no-repeat;
-  background-position: 15px 6px;
+  background-position: 16px 6px;
 
 }
     /*эффекты при наведении и фокусе на li.authorization и фокусе на ссылку a.button*/
@@ -549,21 +568,46 @@ font-family: Roboto;
 
     /*Тележка с покупками*/
 
-    /*Настройки кнопки тележки*/
+    /*Общие настройки кнопки тележки*/
+.trolley > .button {
+  /*outline: 1px solid red;*/
+
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 0;
+  padding-left: 44px;
+  padding-right: 34px; //????????
+
+font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
 
     /*Иконка (пусто) - этот вариант будет по умолчанию. Сейчас так в index.html - trolley_empty_nohover.svg*/
 .trolleyButton {
   background-image: url("../img/svg/trolley_empty_nohover.svg");
   background-repeat: no-repeat;
-  background-position: 15px 5px;
+  background-position: 16px 6px;
 }
 
     /*Иконка(не пусто) - сейчас так в catalog.html - trolley_full.svg*/
 .trolleyButton.withProducts {
+  padding-right: 16px;
   min-width: 117px;
+
+  color: #323232;
+
+  background-color: rgb(248, 247, 244);
   background-image: url("../img/svg/trolley_full.svg");
   background-repeat: no-repeat;
-  background-position: 15px 5px;
+  background-position: 16px 6px;
 }
 
 
@@ -762,26 +806,39 @@ font-family: Roboto;
   width: 167px;
 
   position: absolute;
-  bottom: -47px;
+  bottom: -43px;
   right: 0;
 }
 .scheduleAndTel .info {
+  /*outline: 1px solid black;*/
   width: 100%;
   margin: 0;
   padding: 0;
+
+  text-align: right;
 }
     /*Расписание*/
 .scheduleAndTel .schedule {
-  padding-left: 21px;
-
+  /*outline: 1px solid red;*/
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2px;
   font-family: Roboto;
-  forn-weight: 700;
+  font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 20px;
   color: #ffffff;
 }
     /*Телефон*/
 .scheduleAndTel .tel {
+  /*outline: 1px solid red;*/
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
   font-family: Roboto;
   font-weight: 700;
   font-size: 22px;
@@ -806,17 +863,29 @@ font-family: Roboto;
 
     /*ПЕРЕКЛЮЧАТЕЛЬ СЛАЙДОВ*/
 .sliderToggle {
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   position: absolute;
   z-index: 10;
-  top: 478px;
+  top: 487px;
+}
+.sliderToggleForm {
+  /*outline: 1px solid black;*/
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .sliderToggle .button {
+  /*outline: 1px solid red;*/
   display: inline-block;
   box-sizing: border-box;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
   width: 21px;
   height: 21px;
   background-color: #849d8f;
@@ -834,6 +903,12 @@ font-family: Roboto;
 .sliderToggle .button:hover {
   background-color: rgba(178, 193, 183,0.6);
 }
+.slideControl:checked + .button:hover {
+  background-color: #ffffff;
+}
+.slideControl:active + .button {
+  background-color: #ffffff;
+}
 
 
 
@@ -850,7 +925,7 @@ font-family: Roboto;
   background-color: transparent;
   background-image: url("../img/for_index/specialoffer1_main.png");
   background-repeat: no-repeat;
-  background-position: left 72px top 0px;
+  background-position: left 78px top 1px;
 }
 
     /*Контейнер спец предложений - элемент <section>*/
@@ -858,7 +933,7 @@ font-family: Roboto;
   /*border: 2px solid red;*/
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
   padding: 0;
   width: 1146px;
 
@@ -872,11 +947,11 @@ font-family: Roboto;
 .slide3 {
   /*border: 1px solid red;*/
 
-  min-height: 575px;
+  min-height: 574px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-top: 319px;
+  padding-top: 317px;
 
   text-align: center;
 }
@@ -903,7 +978,7 @@ font-family: Roboto;
   box-sizing: border-box;
   width: 669px;
   margin: 0 auto;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   padding: 0;
   padding-bottom: 7px;
 
@@ -923,7 +998,11 @@ font-family: Roboto;
   display: inline-block;
   box-sizing: border-box;
   margin: 0;
-  padding: 9px 42px;
+  padding: 0;
+  padding-right: 40.5px;
+  padding-left: 40.5px;
+  padding-top: 8px;
+  padding-bottom: 12px;
 
   font-family: "Roboto";
   font-weight: 700;
@@ -932,8 +1011,9 @@ font-family: Roboto;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 
-  border-radius: 30px;
+  border-radius: 32px;
   background-color: rgb(242,104,67);
 
 }
@@ -957,7 +1037,7 @@ font-family: Roboto;
   /*border: 1px solid yellow;*/
   box-sizing: border-box;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   padding: 0;
 
   font-family: "Roboto";
@@ -991,6 +1071,8 @@ font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
   padding: 10px 23px;
+  padding-bottom: 12px;
+  padding-left: 21px;
 
   font-family: "Roboto";
   font-weight: 700;
@@ -1000,10 +1082,16 @@ font-family: Roboto;
   text-decoration: none;
   text-align: center;
 
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: rgb(242,104,67);
 }
 
+.specialOfferChoice2 .button {
+  padding-top: 9px;
+  padding-bottom: 13px;
+  padding-right: 21px;
+  border-radius: 24px;
+}
 
     /*первое спец предложение - контейнер */
 .specialOfferChoice1 {
@@ -1011,11 +1099,12 @@ font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding: 18px 20px;
+  padding: 0 20px;
+  padding-top: 14px;
   padding-bottom: 25px;
   width: 560px;
   min-height: 230px;
-  border-radius: 11px;
+  border-radius: 15px;
   background-color: #5f0e1d;
   background-image: url("../img/for_index/bgr_raspberries.jpg");
   background-repeat: no-repeat;
@@ -1029,11 +1118,12 @@ font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding: 18px 20px;
+  padding: 0 20px;
+  padding-top: 14px;
   padding-bottom: 25px;
   width: 560px;
   min-height: 230px;
-  border-radius: 11px;
+  border-radius: 15px;
   background-color: #452a1e;
   background-image: url("../img/for_index/bgr_choco.jpg");
   background-repeat: no-repeat;
@@ -1049,7 +1139,7 @@ font-family: Roboto;
     /*контейнер каталога - элемент <section>*/
 .hitsCatalog,
 .productsCatalog {
-  /*border: 1px solid black;*/
+  /*outline: 1px solid black;*/
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
@@ -1057,7 +1147,11 @@ font-family: Roboto;
 }
 
 .productsCatalog {
-  margin-bottom: 4px;
+  /*outline: 1px solid black;*/
+  margin-bottom: 43px;
+}
+.hitsCatalog {
+  margin-bottom: 38px;
 }
     /*список хитов продаж и список общего каталога в catalog.html - элемент ul*/
 .catalogList {
@@ -1074,20 +1168,75 @@ font-family: Roboto;
     /*Карточка товара - элемент li*/
 .catalogItem {
   /*outline: 1px solid yellow;*/
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-top: 6px;
-  padding-left: 9px;
-  width: 286px;
-  min-height: 406px;
+  /*padding-top: 4px;*/
+  width: 23.25%;
   position: relative;
 
   text-align: center;
 }
-.catalog-item:last-child {
-  margin-right: 0;
-  background-color: white;
+
+    /*нижний отступ карточки товара в catalog.html*/
+.catalogItem:not(.isHit) {
+  margin-bottom: 39px;
+}
+
+.zPositioner {
+  /*outline: 1px solid black;*/
+  position: relative;
+  z-index: 2;
+}
+
+
+    /*изображение в карточке товара*/
+.catalogItem .image {
+  /*border: 1px solid red;*/
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 13px;  /*нижнее растояние от изображения на карточке товара до текста.*/
+  padding: 0;
+
+}
+
+    /*Название  в карточке товара - элемент <h3>*/
+.itemHeading {
+  padding: 0;
+  margin: 0;
+}
+.itemHeading > .link{
+  /*border: 1px solid red;*/
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+}
+    /*подчеркивание названия-заголовка в карточке товара*/
+.itemHeading .toUnderline {
+  display: inline-block;
+  position: relative;
+}
+.itemHeading .toUnderline::after {
+  /*outline: 1px solid black;*/
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 0;
+  width: 100%;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
   /*значек Хит*/
@@ -1103,84 +1252,78 @@ font-family: Roboto;
   background-repeat: no-repeat;
   border-radius: 50%;
   position: absolute;
+  z-index: 3;
 }
 
-    /*Заголовок в карточке товара - название товара*/
-.itemHeading {
-  padding: 0;
-  margin: 0;
-  margin-top: 0;
-  margin-bottom: 14px;
-}
-
-.catalogItem .image {
-  /*border: 1px solid red;*/
-  display: block;
-  box-sizing: border-box;
-  margin: 0;
-  margin-bottom: 7px;  /*нижнее растояние от изображения на карточке товара до текста.*/
-  padding: 0;
-}
-
-.itemHeading > .link{
-  /*border: 1px solid red;*/
-  display: block;
-  margin:0 auto;
-
-  font-family: "Roboto";
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  text-align: center;
-}
-.itemHeading .toUnderline {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-    /*эффект при наведении и нажатии на ссылку-заголовок на карточке товара*/
-.itemHeading > .link:hover,
-.itemHeading > .link:active {
-  color: rgba(255, 188, 158, 1);
-}
-.itemHeading > .link:hover > .toUnderline,
-.itemHeading > .link:active > .toUnderline {
-  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
-}
-
-
-  /*Надпись цены и значок рубля*/
+    /*Надпись цены и значок рубля*/
 .catalogItem .price {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 215px;
+  top: 210px;
+  left: 0;
 
-  font-family: "Roboto_Bold";
+  text-align: left;
+  color: #ffffff;
+}
+
+.catalogItem .priceBig {
+  /*outline: 1px solid black;*/
+  margin: 0;
+  padding: 0;
+  padding-right: 36px;
+
+  font-family: "Roboto";
   font-size: 45px;
   line-height: 45px;
-  text-align: left;
+  font-weight: 500;
+  text-shadow: 2px 1px 3px rgba(49, 50, 53, 0.5);
 
-
-  background-color: transparent;
   background-image: url("../img/svg/ruble.svg");
   background-repeat: no-repeat;
-  background-position: 84px 7px;
+  background-position: right 1px top 11px;
 }
 
-.toSetRub {
-  margin-right: 37px;
-  padding-right: 6px;
+.catalogItem .priceSmall {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto";
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 500;
+  text-shadow: 2px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-  /*кнопка на карточке Хита продаж*/
-.catalogItem > .button {
-  visibility: hidden;
+    /*появление подложки и кнопки при наведении*/
 
-  display: inline-block;
+    /*подложка*/
+.catalogItem .hoverWrapper {
+  display: none;
   box-sizing: border-box;
-  /*margin: 0 auto;*/
+  margin: 0;
+  padding: 0;
+  position: absolute;
+
+  top: -6px;
+  left: -12px;
+  right: -12px;
+  bottom: -83px;
+  background-color: rgba(248, 247, 244, 0.2);
+
+  border-radius: 5px;
+}
+
+    /*кнопка на карточке Хита продаж*/
+.catalogItem .button {
+  display: none;
+  position: absolute;
+  bottom: -60px;
+  left: calc(50% - 100px);
+  box-sizing: border-box;
   padding: 9px 17px;
 
   font-family: Roboto;
@@ -1193,14 +1336,32 @@ font-family: Roboto;
 
   border-radius: 20px;
   background-color: rgb(242,104,67);
+}
 
+    /*эффект появления подложки и кнопки*/
+.catalogItem:hover .hoverWrapper {
+  display: block;
+  z-inedx: 1;
 }
-.catalogItem:hover > .button {
-  visibility: visible;
+.catalogItem:hover .button {
+  display: block;
 }
-.catalogItem:hover {
-  background-color: rgba(248, 247, 244, 0.2);
+
+
+
+
+    /*эффект при наведении и нажатии на ссылку-заголовок на карточке товара*/
+.itemHeading > .link:hover,
+.itemHeading > .link:active {
+  color: rgba(255, 188, 158, 1);
 }
+.itemLink:hover .toUnderline::after,
+.itemLink:active .toUnderline::after {
+  border-bottom-color: rgba(255, 188, 158, 0.3);
+}
+
+
+
 
 /*ТЕКСТОВОЕ ОПИСАНИЕ МАГАЗИНА*/
     /*Контейнер описания - элемент section*/
@@ -1213,7 +1374,7 @@ font-family: Roboto;
   margin: 0 auto;
   margin-bottom: 40px;
   padding: 0;
-  padding-bottom: 6px;
+  padding-bottom: 2px;
   box-sizing: border-box;
   border-radius: 13px;
 
@@ -1234,7 +1395,7 @@ font-family: Roboto;
   width: 1000px;
   padding-left: 21px;
   padding-top: 24px;
-  padding-bottom: 18px;
+  padding-bottom: 22px;
 
   font-family: "Roboto";
   font-size: 24px;
@@ -1245,12 +1406,14 @@ font-family: Roboto;
 }
     /*пункты текстового описания - элемент <p>*/
 .aboutUsItem {
-  /*border: 1px solid red;*/
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  margin-right: 1px;
+
   padding-left: 77px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   width: 558px;
   position: relative;
 }
@@ -1262,8 +1425,8 @@ font-family: Roboto;
   width: 50px;
   height: 50px;
   position: absolute;
-  left: 21px;
-  top: -12px;
+  left: 20px;
+  top: -13px;
   background-color: transparent;
   background-image: url("../img/for_index/ice_cream_icon.png");
   background-repeat: no-repeat;
@@ -1277,8 +1440,8 @@ font-family: Roboto;
   width: 50px;
   height: 50px;
   position: absolute;
-  left: 21px;
-  top: -12px;
+  left: 19px;
+  top: -13px;
   background-color: transparent;
   background-image: url("../img/for_index/cow_icon.png");
   background-repeat: no-repeat;
@@ -1291,8 +1454,8 @@ font-family: Roboto;
    width: 50px;
    height: 50px;
    position: absolute;
-   left: 21px;
-   top: -12px;
+   left: 20px;
+   top: -13px;
    background-color: transparent;
    background-image: url("../img/for_index/leaf_icon.png");
    background-repeat: no-repeat;
@@ -1306,8 +1469,8 @@ font-family: Roboto;
   width: 50px;
   height: 50px;
   position: absolute;
-  left: 21px;
-  top: -12px;
+  left: 19px;
+  top: -13px;
   background-color: transparent;
   background-image: url("../img/for_index/termometer_icon.png");
   background-repeat: no-repeat;
@@ -1350,7 +1513,7 @@ font-family: Roboto;
   background-color: #ffffff;
   background-image: url("../img/for_index/bgr_stawberry_small.jpg");
   background-repeat: no-repeat;
-  background-position: 202px -36px;
+  background-position: 202px -35px;
 }
 .blogInfo {
   box-sizing: border-box;
@@ -1363,7 +1526,7 @@ font-family: Roboto;
 
 }
 
-.blogNews .link {
+.blogNews .blogLink {
   display: inline-block;
   box-sizing: border-box;
   padding: 0;
@@ -1377,21 +1540,39 @@ font-family: Roboto;
   font-weight: 700;
   color: #323232;
   text-decoration: none;
+}
+
+.blogNews .toUnderline {
+  margin: 0;
+  padding: 0;
+  position: relative;
 
 }
-.blogNews .toUnderline {
-  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+
+.blogNews .toUnderline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 0;
+
+
+  border-bottom: 2px solid black;
 }
 
     /*эффекты при наведении и нажатии на ссылку*/
-.blogNews .link:hover,
-.blogNews .link:active {
+.blogLink:hover,
+.blogLink:active {
   color: rgba(232, 77, 55, 1);
 }
-.blogNews .link:hover > .toUnderline,
-.blogNews .link:active > .toUnderline {
-  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+.blogLink:hover .toUnderline::after,
+.blogLink:active .toUnderline::after {
+  border-bottom: 2px solid rgba(232, 77, 55, 0.3);
 }
+
+
     /*блок подписки на рассылку - элемент div*/
 .mailListSubscription {
   /*border: 1px solid red;*/
@@ -1427,7 +1608,7 @@ font-family: Roboto;
   padding: 0;
   padding-left: 22px;
   padding-right: 10px;
-  padding-top: 28px;
+  padding-top: 30px;
   padding-bottom: 35px;
   border-radius: 13px;
 
@@ -1450,16 +1631,17 @@ font-family: Roboto;
 
 /*поле ввода текста*/
 .subscriptionForm .inputText {
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   padding-left: 14px;
-  margin-right: 6px;
+  margin-right: 9px;
   width: 367px;
   height: 44px;
 
   border-radius: 5px;
-  border: 2px solid #d3d3d2;
+  border: 1px solid #d3d3d2;
 }
 
     /*кнопка*/
@@ -1468,13 +1650,14 @@ font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding: 9px 17px;
-  border-radius: 20px;
+  padding: 8px 18px;
+  padding-bottom: 11px;
+  border-radius: 25px;
 
   background-color: #f06441;
   border: none;
 
-  font-familly: "Roboto";
+  font-family: "Roboto";
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -1489,14 +1672,14 @@ font-family: Roboto;
   margin: 0;
   padding: 0;
   padding-top: 62px;
-  padding-left: 870px;
+  padding-left: 871px;
   width: 100%;
-  height: 430px;
+  height: 429px;
 
   background-color: #eae3c6;
   background-image: url("../img/for_index/map_mask_marker.jpg");
   background-repeat: no-repeat;
-  /*background-position: 0 0;*/
+  background-position: 0 -1px;
 }
 
     /*Информационный блок на карте*/
@@ -1508,7 +1691,7 @@ font-family: Roboto;
   padding-top: 29px;
   padding-left: 25px;
   padding-bottom: 30px;
-  width: 305px;
+  width: 302px;
   min-height: 305px;
   background-color: #fffffe;
 
@@ -1536,19 +1719,23 @@ font-family: Roboto;
 
 .mapInfo .t2 {
   padding-right: 50px;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
 }
 .mapInfo .t4 {
   padding: 2px 0;
+  margin-bottom: 2px;
 
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
   text-decoration: none;
   color: #323232;
+}
+.mapInfo .t3 {
+  margin-bottom: 1px;
 }
 .mapInfo .t5 {
   margin-bottom: 25px;
@@ -1560,8 +1747,10 @@ font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding: 12px 28px;
-  border-radius: 20px;
+  padding: 8px 28px;
+  padding-right: 26px;
+  padding-bottom: 12px;
+  border-radius: 25px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1684,6 +1873,7 @@ font-family: Roboto;
   margin: 0 auto;
   margin-bottom: 2px;
   padding: 0;
+  padding-top: 3px;
   width: 1146px;
   list-style: none;
   display: flex;
@@ -1692,17 +1882,23 @@ font-family: Roboto;
 
     /*элемент списка - элемент <li>*/
 .breadcrumbs > .item {
+  /*outline: 1px solid black;*/
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-top: 0;
 }
     /*ссылка в breadcrumbs - элемент <a>*/
 .breadcrumbs .link {
   /*outline: 1px solid red;*/
-  display: inline-block;
+
+  /*display: inline-block;*/
+  display: block;
+  vertical-align: bottom;
   box-sizing: border-box;
   padding: 0;
-  padding-bottom: 3px;
+  /*padding-bottom: 1px;*/
   padding-right: 22px;
   margin: 0;
 
@@ -1719,13 +1915,25 @@ font-family: Roboto;
 }
 
     /*подчеркивание у ссылок в breadcrumbs*/
-.breadcrumbs .toUnderline:not(.currentUnderline) {
+.breadcrumbs .toUnderline {
+  position: relative;
+}
+.breadcrumbs .toUnderline:not(.currentUnderline)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
     /*убрать фон с изображением стрелки у последнего элемента breadcrumbs*/
 .breadcrumbs .current {
-  bacground-image: none;
+  backround-image: none;
   padding-right: 0;
+  margin-left: -1.5px;
 }
 
     /*эффекты при наведении на ссылки в breadcrumbs*/
@@ -1733,8 +1941,8 @@ font-family: Roboto;
 .breadcrumbs .link:active:not(.current) {
   color: rgba(255, 188, 158, 1);
 }
-.breadcrumbs .link:hover:not(.current) > .toUnderline,
-.breadcrumbs .link:active:not(.current) > .toUnderline {
+.breadcrumbsLink:hover:not(.current) >.toUnderline::after,
+.breadcrumbsLink:active:not(.current) > .toUnderline:after {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
@@ -1743,7 +1951,7 @@ font-family: Roboto;
   /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   padding: 0;
   width: 1146px;
 
@@ -1754,55 +1962,56 @@ font-family: Roboto;
     /*Контейнер фильтов - элемент <section>*/
 .filters {
   /*outline: 1px solid red;*/
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   margin: 0 auto;
-  margin-bottom: 19px;
+  margin-bottom: 25px;
   padding: 0;
   width: 1146px;
 }
-
+    /*элемент <form> - он флекс контейнер*/
 .filters > .filtersForm {
-  /*outline: 1px solid red;*/
+  /*outline: 1px solid yellow;*/
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 1146px;
+
+  display: flex; /*все fieldset стали флекс элементами*/
   flex-wrap: wrap;
-  display: flex;
-  align-items: center;
+
 }
-.set .legend {
+
+  /*выпадающий СЕЛЕКТ выбора КРИТЕРИЯ*/
+
+    /*контейнер - элемент <fieldset> - он флекс элемент*/
+.set.criteriaSet {
+  /*outline: 1px solid red;*/
+  margin: 0;
+  padding: 0;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  border: none;
+}
+
+    /*легенда*/
+.criteriaSet .legend {
+  /*outline: 1px solid red;*/
+  padding: 0;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  margin: 0;
+
   font-family: "Roboto";
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   color: #ffffff;
-  padding-bottom: 5px;
-  padding-left: 15px;
 }
-
-.filtersForm > .set {
+    /*поле селекта*/
+.criteriaSet .options {
   /*outline: 1px solid red;*/
-  margin: 0;
-  padding: 0;
-  padding-right: 16px;
-  padding-bottom: 15px;
-  border: none;
-}
-.priceRangeSet .range {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-    /*общие для всех fieldset > container*/
-.criteriaSet > .options,
-.priceRangeSet > .wrapper,
-.fatContentSet > .wrapper,
-.fillerSet > .wrapper,
-.filtersForm > .filtersButton {
-  box-sizing: border-box;
-  /*outline: 1px solid red;*/
   margin: 0;
   padding: 0;
   min-height: 36px;
@@ -1813,16 +2022,15 @@ font-family: Roboto;
   font-weight: 500;
   color: #ffffff;
 
-  border-radius: 16px;
+  border-radius: 20px;
   border: none;
   background-color: rgba(248, 247, 244, 0.2);
 
+  padding-left: 12px;
+  min-width: 193px;
 }
-  /*выпадающий селект выбора критерия*/
-.criteriaSet .options {
-  padding-left: 16px;
-  min-width: 195px;
-}
+
+    /*опции внутри выпадающего списка*/
 .criteriaSet .option {
   font-family: "Roboto";
   color: black;
@@ -1834,16 +2042,60 @@ font-family: Roboto;
   color: #323232;
 }
 
-    /*бегунок с диапазоном цены*/
-.priceRangeSet > .wrapper {
-  /*border: 1px solid red;*/
+
+    /*ДИАПАЗОН ЦЕН*/
+
+    /*контейнер - элемент <fieldset> - он феклс элемент*/
+.priceRangeSet.set {
+  /*outline: 1px solid red;*/
+  padding-bottom: 14px;
+
+  margin: 0;
+  padding: 0;
+  padding-right: 16px;
+  border: none;
+}
+
+    /*Легенда*/
+.priceRangeSet .legend {
+  padding-bottom: 5px;
+  padding-left: 16px;
+
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+
+  /*outline: 1px solid red;*/
+  padding-left: 15px;
+  margin-bottom: 1px;
+}
+
+    /*само поле диапазона цен*/
+.priceRangeSet.set > .wrapper {
   box-sizing: border-box;
-  padding: 5px 20px;
-  width: 220px;
+  margin: 0;
+  padding: 0;
+  min-height: 36px;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(248, 247, 244, 0.2);
+  /*outline: 1px solid black;*/
+  box-sizing: border-box;
+  width: 218px;
 
   position: relative;
   background-color: rgba(248, 247, 244, 0.2);
 }
+
     /*кнопки бегунка*/
 .priceRangeSet .runner1,
 .priceRangeSet .runner2 {
@@ -1855,7 +2107,7 @@ font-family: Roboto;
   height: 20px;
   position: absolute;
   top: 8px;
-  left: 32px;
+  left: 34px;
   z-index: 2;
 
   cursor: pointer;
@@ -1864,9 +2116,11 @@ font-family: Roboto;
   border-radius: 50%;
   background-color: #ababab;
 }
+
 .priceRangeSet .runner2 {
   left: 132px;
 }
+
     /*рельса бегунка*/
 .priceRangeSet .rail {
   box-sizing: border-box;
@@ -1882,7 +2136,6 @@ font-family: Roboto;
   border-left: 12px solid rgba(248, 247, 244, 0.5);
   border-right: 45px solid rgba(248, 247, 244, 0.5);
 }
-
 
     /*промежуток между бегунками*/
 .priceRangeSet .betweenCircles {
@@ -1900,29 +2153,101 @@ font-family: Roboto;
   background-color: rgb(248, 247, 244);
 }
 
-    /*Выбор жирности*/
+    /*ЖИРНОСТЬ*/
+
+    /*контейнер - элемент fieldset - он флекс элемент*/
+.fatContentSet {
+  /*outline: 1px solid black;*/
+  margin: 0;
+  padding: 0;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  border: none;
+
+}
+
+    /*легенда*/
+.fatContentSet .legend {
+  /*outline: 1px solid red;*/
+  padding-bottom: 6px;
+  padding-left: 15px;
+
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+    /*поле с радиобатонами*/
 .fatContentSet > .wrapper {
   /*outline: 1px solid red;*/
-  padding: 8px 0;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  /*padding-top: 8px;*/
+  /*padding-bottom: 5px;*/
   padding-left: 14px;
   padding-right: 17px;
+  height: 36px;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(248, 247, 244, 0.2);
 }
-    /*радиокнопка в НЕвыбранном состоянии*/
+
+    /*Подпись радиокнопки (радиокнопка в НЕвыбранном состоянии) - элемент <legend>*/
 .fatContentSet .fatnessLabel {
   /*outline: 1px solid red;*/
+  display: inline-block;
+  vertical-align: bottom;
   box-sizing: border-box;
   margin: 0;
   margin-right: -2px;
-  padding: 1px 0;
-  padding-left: 32px;
+  padding: 0;
+  padding-left: 30px;
   padding-right: 18px;
+  height: 36px;
 
   background-image: url("../img/svg/radio-off.svg");
   background-repeat: no-repeat;
   background-size: 21px 21px;
   background-position: 0 0;
 }
+.fatContentSet .lab1 {
+  padding-top: 10px;
+  padding-left: 32px;
+  background-position: 0 7px;
+  padding-right: 17px;
+}
+.fatContentSet .lab2 {
+  padding-left: 30px;
+  padding-top: 9px;
+  padding-right: 17px;
+  background-position: 0 7px;
 
+}
+.fatContentSet .lab3 {
+  padding-top: 9px;
+  padding-left: 31px;
+  padding-right: 16px;
+  background-position: 0 7px;
+
+}
+.fatContentSet .lab4 {
+  padding-top: 9px;
+  padding-left: 31px;
+  background-position: 0 7px;
+
+}
     /*эффект при наведении в НЕвыбранном состоянии*/
 .fatContentSet .fatnessLabel:hover {
   background-image: url("../img/svg/radio-off_hover.svg");
@@ -1958,30 +2283,102 @@ font-family: Roboto;
 }
 
 
-    /*выбор наполнителей*/
-.fillerSet > .wrapper {
-  padding: 8px 0;
+    /*НАПОЛНИТЕЛИ*/
+
+    /*контейнер - элемент fieldset - он флекс элемент*/
+.fillerSet {
+  /*outline: 1px solid black;*/
+  margin: 0;
+  margin-top: 3px;
+  padding: 0;
+  margin-right: 13px;
+  /*padding-right: 14px;*/
+  padding-bottom: 15px;
+  border: none;
+}
+
+    /*легенда*/
+.fillerSet .legend {
+  /*outline: 1px solid red;*/
+
+  padding-bottom: 5px;
   padding-left: 16px;
+
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+    /*поле с цекбоксами - элемент div.wrapper*/
+.fillerSet > .wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  padding-left: 15px;
   padding-right: 19px;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(248, 247, 244, 0.2);
+
+
+
 }
 
     /*Чекбоксы наполнителей в состояние НЕ checked*/
 .fillerSet .fillerLabel {
   /*outline: 1px solid red;*/
+  display: inline-block;
+  vertical-align: bottom;
   box-sizing: border-box;
-  padding: 1px 0;
-  padding-left: 33px;
+  padding-left: 32px;
   padding-right: 20px;
   margin: 0;
   margin-right: -2px;
+  height: 36px;
 
   background-image: url("../img/svg/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-position: 0;
+  background-position: 0 0;
   background-size: 21px 21px;
+}
+.fillerSet .lab1 {
+  padding-top: 9px;
+  background-position: 1px 8px;
+}
+.fillerSet .lab2{
+  padding-top: 9px;
+  padding-left: 31px;
+  background-position: 0 8px;
+
+}
+.fillerSet .lab3 {
+  padding-top: 9px;
+  background-position: -1px 8px;
+
+}
+.fillerSet .lab4 {
+  padding-top: 9px;
+  background-position: 0 8px;
+
+}
+.fillerSet .lab5 {
+  padding-top: 9px;
+  background-position: 0 8px;
+
 }
 
 .fillerSet .fillerLabel:last-of-type {
+  /*outline: 1px solid red;*/
+  margin-right: 0;
   padding-right: 0;
 }
     /*сделать невидимыми нативные чекбоксы*/
@@ -2015,12 +2412,21 @@ font-family: Roboto;
   background-image: url("../img/svg/checkbox-on_disabled.svg");
 }
 
-    /*кнопка формы*/
+    /*кнопка формы "ПРИМЕНИТЬ"*/
 .filtersForm > .filtersButton {
-  padding: 6px 27px;
-  border-radius: 15px;
+  align-self: flex-end;
+  padding: 7px 27px;
+  padding-top: 7px;
+  margin-bottom: 15px;
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.188);
   border: 2px solid rgb(255, 255, 255);
+
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgb(255, 255, 255);
 
 }
 .filtersForm > .filtersButton:hover {
@@ -2040,7 +2446,7 @@ font-family: Roboto;
   /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   padding: 0;
   width: 1146px;
 
@@ -2051,22 +2457,27 @@ font-family: Roboto;
   flex-wrap: wrap;
 }
 .paginator > .paginatorItem {
-  /*border: 1px solid red;*/
+  /*outline: 1px solid red;*/
 
   box-sizing: border-box;
   margin: 0;
+  margin-right: 3px;
   padding: 0;
 
   /*border-radius: 50%;*/
 }
+
 .paginator > .paginatorItem:first-child {
   /*margin-left: auto;*/
   margin-right: 5px;
   padding-top: 1px;
 }
 .paginator > .paginatorItem:last-child {
+  /*outline: 1px solid red;*/
   margin-left: 5px;
+  margin-right: 0;
   padding-top: 1px;
+  width: 17px;
 }
 .paginatorItem > .link {
   /*border: 1px solid red;*/
@@ -2121,7 +2532,7 @@ font-family: Roboto;
   margin: 0 auto;
   padding: 0;
   margin-bottom: 25px;
-  padding-top: 18px;
+  padding-top: 16px;
   width: 1146px;
 
   display: flex;
@@ -2131,10 +2542,10 @@ font-family: Roboto;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-    /*Социальные сети*/
+    /*Кнопки социальныых сетей*/
     /*Контейнер соц сетей - элемент <div>*/
 .socialNetworks {
-  /*border: 1px solid red;*/
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -2145,52 +2556,103 @@ font-family: Roboto;
   display: inline-block;
   box-sizing: border-box;
   margin: 0;
-  margin-right: 7px;
+  margin-right: 8px;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
   border-radius: 50%;
 
-  border: 4px solid rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.5);
 
   font-size: 0px;
 }
 
+    /*твиттер - базовое состояние */
 .twitter {
+  margin-left: 1px;
+  margin-right: 9px;
   background-color: transparent;
   background-image: url("../img/svg/twittericon.svg");
   background-repeat: no-repeat;
 }
+    /*твиттер: эффект при наведении*/
+.twitter:hover {
+  background-image: url("../img/svg/twittericon_hover.svg");
+}
+
+    /*твиттер: эффект принажатии*/
+.twitter:active {
+  background-image: url("../img/svg/twittericon_active.svg");
+}
+
+    /*инстаграм - базовое состояние*/
 .instagram {
   background-color: transparent;
   background-image: url("../img/svg/instagramicon.svg");
   background-repeat: no-repeat;
 }
+    /*инстаграм: эффект при наведении*/
+.instagram:hover {
+  background-image: url("../img/svg/instagramicon_hover.svg");
+}
+
+    /*инстаграм: эффект принажатии*/
+.instagram:active {
+  background-image: url("../img/svg/instagramicon_active.svg");
+}
+
+    /*фейсбук - базовое состояние*/
 .facebook {
   background-color: transparent;
   background-image: url("../img/svg/facebookicon.svg");
   background-repeat: no-repeat;
 }
+    /*фейсбук: эффект при наведении*/
+.facebook:hover {
+  background-image: url("../img/svg/facebookicon_hover.svg");
+}
+
+    /*фейсбук: эффект принажатии*/
+.facebook:active {
+  background-image: url("../img/svg/facebookicon_active.svg");
+}
+
+    /*вконтакте - базовое состояние*/
 .vk {
   background-color: transparent;
   background-image: url("../img/svg/vkicon.svg");
   background-repeat: no-repeat;
 }
 
+    /*вконтакте: эффект при наведении*/
+.vk:hover {
+  background-image: url("../img/svg/vkicon_hover.svg");
+}
+
+    /*вконтакте: эффект принажатии*/
+.vk:active {
+  background-image: url("../img/svg/vkicon_active.svg");
+}
+
+
     /*Официальная информация*/
 .officialInfo {
   /*border: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
+  margin-right: 2px;
   padding: 0;
+
+
   width: 345px;
   font-size: 0;
 }
 .officialInfo .block {
   display: inline-block;
+  vertical-align: bottom;
   box-sizing: border-box;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 9px;
   padding: 0;
 
 }
@@ -2201,7 +2663,7 @@ font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
   padding-left: 22px;
 
   font-family: Roboto;
@@ -2211,9 +2673,13 @@ font-family: Roboto;
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
 }
+/*.officialInfo .atBottom {*/
+  /*padding-bottom: 2px;*/
+/*}*/
 .officialInfo .marked {
   font-weight: 700;
   position: relative;
+  padding-bottom: 5px;
 }
 .officialInfo .marked:before {
   /*border: 1px solid red;*/
@@ -2250,11 +2716,15 @@ font-family: Roboto;
 
     /*Разработчик сайта*/
 .siteDeveloper {
-  /*border: 1px solid red;*/
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 191px;
+  position: relative;
+  top: 1px;
+  left: 3px;
+
   text-align: left;
 }
 .siteDeveloper .image {
@@ -2267,21 +2737,25 @@ font-family: Roboto;
 }
 
 .siteDeveloper .link1 {
-  /*border: 1px solid black;*/
+  /*outline: 1px solid black;*/
   display: block;
   box-sizing: border-box;
   marign: 0;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   padding: 0;
 }
 .siteDeveloper .link2 {
+  /*display: block;*/
+  /*box-sizing: border-box;*/
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
 
 }
 
 .siteDeveloper .info {
-  /*border: 1px solid red;*/
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -2369,6 +2843,7 @@ font-family: Roboto;
 
   /*СЕТКА*/
 .globalContainer {
+  outline: 1px solid black;
   /*border: 1px solid yellow;*/
   box-sizing: border-box;
   margin: 0 auto;
