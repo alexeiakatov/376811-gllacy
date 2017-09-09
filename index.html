@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns:http="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/normalize.css">
@@ -54,7 +54,7 @@
 
       <!--МОДАЛЬНОЕ ОКНО - поле ввода поиска-->
       <div class="hidden searchOnHover">
-        <form class="searchForm" method="post" action="">
+        <form class="searchForm" method="post" action="/echo">
           <label class="visuallyHidden" for="searchField">Поле поиска</label>
           <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
         </form>
@@ -297,7 +297,7 @@
         <p class="subscriptionText">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
           что
           у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form class="subscriptionForm" method="post" action="">
+        <form class="subscriptionForm" method="post" action="/echo">
           <label class="visuallyHidden" for="emailField">Ваша электронная почта</label>
           <input class="inputText" id="emailField" type="text" name="emailToSubscribe" maxlength="50" placeholder="Электронная почта">
           <button class="subscriptionButton button" type="submit">Отправить</button>
@@ -353,7 +353,6 @@
     </a>
     <p class="info">Сделано в <a class="siteDeveloperLink2" href="https://htmlacademy.ru/intensive/htmlcss"><span class="toUnderline">
       HTML Academy</span></a> &copy; 2017</p>
-    </a>
   </div>
 </footer>
     <!--/*108x39*/-->

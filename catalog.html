@@ -55,7 +55,7 @@
 
       <!--МОДАЛЬНОЕ ОКНО - поле ввода поиска-->
       <div class="hidden searchOnHover">
-        <form class="searchForm" method="post" action="">
+        <form class="searchForm" method="post" action="/echo">
           <label class="visuallyHidden" for="searchField">Поле поиска</label>
           <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
         </form>
@@ -154,10 +154,10 @@
       <fieldset class="criteriaSet set">
         <legend class="legend">Сортировка:</legend>
         <select class="options" id="options" name="sortCriteria">
-          <option class="option" name="sortBy" value="popularity" selected>по популярности</option>
-          <option class="option" name="sortBy" value="lowPriceFirst">сначала недорогие</option>
-          <option class="option" name="sortBy" value="highPriceFirst">сначала дорогие</option>
-          <option class="option" name="sortBy" value="fatContent">по жирности</option>
+          <option class="option" value="popularity" selected>по популярности</option>
+          <option class="option" value="lowPriceFirst">сначала недорогие</option>
+          <option class="option" value="highPriceFirst">сначала дорогие</option>
+          <option class="option" value="fatContent">по жирности</option>
         </select>
       </fieldset>
 
@@ -455,7 +455,6 @@
     </a>
     <p class="info">Сделано в <a class="siteDeveloperLink2" href="https://htmlacademy.ru/intensive/htmlcss"><span class="toUnderline">
       HTML Academy</span></a> &copy; 2017</p>
-    </a>
   </div>
 
 </footer>

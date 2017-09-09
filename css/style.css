@@ -250,7 +250,7 @@ body {
 .inCatalogPointers .pointer:first-child,
 .pointer:first-child > .button {
   border-radius: 5px 5px 0 0;
-  position: relative; //для того чтоб сделать подчеркивание у Новинок псевдоэлементом и позиционировать относит эт. блока
+  position: relative;
 }
 .inCatalogPointers .pointer:last-child,
 .pointer:last-child > .button {
