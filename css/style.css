@@ -322,6 +322,10 @@ body {
 }
 .inCatalogPointers .pointer.current {
   background-color: rgb(208, 112, 88);
+  color: #ffffff;
+}
+.pointer.current:hover .button {
+  color: #ffffff;
 }
 
 /*БЛОК СЕРВИСОВ ПОЛЬЗОВАТЕЛЯ (flex)  - элмент <ul>*/
@@ -2220,12 +2224,18 @@ font-family: "Roboto", "Arial", sans-serif;
   border: 2px solid rgba(154, 154, 154, 0.5);
   padding-left: 14px;
 }
+.feedbackForm .getMessage:hover {
+  padding-top: 7px;
+}
 .feedbackForm .clientName:focus,
 .feedbackForm .clientEmail:focus,
 .feedbackForm .getMessage:focus {
   border: 2px solid rgba(46, 136, 228, 0.5);
   padding-left: 14px;
   outline: none;
+}
+.feedbackForm .getMessage:focus {
+  padding-top: 7px;
 }
 
     /*Контейнер с блоком ввода сообщения <textarea> и блоком текста который будет вставать над эт. блоком при его фокусе*/
