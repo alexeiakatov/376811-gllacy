@@ -409,17 +409,89 @@ body {
   border-radius: 5px;
 
 }
-    /*поле ввода текста - элемент <input>*/
-.searchForm .searchField {
+    /*контейнер c полем ввода и блоком с текстом .textAbove*/
+.searchForm .toShowTextAbove{
+  /*outline: 1px solid black;*/
   box-sizing: border-box;
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+
+}
+
+
+    /*поле ввода текста - элемент <input>*/
+.searchForm .searchField {
+  /*outline: 1px solid red;*/
+  box-sizing: border-box;
+  margin: 0;
   padding-left: 15px;
   width: 100%;
   height: 44px;
+  position: relative;
+  z-index: 2;
 
   border-radius: 5px;
-  border: 1px solid #d3d3d2;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  background-color: transparent;
+}
+
+.searchForm .textAbove {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  top: 0;
+
+  background-color: #ffffff;
+  z-index: 1;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
+
+  border-radius: 5px;
+
+}
+
+
+    /*эфекты при наведении и фокусе этого поля*/
+.search .searchField:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+  padding-left: 14px;
+}
+
+.search .searchField:focus {
+  background-color: #ffffff;
+  border: 2px solid rgba(46, 136, 228, 0.5);
+  padding-left: 14px;
+  outline: none;
+}
+
+.searchField:focus + .textAbove {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  top: -16px;
+  left: 15px;
+  /**/
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+  /**/
+  background-color: transparent;
 }
 
     /*Общие настройки кнопки Авторизация - элемент <a>*/
@@ -473,6 +545,7 @@ font-family: "Roboto", "Arial", sans-serif;
     /*всплывающий блок АВТОРИЗАЦИИ*/
 .authOnHover {
   /*border: 1px solid red;*/
+
   display: none;
   box-sizing: border-box;
   margin: 0;
@@ -493,7 +566,7 @@ font-family: "Roboto", "Arial", sans-serif;
   display: block;
 }
     /*форма авторизации - элемент <form>*/
-.authOnHover .form {
+.authOnHover .authForm {
   /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
@@ -502,22 +575,183 @@ font-family: "Roboto", "Arial", sans-serif;
 
   border-radius: 5px;
 }
-    /*поля ввода текста*/
-.authOnHover .login,
-.authOnHover .password {
+
+    /*контейнеры с полем ввода и блоком текста, который при фокусе встает над полем login*/
+.authOnHover .toShowTextAbove1 {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+    /*поле ввода логина - элемент <input>*/
+.authOnHover .login {
+  /*outline: 1px solid red;*/
+
   box-sizing: border-box;
   width: 100%;
   height: 45px;
   padding: 0;
   margin: 0;
   padding-left: 15px;
-  margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid #d3d3d2;
+  position: relative;
+  z-index: 2;
+
+  background-color: transparent;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+}
+
+    /*блок с текстом, который встает над полем ввода при фокусе*/
+.authOnHover .textAbove1 {
+  /*outline: 1px solid black;*/
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  top: 0;
+
+  background-color: #ffffff;
+  z-index: 1;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
+
+  border-radius: 5px;
+}
+
+    /*Эффект перемещения плейсхолдера при фокусе на поле ввода login*/
+.login:focus + .textAbove1 {
+  /*outline: 1px solid red;*/
+
+  width: auto;
+  height: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  top: -16px;
+  left: 15px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+
+  background-color: transparent;
+}
+
+  /*контейнер с полем ввода и блоком текста, который при фокусе встает над полем password*/
+.authOnHover .toShowTextAbove2 {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+
+    /*поле ввода пароля - элемент <input>*/
+.authOnHover .password {
+  /*outline: 1px solid black;*/
+
+  box-sizing: border-box;
+  padding: 0;
+  padding-left: 15px;
+  margin: 0;
+  width: 100%;
+  height: 45px;
+  position: relative;
+  z-index: 2;
+
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  background-color: transparent;
+}
+
+    /*блок с текстом, который встает над полем ввода при фокусе на поле password*/
+.authOnHover .textAbove2 {
+  /*outline: 1px solid black;*/
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  top: 0;
+
+  background-color: #ffffff;
+  z-index: 1;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
+
+  border-radius: 5px;
+}
+
+    /*Эффект перемещения плейсхолдера при фокусе на поле ввода password*/
+.password:focus + .textAbove2 {
+  /*outline: 1px solid red;*/
+
+  width: auto;
+  height: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  top: -16px;
+  left: 15px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+
+  background-color: transparent;
+}
+
+
+    /*эффекты при наведении и фокусе полей ввода логина и пароля*/
+.authOnHover .login:hover,
+.authOnHover .password:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+  padding-left: 14px;
+
+}
+.authOnHover .login:focus,
+.authOnHover .password:focus {
+  border: 2px solid rgba(46, 136, 228, 0.5);
+  padding-left: 14px;
+  outline: none;
+  background-color: #ffffff;
 }
 
     /*Кнопка в форме*/
-.form > .authButton{
+.authForm > .authButton{
 
   display: inline-block;
   box-sizing: border-box;
@@ -1635,19 +1869,92 @@ font-family: "Roboto", "Arial", sans-serif;
 
 }
 
-/*поле ввода текста*/
-.subscriptionForm .inputText {
+    /*контейнер с полем ввода и блоком текста который будет вставать над полем ввода*/
+.subscriptionForm .toShowTextAbove {
+  /*outline: 1px solid black;*/
+
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-right: 9px;
+  padding: 0;
+  width: 367px;
+  height: 44px;
+  position: relative;
+}
+
+    /*поле ввода эл.почты для рассылки - элемент <input>*/
+.subscriptionForm .inputEmail {
   /*outline: 1px solid red;*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   padding-left: 14px;
-  margin-right: 9px;
   width: 367px;
   height: 44px;
+  position: relative;
+  z-index: 2;
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  background-color: transparent;
+}
+
+    /*блок с текстом, который будет вставать над полем ввода inputEmail при фокусе этого поля*/
+.subscriptionForm .textAbove {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  top: 0;
+
+  background-color: #ffffff;
+  z-index: 1;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153, 153, 153);
 
   border-radius: 5px;
-  border: 1px solid #d3d3d2;
+}
+
+.inputEmail:focus + .textAbove {
+  /*outline: 1px solid red;*/
+
+  width: auto;
+  height: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  top: -16px;
+  left: 15px;
+  /**/
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+  /**/
+  background-color: transparent;
+}
+    /*эффекты при наведении и фокусе на поле ввода эл.почты для рассылки*/
+.subscriptionForm .inputEmail:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+  padding-left: 13px;
+}
+.subscriptionForm .inputEmail:focus {
+  border: 2px solid rgba(46, 136, 228, 0.5);
+  padding-left: 13px;
+  outline: none;
+  background-color: #ffffff;
 }
 
     /*кнопка*/
@@ -1768,8 +2075,8 @@ font-family: "Roboto", "Arial", sans-serif;
 }
     /*ПОПАП - Форма обратной связи*/
 .feedback {
-  display: none;
-  outline: 1px solid red;
+  /*display: none;*/
+  /*outline: 1px solid red;*/
   box-sizing: border-box;
   width: 478px;
   margin: 0;
@@ -1806,26 +2113,138 @@ font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   color: #323232;
 }
-    /*поля ввода имени и эл.почты*/
-.feedback .clientName,
-.feedback .clientEmail {
+
+    /*Контейнер с полем ввода clientName и блоком текста, который будет вставать над этим полем при его фокусе*/
+.feedback .toShowTextAbove1 {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 268px;
+  height: 45px;
+  position: relative;
+}
+
+    /*поле ввода clientName - элемент <input>*/
+.feedback .clientName {
   display: block;
   box-sizing: border-box;
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
   padding-left: 15px;
   width: 268px;
   height: 45px;
 
   border-radius: 5px;
-  border: 1px solid #d3d3d2;
+  border: 1px solid rgba(178, 178, 178, 0.5);
 }
+
+    /*текст, встающий над полем ввода clientName при его фокусе*/
+.feedbackForm .textAbove {
+  /*outline: 1px solid red;*/
+
+  display: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -16px;
+  left: 15px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+}
+.clientName:focus + .textAbove {
+  display: inline-block;
+}
+
+    /*Контейнер с полем ввода clientEmail и блоком текста, который будет вставать над этим полем при его фокусе*/
+.feedback .toShowTextAbove2 {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 268px;
+  height: 45px;
+  position: relative;
+}
+    /*поля ввода эл.почты - элемент <input>*/
+.feedback .clientEmail {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  width: 268px;
+  height: 45px;
+
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+}
+
+    /*текст, встающий над полем ввода clientName при его фокусе*/
+.feedbackForm .textAbove {
+  /*outline: 1px solid red;*/
+
+  display: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -16px;
+  left: 15px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+}
+    /*эффект появления текста над полем*/
+.clientEmail:focus + .textAbove {
+  display: inline-block;
+}
+
+
+    /*эффекты при наведении и фокусе полей ввода имени и эл.почты*/
+.feedbackForm .clientName:hover,
+.feedbackForm .clientEmail:hover,
+.feedbackForm .getMessage:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+  padding-left: 14px;
+}
+.feedbackForm .clientName:focus,
+.feedbackForm .clientEmail:focus,
+.feedbackForm .getMessage:focus {
+  border: 2px solid rgba(46, 136, 228, 0.5);
+  padding-left: 14px;
+  outline: none;
+}
+
+    /*Контейнер с блоком ввода сообщения <textarea> и блоком текста который будет вставать над эт. блоком при его фокусе*/
+.feedback .toShowTextAbove3 {
+  /*outline: 1px solid red;*/
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 26px;
+  width: 428px;
+  height: 155px;
+  position: relative;
+}
+
     /*Блок ввода сообщения - элемент <textarea>*/
 .feedback .getMessage {
   box-sizing: border-box;
   margin: 0;
-  margin-bottom: 26px;
   padding: 0;
   padding-left: 15px;
   padding-top: 8px;
@@ -1833,9 +2252,32 @@ font-family: "Roboto", "Arial", sans-serif;
   width: 428px;
 
   border-radius: 5px;
-  border: 1px solid #d3d3d2;
-
+  border: 1px solid rgba(178, 178, 178, 0.5);
 }
+
+    /*текст, встающий над полем ввода clientName при его фокусе*/
+.feedbackForm .textAbove {
+  /*outline: 1px solid red;*/
+
+  display: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -16px;
+  left: 15px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+}
+/*эффект появления текста над полем*/
+.getMessage:focus + .textAbove {
+  display: inline-block;
+}
+
     /*Кнопка отправки формы*/
 .feedbackForm .button {
   box-sizing: border-box;
@@ -2022,6 +2464,8 @@ font-family: "Roboto", "Arial", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-left: 16px;
+  min-width: 193px;
   min-height: 36px;
 
   font-family: "Roboto", "Arial", sans-serif;
@@ -2033,9 +2477,16 @@ font-family: "Roboto", "Arial", sans-serif;
   border-radius: 20px;
   border: none;
   background-color: rgba(248, 247, 244, 0.2);
+  background-image: url("../img/svg/select_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 14px top 13px;
 
-  padding-left: 12px;
-  min-width: 193px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.criteriaSet .options::-ms-expand {
+  display: none;
 }
 
     /*опции внутри выпадающего списка*/
@@ -2048,6 +2499,8 @@ font-family: "Roboto", "Arial", sans-serif;
 .criteriaSet .options:hover {
   background-color: rgb(255, 255, 255);
   color: #323232;
+  background-image: url("../img/svg/select_arrowhover.svg");
+
 }
 
 

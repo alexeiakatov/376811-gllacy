@@ -56,8 +56,11 @@
       <!--МОДАЛЬНОЕ ОКНО - поле ввода поиска-->
       <div class="hidden searchOnHover">
         <form class="searchForm" method="post" action="/echo">
-          <label class="visuallyHidden" for="searchField">Поле поиска</label>
-          <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?">
+          <div class="toShowTextAbove">
+            <label class="visuallyHidden" for="searchField">Поле поиска</label>
+            <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50">
+            <span class="textAbove">Что ищем?</span>
+          </div>
         </form>
       </div>
     </li>
@@ -70,12 +73,19 @@
       <!--МОДАЛЬНОЕ ОКНО - Авторизация пользователя-->
       <div class="hidden authOnHover">
         <h3 class="visuallyHidden descriptor">Форма авторизации</h3>
-        <form class="form" method="post" action="#">
-          <label class="visuallyHidden" for="login">Электронная почта</label>
-          <input class="login" id="login" type="text" name="login" maxlength="50" placeholder="Электронная почта">
+        <form class="authForm" method="post" action="#">
+          <div class="toShowTextAbove1">
+            <label class="visuallyHidden" for="login">Электронная почта</label>
+            <input class="login" id="login" type="text" name="login" maxlength="50">
+            <span class="textAbove1">Электронная почта</span>
+          </div>
 
-          <label class="visuallyHidden" for="password">Пароль</label>
-          <input class="password" id="password" type="text" name="password" maxlength="50" placeholder="Пароль">
+          <div class="toShowTextAbove2">
+            <label class="visuallyHidden" for="password">Пароль</label>
+            <input class="password" id="password" type="text" name="password" maxlength="50">
+            <span class="textAbove2">Пароль</span>
+          </div>
+
           <button class="authButton button" type="submit">Войти</button>
         </form>
 
@@ -84,6 +94,7 @@
           <a class="link" href="#">Новая регистрция</a>
         </p>
       </div>
+
     </li>
 
     <!--Тележка-->
