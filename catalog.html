@@ -58,7 +58,7 @@
         <form class="searchForm" method="post" action="/echo">
           <div class="toShowTextAbove">
             <label class="visuallyHidden" for="searchField">Поле поиска</label>
-            <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50">
+            <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?" required>
             <span class="textAbove">Что ищем?</span>
           </div>
         </form>
@@ -76,13 +76,13 @@
         <form class="authForm" method="post" action="#">
           <div class="toShowTextAbove1">
             <label class="visuallyHidden" for="login">Электронная почта</label>
-            <input class="login" id="login" type="text" name="login" maxlength="50">
+            <input class="login" id="login" type="text" name="login" maxlength="50" placeholder="Электронная почта" required>
             <span class="textAbove1">Электронная почта</span>
           </div>
 
           <div class="toShowTextAbove2">
             <label class="visuallyHidden" for="password">Пароль</label>
-            <input class="password" id="password" type="text" name="password" maxlength="50">
+            <input class="password" id="password" type="text" name="password" maxlength="50" placeholder="Пароль" required>
             <span class="textAbove2">Пароль</span>
           </div>
 

@@ -57,7 +57,7 @@
         <form class="searchForm" method="post" action="/echo">
           <div class="toShowTextAbove">
             <label class="visuallyHidden" for="searchField">Поле поиска</label>
-            <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50">
+            <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?" required>
             <span class="textAbove">Что ищем?</span>
           </div>
         </form>
@@ -75,13 +75,13 @@
         <form class="authForm" method="post" action="#">
           <div class="toShowTextAbove1">
             <label class="visuallyHidden" for="login">Электронная почта</label>
-            <input class="login" id="login" type="text" name="login" maxlength="50">
+            <input class="login" id="login" type="text" name="login" maxlength="50" placeholder="Электронная почта" required>
             <span class="textAbove1">Электронная почта</span>
           </div>
 
           <div class="toShowTextAbove2">
             <label class="visuallyHidden" for="password">Пароль</label>
-            <input class="password" id="password" type="text" name="password" maxlength="50">
+            <input class="password" id="password" type="text" name="password" maxlength="50" placeholder="Пароль" required>
             <span class="textAbove2">Пароль</span>
           </div>
 
@@ -310,7 +310,7 @@
         <form class="subscriptionForm" method="post" action="/echo">
           <div class="toShowTextAbove">
           <label class="visuallyHidden" for="emailField">Ваша электронная почта</label>
-          <input class="inputEmail" id="emailField" type="text" name="emailToSubscribe" maxlength="50">
+          <input class="inputEmail" id="emailField" type="text" name="emailToSubscribe" maxlength="50" placeholder="Электронная почта" required>
           <span class="textAbove">Электронная почта</span>
           </div>
           <button class="subscriptionButton button" type="submit">Отправить</button>
@@ -369,38 +369,44 @@
   </div>
 </footer>
 
-<!--МОДАЛЬНОЕ ОКНО - Форма обратной связи, которая открывается с кнопки на карте-->
-<div class="hidden feedback">
-  <h2 class="visuallyHidden descriptor">Форма обратной связи</h2>
-  <form class="feedbackForm">
-    <p class="info">Мы обязательно вам ответим! </p>
-
-    <div class="toShowTextAbove1">
-      <label class="visuallyHidden" for="name">Ваше имя</label>
-      <input class="clientName" id="name" type="text" name="clientName" placeholder="Как вас зовут?" maxlength="50">
-      <span class="textAbove">Как вас зовут?</span>
-    </div>
-
-    <div class="toShowTextAbove2">
-      <label class="visuallyHidden" for="email">Ваша электронная почта</label>
-      <input class="clientEmail" id="email" type="text" name="clientEmail" placeholder="Ваша почта для ответа?"
-             maxlength="50">
-      <span class="textAbove">Ваша почта для ответа?</span>
-    </div>
-
-    <div class="toShowTextAbove3">
-    <label class="visuallyHidden" for="message">Поле для ввода сообщения</label>
-    <textarea class="getMessage" id="message" rows="7" cols="40" name="clientMessage"
-              placeholder="Напишите что-нибудь..."></textarea>
-      <span class="textAbove">Напишите что-нибудь...</span>
-    </div>
-    <button class="button" type="submit">Отправить</button>
-  </form>
-  <button class="button" type="button">Закрыть форму обратной связи</button>
+  <!--это - закрытие врапера для слайдов-->
+  </div>
+  <!--это - закрытие globalContainer-->
 </div>
+
+<!--МОДАЛЬНОЕ ОКНО - Форма обратной связи, которая открывается с кнопки на карте-->
+
+<div class="darkLayer hidden">
+  <div class=" feedback">
+    <h2 class="visuallyHidden descriptor">Форма обратной связи</h2>
+    <form class="feedbackForm">
+      <p class="info">Мы обязательно вам ответим! </p>
+
+      <div class="toShowTextAbove1">
+        <label class="visuallyHidden" for="name">Ваше имя</label>
+        <input class="clientName" id="name" type="text" name="clientName" placeholder="Как вас зовут?"
+               maxlength="50" required>
+        <span class="textAbove">Как вас зовут?</span>
+      </div>
+
+      <div class="toShowTextAbove2">
+        <label class="visuallyHidden" for="email">Ваша электронная почта</label>
+        <input class="clientEmail" id="email" type="text" name="clientEmail" placeholder="Ваша почта для ответа?"
+               maxlength="50" required>
+        <span class="textAbove">Ваша почта для ответа?</span>
+      </div>
+
+      <div class="toShowTextAbove3">
+        <label class="visuallyHidden" for="message">Поле для ввода сообщения</label>
+        <textarea class="getMessage" id="message" rows="7" cols="40" name="clientMessage"
+                  placeholder="Напишите что-нибудь..." required></textarea>
+        <span class="textAbove">Напишите что-нибудь...</span>
+      </div>
+      <button class="button" type="submit">Отправить</button>
+    </form>
+    <button class="button" type="button">Закрыть форму обратной связи</button>
   </div>
 </div>
-
 <script src="js/script.js"></script>
 </body>
 </html>
