@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Глейси : каталог</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <!--<link rel="stylesheet" href="css/style_min.css">-->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Глейси : каталог</title>
 </head>
 <body class="bodyCatalog">
 <div class="globalContainer">
@@ -49,13 +50,14 @@
   <!--Сервисы пользователя-->
   <h2 class="visuallyHidden descriptor">Сервисы пользователя</h2>
   <ul class="clientServices">
+
     <!--Поиск-->
     <li class="search service" tabindex="0">
       <h3 class="visuallyHidden descriptor">Поиск по сайту</h3>
 
       <!--МОДАЛЬНОЕ ОКНО - поле ввода поиска-->
       <div class="hidden searchOnHover">
-        <form class="searchForm" method="post" action="/echo">
+        <form class="searchForm" method="post" action="http://echo.htmlacademy.ru">
           <div class="toShowTextAbove">
             <label class="visuallyHidden" for="searchField">Поле поиска</label>
             <input class="searchField" id="searchField" type="text" name="searchRequest" maxlength="50" placeholder="Что ищем?" required>
@@ -73,7 +75,7 @@
       <!--МОДАЛЬНОЕ ОКНО - Авторизация пользователя-->
       <div class="hidden authOnHover">
         <h3 class="visuallyHidden descriptor">Форма авторизации</h3>
-        <form class="authForm" method="post" action="#">
+        <form class="authForm" method="post" action="http://echo.htmlacademy.ru">
           <div class="toShowTextAbove1">
             <label class="visuallyHidden" for="login">Электронная почта</label>
             <input class="login" id="login" type="text" name="login" maxlength="50" placeholder="Электронная почта" required>
