@@ -1239,6 +1239,7 @@ font-family: "Roboto", "Arial", sans-serif;
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -1308,7 +1309,6 @@ font-family: "Roboto", "Arial", sans-serif;
   /*border: 1px solid yellow;*/
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   padding: 0 20px;
   padding-top: 14px;
   padding-bottom: 25px;
@@ -1317,7 +1317,7 @@ font-family: "Roboto", "Arial", sans-serif;
   border-radius: 15px;
   background-color: #5f0e1d;
   background-image: url("../img/for_index/bgr_raspberries.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 560px 230px;
 
   text-align: right;
@@ -1336,7 +1336,7 @@ font-family: "Roboto", "Arial", sans-serif;
   border-radius: 15px;
   background-color: #452a1e;
   background-image: url("../img/for_index/bgr_choco.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 560px 230px;
 
   text-align: right;
@@ -1705,6 +1705,7 @@ font-family: "Roboto", "Arial", sans-serif;
   padding: 0;
 
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   width: 1146px;
 
@@ -1714,7 +1715,11 @@ font-family: "Roboto", "Arial", sans-serif;
     /*блок блога*/
 .blogNews {
   /*border: 1px solid red;*/
+
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
   width: 560px;
   min-height: 220px;
   border-radius: 13px;
@@ -1727,7 +1732,7 @@ font-family: "Roboto", "Arial", sans-serif;
 
   background-color: #ffffff;
   background-image: url("../img/for_index/bgr_stawberry_small.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: 202px -35px;
 }
 .blogInfo {
@@ -1754,37 +1759,15 @@ font-family: "Roboto", "Arial", sans-serif;
   line-height: 30px;
   font-weight: 700;
   color: #323232;
-  text-decoration: none;
-}
-
-.blogNews .toUnderline {
-  margin: 0;
-  padding: 0;
-  position: relative;
-
-}
-
-.blogNews .toUnderline::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 0;
-
-
-  border-bottom: 2px solid black;
+  text-decoration: underline;
+  text-decoration-color: black;
 }
 
     /*эффекты при наведении и нажатии на ссылку*/
 .blogLink:hover,
 .blogLink:active {
   color: rgba(232, 77, 55, 1);
-}
-.blogLink:hover .toUnderline::after,
-.blogLink:active .toUnderline::after {
-  border-bottom: 2px solid rgba(232, 77, 55, 0.3);
+  text-decoration-color: rgba(232, 77, 55, 1);
 }
 
 
@@ -1810,6 +1793,7 @@ font-family: "Roboto", "Arial", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-bottom: 5px;
   border-radius: 13px;
   min-height: 210px;
 
@@ -1837,6 +1821,7 @@ font-family: "Roboto", "Arial", sans-serif;
 /*Форма ввода - элемент <form>*/
 .subscriptionForm {
   /*border: 1px solid red;*/
+
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -2055,15 +2040,6 @@ font-family: "Roboto", "Arial", sans-serif;
   text-decoration: none;
 
   background-color: rgb(242,104,67);
-}
-
-    /*интерактивная карта*/
-.interactiveMap {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
 }
 
     /*ПОПАП - Форма обратной связи*/
@@ -2386,6 +2362,7 @@ font-family: "Roboto", "Arial", sans-serif;
 
   background-color: transparent;
   background-image: url("../img/svg/cross-big.svg");
+  background-repeat: no-repeat;
   border: none;
   font-size: 0;
 

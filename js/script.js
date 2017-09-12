@@ -83,6 +83,7 @@ popupSubmitButton.addEventListener("click", function(submitEvent){
   if (name && email && message) {
   } else{
     submitEvent.preventDefault();
+    feedback.offsetWidth = feedback.offsetWidth;
     feedback.classList.add("inputError");
   }
 
