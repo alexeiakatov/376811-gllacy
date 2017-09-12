@@ -821,8 +821,7 @@ font-family: "Roboto", "Arial", sans-serif;
 }
 
 
-
-/*эффекты при наведении и фокусе на li.trolley и фокусе на ссылку a.button*/
+  /*эффекты при наведении и фокусе на li.trolley и фокусе на ссылку a.button*/
 .trolley:focus {
   outline: none;
 }
@@ -839,7 +838,7 @@ font-family: "Roboto", "Arial", sans-serif;
     /*изменение цвета иконки для дефолтного варианта, т.е. когда тележка пустая - сейчас так в index.html*/
 .trolley:not(.withProducts):focus .trolleyButton,
 .trolley:not(.withProducts):hover .trolleyButton,
-.trolleyButton:focus{
+.trolley .trolleyButton:not(.withProducts):focus{
   background-image: url("../img/svg/trolley_empty_hover.svg");
   background-repeat: no-repeat;
   background-position: 15px 5px;
@@ -850,6 +849,11 @@ font-family: "Roboto", "Arial", sans-serif;
 .trolley.withProducts:hover > .trolleyOnHover
 {
   display: block;
+}
+
+.trolleyButton.withProducts:hover,
+.trolleyButton.withProducts:focus {
+  background-image: url("../img/svg/trolley_full.svg");
 }
 
 
