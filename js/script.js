@@ -53,7 +53,7 @@ closeFormButton.addEventListener("click", function (clickEvent) {
   dark.classList.add("hidden");
 });
 
-    /*закрытие попапа обратной связи или интеракт. карты по нажатию Esc - событие объекта window*/
+    /*закрытие попапа обратной связи по нажатию Esc - событие объекта window*/
 window.addEventListener("keydown", function (escEvent) {
   if(escEvent.keyCode === 27){
 
@@ -63,10 +63,6 @@ window.addEventListener("keydown", function (escEvent) {
         feedback.classList.remove("inputError");
       }
       dark.classList.add("hidden");
-    }
-
-    if(!interactiveMap.classList.contains("hidden")){
-      interactiveMap.classList.add("hidden");
     }
   }
 
@@ -95,16 +91,6 @@ popupSubmitButton.addEventListener("click", function(submitEvent){
     clientMessage.setAttribute("required","");
 });
 
-
-    /*показать интерактивную карту*/
-mapImage.addEventListener("click", function(clickEvent){
-  clickEvent.preventDefault();
-
-  if(interactiveMap.classList.contains("hidden")){
-    interactiveMap.classList.remove("hidden");
-  }
-
-});
 
     /*ОБРАБОТКА СОБЫТИЙ ПОЛУЧЕНИЯ ФОКУСА ЭЛЕМЕНТАМИ ВВОДА*/
 
