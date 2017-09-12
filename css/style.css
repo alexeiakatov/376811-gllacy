@@ -1961,30 +1961,23 @@ font-family: "Roboto", "Arial", sans-serif;
 
 }
 
-.mapImage {
-  /*outline: 1px solid red;*/
-
+/*интерактивная карта*/
+.interactiveMap {
   display: block;
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 429px;
 
-  cursor: pointer;
-
-  background-color: #eae3c6;
-  background-image: url("../img/for_index/map_mask_marker.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 -1px;
 }
 
     /*Информационный блок на карте*/
-.map .mapInfo {
+.mapInfo {
   /*outline: 1px solid red;*/
 
   position: absolute;
-  top: 62px;
+  top: -367px;
   right: 27px;
 
 
@@ -2064,19 +2057,14 @@ font-family: "Roboto", "Arial", sans-serif;
   background-color: rgb(242,104,67);
 }
 
-    /*появляющаяся интерактивная карта*/
+    /*интерактивная карта*/
 .interactiveMap {
   display: block;
-  /*z-index: 10;*/
   position: absolute;
   bottom: 0;
   left: 0;
 
 }
-.interactiveMap.hidden {
-  display: none;
-}
-
 
     /*ПОПАП - Форма обратной связи*/
 
