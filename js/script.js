@@ -8,6 +8,15 @@ var dark = document.querySelector(".darkLayer");
 //кнопка закрытия попапа обратной связи "крестик"
 var closeFormButton = document.querySelector(".closeFormButton");
 
+//Контейнер попапа обратной связиэлемент div.feedback
+var feedback = document.querySelector(".feedback");
+
+//Форма ввода в попапе - элемент form.feedbackform
+var feedbackForm = document.querySelector(".feedbackForm");
+
+//Кнопка submit в форме попапа
+var popupSubmitButton = document.querySelector(".feedbackForm .button");
+
 //поля ввода имени, эл.почты и сообщения
 var clientName = dark.querySelector(".clientName");
 var clientEmail = dark.querySelector(".clientEmail");
@@ -38,6 +47,9 @@ feedbackButton.addEventListener("click", function(clickEvent){
 closeFormButton.addEventListener("click", function (clickEvent) {
   clickEvent.preventDefault();
 
+  if(feedback.classList.contains("inputError")){
+    feedback.classList.remove("inputError");
+  }
   dark.classList.add("hidden");
 });
 
@@ -46,6 +58,10 @@ window.addEventListener("keydown", function (escEvent) {
   if(escEvent.keyCode === 27){
 
     if(!dark.classList.contains("hidden")) {
+
+      if(feedback.classList.contains("inputError")){
+        feedback.classList.remove("inputError");
+      }
       dark.classList.add("hidden");
     }
 
@@ -55,6 +71,30 @@ window.addEventListener("keydown", function (escEvent) {
   }
 
 });
+
+
+    /*проверка введенных данных в попапе*/
+popupSubmitButton.addEventListener("click", function(submitEvent){
+
+  clientName.removeAttribute("required");
+  clientEmail.removeAttribute("required");
+  clientMessage.removeAttribute("required");
+
+  var name = clientName.value;
+  var email = clientEmail.value;
+  var message = clientMessage.value;
+
+  if (name && email && message) {
+  } else{
+    submitEvent.preventDefault();
+    feedback.classList.add("inputError");
+  }
+
+    clientName.setAttribute("required","");
+    clientEmail.setAttribute("required","");
+    clientMessage.setAttribute("required","");
+});
+
 
     /*показать интерактивную карту*/
 mapImage.addEventListener("click", function(clickEvent){
