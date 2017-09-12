@@ -32,7 +32,7 @@ var inputEmail = document.querySelector(".inputEmail");
 
 var bodyCurrent = document.querySelector(".bodyIndex");
 
-/*СОБЫТИЙ СТРАНИЦЫ*/
+/*СОБЫТИЯ СТРАНИЦЫ*/
 if(bodyCurrent) {
   /*событие клика на кнопку "Форма обратной связи" в информационном блоке катры*/
   feedbackButton.addEventListener("click", function (clickEvent) {
@@ -121,7 +121,7 @@ if(bodyCurrent) {
 
 }
 
-/*ОБРАБОТКА СОБЫТИЙ ПОЛУЧЕНИЯ ФОКУСА ФОРМАМИ ВВОДА (чтоб пропадал плейсхолдер в полях с фокусом)*/
+/*общие для catalog.html и index.html - ОБРАБОТКА СОБЫТИЙ ПОЛУЧЕНИЯ ФОКУСА ФОРМАМИ ВВОДА (чтоб пропадал плейсхолдер в полях с фокусом)*/
 
 //поле searchField
 searchField.addEventListener("focus", function(focusEvent){
