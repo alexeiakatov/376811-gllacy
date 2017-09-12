@@ -322,11 +322,14 @@ body {
 }
 .pointer.current > .button {
   color: #ffffff;
+  cursor: default;
 }
+
 /*Эффект - изменение фона элементов подменю Каталога при наведении и при нажатии*/
-.inCatalogPointers .pointer:hover {
+.inCatalogPointers .pointer:hover:not(.current) {
   background-color: #fbded7;
 }
+
 
 
 /*БЛОК СЕРВИСОВ ПОЛЬЗОВАТЕЛЯ (flex)  - элмент <ul>*/
@@ -1945,13 +1948,30 @@ font-family: "Roboto", "Arial", sans-serif;
 
 .map {
   /*outline: 1px solid red;*/
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-top: 62px;
-  padding-left: 871px;
+  /*padding-top: 62px;*/
+  /*padding-left: 871px;*/
   width: 100%;
   height: 429px;
+
+  position: relative;
+
+}
+
+.mapImage {
+  /*outline: 1px solid red;*/
+
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 429px;
+
+  cursor: pointer;
 
   background-color: #eae3c6;
   background-image: url("../img/for_index/map_mask_marker.jpg");
@@ -1962,6 +1982,12 @@ font-family: "Roboto", "Arial", sans-serif;
     /*Информационный блок на карте*/
 .map .mapInfo {
   /*outline: 1px solid red;*/
+
+  position: absolute;
+  top: 62px;
+  right: 27px;
+
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -2038,14 +2064,38 @@ font-family: "Roboto", "Arial", sans-serif;
   background-color: rgb(242,104,67);
 }
 
+    /*появляющаяся интерактивная карта*/
+.interactiveMap {
+  display: block;
+  /*z-index: 10;*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
-    /*ПОПАП - Форма обратной связи*/
-
-.darkLayer.hidden {
+}
+.interactiveMap.hidden {
   display: none;
 }
 
+
+    /*ПОПАП - Форма обратной связи*/
+
+    /*анимация появления попапа с формой обратной связи*/
+@keyframes feedbackGetVisible {
+  0% {top: -1000px;}
+  70% {top: 130px;}
+  90% {top: 90px;}
+  100% {top: 100px;}
+}
+
+    /*сокрытие темного слоя и попапа с формой обратной связи*/
+.darkLayer.hidden {
+  display: none;
+  /*visibility: hidden;*/
+}
+
 .darkLayer {
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -2063,11 +2113,17 @@ font-family: "Roboto", "Arial", sans-serif;
 .feedback {
   /*outline: 1px solid red;*/
 
+  animation-name: feedbackGetVisible;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+
   box-sizing: border-box;
   width: 477px;
   margin: 0 auto;
   padding: 0;
-  position: relative;
+  position: fixed;
+  left: calc((100% / 2) - 238px);
+  top: 100px;
 
   border-radius: 9px;
   background-color: #f8f7f4;
@@ -2090,7 +2146,7 @@ font-family: "Roboto", "Arial", sans-serif;
     /*верхняя надпись в попапе*/
 .feedback .info {
   /*outline: 1px solid red;*/
-  
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -2484,12 +2540,13 @@ font-family: "Roboto", "Arial", sans-serif;
     /*поле селекта*/
 .criteriaSet .options {
   /*outline: 1px solid red;*/
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   padding-left: 16px;
   min-width: 193px;
-  min-height: 36px;
+  height: 36px;
 
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -3343,7 +3400,7 @@ font-family: "Roboto", "Arial", sans-serif;
   margin: 0 auto;
   padding: 0;
   width: 1200px;
-
+  position: relative;
 
 }
 
